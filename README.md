@@ -1,6 +1,10 @@
 # Sleuth Forensics — Internal Runbook & Engagement Platform
 
-**Status: ON HOLD — awaiting Sleuth's engagement-type list. No application code has been written.**
+**Status: ARCHITECTURE IN PROGRESS. No application code has been written.**
+
+**20 engagement types** specified across 4 execution archetypes, covering all 21 public services.
+**109 procedures** specified (59 core + 50 archetype) plus service-specific procedures per type.
+**0% SME-validated · 21 blocking gaps** — see [`docs/30-decisions-needed.md`](docs/30-decisions-needed.md).
 
 Seven governing constraints issued by Sleuth on 2026-09-20 are **binding** on all work here:
 see [`docs/17-governing-constraints.md`](docs/17-governing-constraints.md). In short — everything
@@ -84,8 +88,18 @@ neutrals, Inter and IBM Plex Mono, flat, no gradients. The site's own stylesheet
 | [16 — Implementation Plan](docs/16-implementation-plan.md) | Phased delivery; the two tracks |
 | **[17 — Governing Constraints](docs/17-governing-constraints.md)** | **Sleuth's seven binding rules, and how each is enforced** |
 | [18 — Provenance & Validation](docs/18-content-provenance-and-validation.md) | How "needs confirmation" becomes a data field, not a footnote |
-| [19 — Engagement Type Specification](docs/19-engagement-type-specification.md) | The schema awaiting Sleuth's engagement types |
+| [19 — Engagement Type Specification](docs/19-engagement-type-specification.md) | The ETS schema |
 | [20 — Shared Modules](docs/20-shared-module-inheritance.md) | The "change once" guarantee, specified precisely |
+| **[21 — Engagement Catalogue v2](docs/21-engagement-catalogue-v2.md)** | **The recommended 20 engagement types. Supersedes doc 01** |
+| [22 — Core Spine](docs/22-core-spine-specification.md) | The 59 procedures every engagement type inherits |
+| [23 — Archetype Modules](docs/23-archetype-modules.md) | A1–A4 execution, 50 procedures |
+| [24 — ETS: Assessment](docs/24-ets-assessment.md) | 6 A1 engagement types, populated |
+| [25 — ETS: Testing](docs/25-ets-testing.md) | 7 A2 engagement types, populated |
+| [26 — ETS: Investigation](docs/26-ets-investigation.md) | 5 A3 engagement types, populated |
+| [27 — ETS: Continuous](docs/27-ets-continuous.md) | 2 A4 engagement types, populated |
+| [28 — Checklists & Gates](docs/28-checklist-and-gate-architecture.md) | 7 gates, 63 conditions, 71% fact-evaluated |
+| [29 — Architecture Amendments](docs/29-architecture-amendments.md) | Deltas to findings, reporting, roles, data model, nav, UX, exports |
+| **[30 — Decisions Needed](docs/30-decisions-needed.md)** | **Plain English, with a recommendation for each** |
 
 ---
 
@@ -95,7 +109,7 @@ Detail in [doc 15](docs/15-assumptions-and-open-questions.md). The four that mat
 
 | | Decision | State |
 |---|---|---|
-| **D9** | Which engagement types are actually sold, and in what volume? | **Sleuth is supplying these.** Everything downstream waits on it |
+| **D9** | Which engagement types are actually sold, and in what volume? | **A catalogue of 20 is now recommended** (doc 21). Volumes still needed — they set authoring order |
 | ~~D1~~ | Evidence content storage | **Closed by Rule 3 — register-only** |
 | **D8** | Who authors and validates the runbooks, starting when? | Open. Name an SME per pillar — this is the critical path |
 | **D6** | Hosting and data residency | Open. India assumed; confirm early |
