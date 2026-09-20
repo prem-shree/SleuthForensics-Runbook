@@ -1,5 +1,13 @@
 # 15 — Assumptions, Open Questions & Decisions Needed
 
+> **Status — `PROPOSED`, awaiting approval.** Structural and design proposals, not confirmed
+> Sleuth practice. See [`17-governing-constraints.md`](17-governing-constraints.md). Partly superseded on arrival of Sleuth's engagement-type list —
+> [`19-engagement-type-specification.md`](19-engagement-type-specification.md) §5.
+>
+> **D1 is closed by Rule 3** (register-only). D2 and D3 are unaffected. New entries NC-26 to
+> NC-32 arising from the rules are recorded in [`18-content-provenance-and-validation.md`](18-content-provenance-and-validation.md) §6.
+
+
 Two kinds of entry here:
 
 - **Needs Confirmation (NC)** — a fact about Sleuth that the website does not state and that I have not invented. Each one has a working assumption used in the design, and a note on what changes if the assumption is wrong.
@@ -9,7 +17,7 @@ Two kinds of entry here:
 
 ## PART A — Decisions needed before building
 
-### D1 — Does the platform store evidence content, or only the evidence register?
+### D1 — Does the platform store evidence content, or only the evidence register? · **CLOSED by Rule 3 — register-only**
 
 This is the biggest single scoping decision in the product.
 
@@ -21,7 +29,7 @@ This is the biggest single scoping decision in the product.
 | Risk if breached | Metadata exposure — serious | **Every client's forensic evidence in one place — existential** |
 | Delivers | ~90% of the brief's evidence requirements | The remaining 10% |
 
-**Recommendation: register-only for Phases 1–4.** Revisit at Phase 5 with real usage data. The custody, integrity, provenance and access-history requirements — which is what makes forensic work defensible — are all satisfied by the register. Centralising the images themselves adds enormous infrastructure cost and concentrates catastrophic risk to buy comparatively little. *(Assumed throughout `06-evidence-model.md` and `10-data-model.md`.)*
+**Decided by Sleuth (Rule 3): register-only.** Not revisited unless Sleuth reopens it. The custody, integrity, provenance and access-history requirements — which is what makes forensic work defensible — are all satisfied by the register. Centralising the images themselves adds enormous infrastructure cost and concentrates catastrophic risk to buy comparatively little. *(Assumed throughout `06-evidence-model.md` and `10-data-model.md`.)*
 
 ### D2 — Build target: internal-only, or eventually client-facing?
 
@@ -126,5 +134,5 @@ Where the design needed one of these, it is a configurable field that ships empt
 | Gate overrides become routine | Medium | High | Two-person approval, expiry, client-report visibility, Oversight tracking — all already designed in. Watch the override rate as a health metric |
 | Scope expands toward a general PSA/billing system | Medium | Medium | D4 says no. Hold that line |
 | The platform itself is breached | Low | **Existential** | `13-security-architecture.md`. Assess before it holds real data, and annually |
-| Evidence storage costs exceed expectation | Medium | Medium | D1 recommends register-only precisely to defer this |
+| ~~Evidence storage costs exceed expectation~~ | — | — | **Removed.** Rule 3 eliminates this risk entirely |
 | Built for the wrong archetype first | Low | High | D9 — confirm real engagement volumes before committing to the Phase 1 slice |

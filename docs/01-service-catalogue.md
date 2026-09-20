@@ -1,5 +1,17 @@
 # 01 — Service Catalogue & Engagement Types
 
+> **Status — DRAFT / NEEDS SME VALIDATION.** Per Rule 1 of [`17-governing-constraints.md`](17-governing-constraints.md), nothing in this document is
+> confirmed Sleuth practice. Procedures, tools, legal requirements and operational rules here are
+> proposals for SME review, not internal SOP. Content drawn from the public website is
+> `SITE-SUGGESTED` and carries no authority over internal method (Rule 6). Gaps are named rather
+> than filled (Rule 2). Validation vocabulary: [`18-content-provenance-and-validation.md`](18-content-provenance-and-validation.md).
+>
+> **Superseded on arrival.** The 41 engagement types below are derived from the public
+> catalogue. Sleuth's actual list replaces them; anything Sleuth does not sell is deleted,
+> not merged. The four archetypes are re-tested against the real list (a fifth is a genuine
+> possible outcome).
+
+
 **Purpose:** Turn 21 marketed services into the unit the platform actually operates on.
 
 ---

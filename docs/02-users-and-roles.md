@@ -1,5 +1,10 @@
 # 02 — Users, Roles & Access Model
 
+> **Status — `PROPOSED`, awaiting approval.** Structural and design proposals, not confirmed
+> Sleuth practice. See [`17-governing-constraints.md`](17-governing-constraints.md). Partly superseded on arrival of Sleuth's engagement-type list —
+> [`19-engagement-type-specification.md`](19-engagement-type-specification.md) §5.
+
+
 **Note on evidence:** the website names no individuals, no team size and no certifications (research §4.4). Everything about *who actually exists* at Sleuth is **Needs Confirmation**. What follows is a role model derived from the brief and from the work the services describe, not a claim about Sleuth's staffing.
 
 ---

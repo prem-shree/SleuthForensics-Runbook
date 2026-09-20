@@ -1,5 +1,12 @@
 # 08 — Findings, Reporting & QA
 
+> **Status — DRAFT / NEEDS SME VALIDATION.** Per Rule 1 of [`17-governing-constraints.md`](17-governing-constraints.md), nothing in this document is
+> confirmed Sleuth practice. Procedures, tools, legal requirements and operational rules here are
+> proposals for SME review, not internal SOP. Content drawn from the public website is
+> `SITE-SUGGESTED` and carries no authority over internal method (Rule 6). Gaps are named rather
+> than filled (Rule 2). Validation vocabulary: [`18-content-provenance-and-validation.md`](18-content-provenance-and-validation.md).
+
+
 > "Clarity in communication — we prioritise clear reporting for both technical and non-technical audiences." — sleuthforensics.in/about
 >
 > 13 of the 21 services promise an executive summary alongside a technical body (research §6.1). The report is not an export. It is the product.

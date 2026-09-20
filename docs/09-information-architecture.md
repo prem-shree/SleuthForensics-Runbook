@@ -1,5 +1,10 @@
 # 09 — Information Architecture & Navigation
 
+> **Status — `PROPOSED`, awaiting approval.** Structural and design proposals, not confirmed
+> Sleuth practice. See [`17-governing-constraints.md`](17-governing-constraints.md). Partly superseded on arrival of Sleuth's engagement-type list —
+> [`19-engagement-type-specification.md`](19-engagement-type-specification.md) §5.
+
+
 > The brief lists 17 candidate areas and then says: *"Do not blindly make all of these top-level navigation items. Design the information architecture properly."*
 
 ---

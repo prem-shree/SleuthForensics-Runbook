@@ -1,5 +1,10 @@
 # 14 — Excel Export Layer
 
+> **Status — `PROPOSED`, awaiting approval.** Structural and design proposals, not confirmed
+> Sleuth practice. See [`17-governing-constraints.md`](17-governing-constraints.md). Partly superseded on arrival of Sleuth's engagement-type list —
+> [`19-engagement-type-specification.md`](19-engagement-type-specification.md) §5.
+
+
 > The brief: *"Excel is a future output layer, not the primary system. The web application should remain the source of structured information."*
 
 ---

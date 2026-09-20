@@ -1,6 +1,13 @@
 # Sleuth Forensics — Internal Runbook & Engagement Platform
 
-**Status: DESIGN PROPOSAL — awaiting review. No application code has been written.**
+**Status: ON HOLD — awaiting Sleuth's engagement-type list. No application code has been written.**
+
+Seven governing constraints issued by Sleuth on 2026-09-20 are **binding** on all work here:
+see [`docs/17-governing-constraints.md`](docs/17-governing-constraints.md). In short — everything
+unconfirmed is *Draft / Needs SME Validation*; no invented procedures; evidence model is
+register-only; no client secrets in the platform; legal templates are controlled drafts; the public
+website is the catalogue but **not** the internal SOP; and no implementation until the revised
+architecture is approved.
 
 This repository currently contains research and a proposed architecture for an internal
 platform that guides Sleuth Forensics consultants through cybersecurity, digital-forensics,
@@ -75,6 +82,10 @@ neutrals, Inter and IBM Plex Mono, flat, no gradients. The site's own stylesheet
 | [14 — Excel Exports](docs/14-excel-exports.md) | The future output layer |
 | [15 — Assumptions & Open Questions](docs/15-assumptions-and-open-questions.md) | **Decisions needed before building** |
 | [16 — Implementation Plan](docs/16-implementation-plan.md) | Phased delivery; the two tracks |
+| **[17 — Governing Constraints](docs/17-governing-constraints.md)** | **Sleuth's seven binding rules, and how each is enforced** |
+| [18 — Provenance & Validation](docs/18-content-provenance-and-validation.md) | How "needs confirmation" becomes a data field, not a footnote |
+| [19 — Engagement Type Specification](docs/19-engagement-type-specification.md) | The schema awaiting Sleuth's engagement types |
+| [20 — Shared Modules](docs/20-shared-module-inheritance.md) | The "change once" guarantee, specified precisely |
 
 ---
 
@@ -82,15 +93,31 @@ neutrals, Inter and IBM Plex Mono, flat, no gradients. The site's own stylesheet
 
 Detail in [doc 15](docs/15-assumptions-and-open-questions.md). The four that matter most:
 
-| | Decision | Recommendation |
+| | Decision | State |
 |---|---|---|
-| **D9** | Which engagement types are actually sold, and in what volume? | **The single most useful answer.** It sets the Phase 1 slice |
-| **D1** | Does the platform store evidence content, or only the register? | **Register-only** for Phases 1–4 |
-| **D8** | Who authors the runbooks, starting when? | Name an owner per pillar **now** — this is the critical path |
-| **D6** | Hosting and data residency | India region assumed; needs confirmation early |
+| **D9** | Which engagement types are actually sold, and in what volume? | **Sleuth is supplying these.** Everything downstream waits on it |
+| ~~D1~~ | Evidence content storage | **Closed by Rule 3 — register-only** |
+| **D8** | Who authors and validates the runbooks, starting when? | Open. Name an SME per pillar — this is the critical path |
+| **D6** | Hosting and data residency | Open. India assumed; confirm early |
 
-Plus **NC-09 to NC-15**, which are questions for qualified legal counsel and several of which
-change the forensic report format.
+Plus **NC-26 to NC-32**, newly raised by the constraints — chiefly: who the validating SMEs are
+(Rule 1 is inert without named people), where Sleuth actually holds evidence today (the register's
+vocabulary must match reality), and whether contemporaneous records are referenced like all other
+evidence or attached.
+
+**NC-09 to NC-15** remain questions for qualified legal counsel; several change the forensic report
+format.
+
+## What happens when the engagement types arrive
+
+Per [`docs/19`](docs/19-engagement-type-specification.md) §5: reconcile against the proposed 41
+(superseded, not merged) → **re-test the four archetypes against the real list** → re-derive the
+common lifecycle → populate one Engagement Type Specification per type → update all sixteen
+architecture areas → publish the gap register as the SME work queue.
+
+The archetypes are the load-bearing abstraction here and were inferred from marketing copy. Sleuth's
+actual catalogue is the first real test of whether they hold; a fifth archetype is a genuine possible
+outcome and would be the right answer rather than a setback.
 
 ---
 

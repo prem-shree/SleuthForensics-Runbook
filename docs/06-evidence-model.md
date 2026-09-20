@@ -1,5 +1,16 @@
 # 06 — Evidence Model, Chain of Custody & Disposition
 
+> **Status — DRAFT / NEEDS SME VALIDATION.** Per Rule 1 of [`17-governing-constraints.md`](17-governing-constraints.md), nothing in this document is
+> confirmed Sleuth practice. Procedures, tools, legal requirements and operational rules here are
+> proposals for SME review, not internal SOP. Content drawn from the public website is
+> `SITE-SUGGESTED` and carries no authority over internal method (Rule 6). Gaps are named rather
+> than filled (Rule 2). Validation vocabulary: [`18-content-provenance-and-validation.md`](18-content-provenance-and-validation.md).
+>
+> **Rule 3 settles the open question.** Register-only is now the design, not a recommendation.
+> The platform records evidence metadata, hashes, provenance, custody, access history and
+> disposition. It does **not** hold client evidence content, and no upload path is built.
+
+
 > "Evidence over assumption. Every finding is supported by evidence." — sleuthforensics.in/about
 >
 > The platform's job is to make that statement *structurally true* rather than aspirational.
@@ -50,7 +61,7 @@ Reading the ladder upward from any sentence in a delivered report to the physica
 
 ### 1.1 An important scoping consequence
 
-Only L1 and L2 are large binary objects. L3–L5 are mostly structured data and modest files. **The platform does not need to store forensic images to deliver most of this value** — it needs to *register* them, hash them, and track their custody and location. See Decision D1 in `15-assumptions-and-open-questions.md`; the recommendation is register-first, managed-storage later.
+Only L1 and L2 are large binary objects. L3–L5 are mostly structured data and modest files. **The platform does not need to store forensic images to deliver most of this value** — it needs to *register* them, hash them, and track their custody and location. **Rule 3 settles this: register-only.** The platform stores no evidence content, and no upload path is built. `storage_location` points outward — to Sleuth's lab storage, evidence safe or medium — and is a reference, never an upload target.
 
 ---
 

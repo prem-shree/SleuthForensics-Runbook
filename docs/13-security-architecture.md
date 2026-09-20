@@ -1,5 +1,15 @@
 # 13 — Security Architecture
 
+> **Status — DRAFT / NEEDS SME VALIDATION.** Per Rule 1 of [`17-governing-constraints.md`](17-governing-constraints.md), nothing in this document is
+> confirmed Sleuth practice. Procedures, tools, legal requirements and operational rules here are
+> proposals for SME review, not internal SOP. Content drawn from the public website is
+> `SITE-SUGGESTED` and carries no authority over internal method (Rule 6). Gaps are named rather
+> than filled (Rule 2). Validation vocabulary: [`18-content-provenance-and-validation.md`](18-content-provenance-and-validation.md).
+>
+> **§6 is now a hard constraint (Rule 4), not a recommendation.** There is no field, anywhere in
+> the schema, typed to hold a secret.
+
+
 > This platform holds, in one place: every client's scope and known weaknesses, live incident details, forensic evidence, and unreleased findings. It is a higher-value target than most of the systems Sleuth is engaged to assess.
 >
 > That is the design premise. A compromise here is not an outage — it is a breach of every client simultaneously, and it would end the firm.
@@ -56,7 +66,10 @@ Per `02-users-and-roles.md`: `Role capability ∧ Engagement membership ∧ Obje
 - Retention aligned to the longest applicable obligation *(Needs Confirmation — Decision D7)*.
 - Engagement-scoped audit views are available to the Engagement Manager, because "who touched this engagement" is an operational question, not only a forensic one.
 
-## 6. Secrets — and a firm recommendation
+## 6. Secrets — a hard constraint
+
+> **Rule 4 (binding).** No client credentials, secrets, API keys, passwords, private keys or similar
+> access material in the platform. There is no field, anywhere in the schema, typed to hold one.
 
 **The platform must not become a client credential store.**
 

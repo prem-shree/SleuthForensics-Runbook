@@ -1,5 +1,15 @@
 # 05 — Client Information & Questionnaire Architecture
 
+> **Status — DRAFT / NEEDS SME VALIDATION.** Per Rule 1 of [`17-governing-constraints.md`](17-governing-constraints.md), nothing in this document is
+> confirmed Sleuth practice. Procedures, tools, legal requirements and operational rules here are
+> proposals for SME review, not internal SOP. Content drawn from the public website is
+> `SITE-SUGGESTED` and carries no authority over internal method (Rule 6). Gaps are named rather
+> than filled (Rule 2). Validation vocabulary: [`18-content-provenance-and-validation.md`](18-content-provenance-and-validation.md).
+>
+> **Rule 4 applies throughout.** Questions establish *whether* access material exists and
+> *how it will be delivered* — never what it is.
+
+
 > The brief: *"The platform must not simply tell consultants what technical work to perform. It must also tell them what to ask the client."*
 
 This is the part most consultancies keep in someone's head, and it is where engagements are most often damaged before any technical work begins. A question not asked at intake becomes a limitation in the report.

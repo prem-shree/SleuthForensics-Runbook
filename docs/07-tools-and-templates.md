@@ -1,5 +1,16 @@
 # 07 — Tool Catalogue & Document Templates
 
+> **Status — DRAFT / NEEDS SME VALIDATION.** Per Rule 1 of [`17-governing-constraints.md`](17-governing-constraints.md), nothing in this document is
+> confirmed Sleuth practice. Procedures, tools, legal requirements and operational rules here are
+> proposals for SME review, not internal SOP. Content drawn from the public website is
+> `SITE-SUGGESTED` and carries no authority over internal method (Rule 6). Gaps are named rather
+> than filled (Rule 2). Validation vocabulary: [`18-content-provenance-and-validation.md`](18-content-provenance-and-validation.md).
+>
+> **Rule 5 applies to Part B.** Every document template is a controlled draft. No workflow
+> inside the platform can set `Counsel-approved`; that status is set only on recorded evidence
+> of external legal review.
+
+
 ---
 
 ## PART A — Tool Catalogue

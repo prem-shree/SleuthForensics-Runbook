@@ -1,5 +1,13 @@
 # 10 — Data Model
 
+> **Status — `PROPOSED`, awaiting approval.** Structural and design proposals, not confirmed
+> Sleuth practice. See [`17-governing-constraints.md`](17-governing-constraints.md). Partly superseded on arrival of Sleuth's engagement-type list —
+> [`19-engagement-type-specification.md`](19-engagement-type-specification.md) §5.
+>
+> **Rules 3 and 4 constrain this schema.** No entity, field or relation holds client evidence
+> content or any client secret. `storage_location` is an outward reference only.
+
+
 ---
 
 ## 1. Two planes
@@ -182,7 +190,8 @@ Not asked for explicitly, but it shapes the phasing, so it is stated as a propos
 
 - **PostgreSQL.** The model is relational, constraint-heavy and audit-critical. Referential integrity is a feature here, not overhead. Row-level security supports engagement scoping at the database rather than only in application code. JSONB covers the genuinely variable parts (questionnaire answers, condition results).
 - **Server-rendered application with targeted interactivity.** Dense tables, forms, print-quality output and strong URL semantics. A single-page framework buys little here and costs offline-state complexity in an app whose correctness depends on the server's view of state.
-- **Evidence content in object storage, never in the database.** Per-engagement encryption keys, short-lived signed URLs, every access logged. *(And only once Decision D1 selects managed storage — Phase 3 at the earliest.)*
+- **No evidence content storage at all** (Rule 3). No object store, no upload path, no signed-download infrastructure. The evidence register holds metadata, hashes, provenance, custody, access history and disposition; `storage_location` is an outward reference to where Sleuth actually holds the item.
+- **No client secrets** (Rule 4). No entity or field is typed to hold a credential, key or password.
 - **Append-only audit via insert-only tables** with hash chaining and periodic external anchoring.
 - **Self-hosted, India region** pending confirmation of data residency requirements (Decision D6).
 

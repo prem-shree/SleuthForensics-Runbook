@@ -1,5 +1,11 @@
 # 00 — Research Findings: sleuthforensics.in
 
+> **Status — `SITE-DERIVED`.** Authoritative for the **public service catalogue only** (Rule 6, [`17-governing-constraints.md`](17-governing-constraints.md)): service names, pillar grouping, public descriptions, client-facing deliverable
+> language and the contact-form taxonomy. It is **not** evidence of internal SOP. The scope
+> extracts from "What We Examine / Test / Analyse" are `SITE-SUGGESTED` candidates for SME
+> review. Every design consequence drawn from them is **DRAFT — NEEDS SME VALIDATION**.
+
+
 **Status:** Complete. Source of truth for everything downstream.
 **Method:** Full retrieval of the services index, all 21 service detail pages, homepage, about, industries, contact, terms, privacy, and the site stylesheet.
 **Date of research:** 2026-09-20

@@ -1,5 +1,12 @@
 # 04 — Runbook Architecture: Common vs Service-Specific
 
+> **Status — DRAFT / NEEDS SME VALIDATION.** Per Rule 1 of [`17-governing-constraints.md`](17-governing-constraints.md), nothing in this document is
+> confirmed Sleuth practice. Procedures, tools, legal requirements and operational rules here are
+> proposals for SME review, not internal SOP. Content drawn from the public website is
+> `SITE-SUGGESTED` and carries no authority over internal method (Rule 6). Gaps are named rather
+> than filled (Rule 2). Validation vocabulary: [`18-content-provenance-and-validation.md`](18-content-provenance-and-validation.md).
+
+
 > The brief's constraint: **"Do NOT create 21 giant documents."**
 > The answer: a runbook is not a document. It is a **composition of versioned, reusable units**, rendered one step at a time.
 

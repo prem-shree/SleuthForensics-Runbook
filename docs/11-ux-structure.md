@@ -1,5 +1,10 @@
 # 11 — UX Structure
 
+> **Status — `PROPOSED`, awaiting approval.** Structural and design proposals, not confirmed
+> Sleuth practice. See [`17-governing-constraints.md`](17-governing-constraints.md). Partly superseded on arrival of Sleuth's engagement-type list —
+> [`19-engagement-type-specification.md`](19-engagement-type-specification.md) §5.
+
+
 Every screen below is worked through the brief's six questions before any layout is proposed: **Message · User · Context · Priority · Risk · UI**.
 
 ---

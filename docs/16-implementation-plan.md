@@ -1,5 +1,16 @@
 # 16 — Phased Implementation Plan
 
+**Rule 7: no implementation begins until Sleuth approves the revised architecture.** The phasing below
+is a plan, not a schedule in progress.
+
+> **Status — `PROPOSED`, awaiting approval.** Structural and design proposals, not confirmed
+> Sleuth practice. See [`17-governing-constraints.md`](17-governing-constraints.md). Partly superseded on arrival of Sleuth's engagement-type list —
+> [`19-engagement-type-specification.md`](19-engagement-type-specification.md) §5.
+>
+> **Phase 3 scope is reduced by Rule 3** — the evidence *register*, custody and disposition are
+> built; no evidence storage subsystem, no upload path, no signed-download infrastructure.
+
+
 ---
 
 ## 1. Two tracks, and which one is actually critical
@@ -43,7 +54,7 @@ Findings register with severity, rationale and calibration. Evidence↔finding l
 ### Phase 3 — Evidence and custody core · ~6–8 weeks
 Evidence register with the L0–L5 provenance ladder. Hashing and verification with immediate match feedback. Custody event stream with gap detection. Access history. Custody Gate. Evidence Integrity Gate. Disposition workflow with witness requirement and certificate generation. Mobile evidence-capture surface. Evidence Register and custody Excel exports.
 
-Register-only, per Decision D1.
+Register-only, per **Rule 3** — the register, custody and disposition are built; no evidence storage subsystem, no upload path, no signed-download infrastructure. This materially reduces Phase 3's scope against the original estimate.
 
 *Exit:* A3 work is possible. This is the subsystem that makes the platform specifically a *forensics* platform rather than a workflow tool.
 
@@ -130,7 +141,7 @@ MILESTONE        ▲                  ▲              ▲             ▲
 | Forensic analysis capability | The platform records and governs; it does not replace the examiner's toolkit (`06-evidence-model.md` §7) |
 | Time tracking and billing | Decision D4 — changes the product's character; integrate instead |
 | Client portal | Decision D2 — a seam, not a Phase 1 feature |
-| Evidence content storage | Decision D1 — register-first; revisit at Phase 5 |
+| Evidence content storage | **Rule 3** — register-only. Not revisited without Sleuth reopening it |
 | Automated scanning or tool orchestration | Different product. The catalogue references tools; it does not run them |
 | AI assistance | Not ruled out, but not now. On a platform whose entire value is evidentiary defensibility, generated content needs a much clearer provenance story before it goes anywhere near a finding or a report |
 | Multi-tenancy | Single firm. Do not build for a market that does not exist yet |
@@ -140,6 +151,6 @@ MILESTONE        ▲                  ▲              ▲             ▲
 ## 6. The first thing to do after this review
 
 1. Answer **D9** — which engagement types Sleuth actually sells, and in what volume. It determines the Phase 1 slice, and everything sequences from there.
-2. Answer **D1** (evidence storage) and **D6** (hosting/residency) — both constrain infrastructure and are expensive to change later.
+2. Answer **D6** (hosting/residency) — it constrains infrastructure and is expensive to change later. *(D1 is closed by Rule 3.)*
 3. Name **Runbook Authors** per pillar (D8) and start Wave 0. This can begin immediately and in parallel with everything else; it is the critical path.
 4. Confirm the legal questions **NC-09 to NC-15** with qualified counsel. Several change the forensic report format, and it is far cheaper to know now.
