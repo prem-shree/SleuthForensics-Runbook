@@ -13,8 +13,12 @@ scope, hunt hypothesis library, malware analysis environment, OT passive observa
 named owner's sign-off (safeguarding, red team techniques), 1 awaiting counsel (expert reports and
 electronic-record certificates).
 
-**Still 0% SME-validated — that is now the real constraint**, and it needs named validators per
-pillar before it can move.
+**14 of 20 engagement types now carry no blocking placeholder.** The six that do are
+`SF-A3-IRE` · `SF-A3-CTH` · `SF-A3-MAL` · `SF-A1-OTA` · `SF-A3-SPY` · `SF-A3-DFE` — five of them
+investigation work, clustered exactly where Sleuth's own expertise is irreplaceable.
+
+**Still 0% SME-validated — that is the real constraint**, and it needs named validators per pillar
+before it can move.
 
 Seven governing constraints issued by Sleuth on 2026-09-20 are **binding** on all work here:
 see [`docs/17-governing-constraints.md`](docs/17-governing-constraints.md). In short — everything
@@ -112,6 +116,12 @@ neutrals, Inter and IBM Plex Mono, flat, no gradients. The site's own stylesheet
 | [30 — Decisions Needed](docs/30-decisions-needed.md) | Plain English, with a recommendation for each |
 | **[31 — Confirmed Decisions](docs/31-confirmed-decisions.md)** | **What Sleuth confirmed, what it closed, and what it did not** |
 | **[32 — Operating Policies](docs/32-operating-policies.md)** | **Intrusiveness ceiling · severity · safeguarding · red team · standards** |
+| [33 — Questionnaire Instruments](docs/33-questionnaire-instruments.md) | 368 questions across 20 types; ~60% inherited |
+| [34 — Report Templates](docs/34-report-templates.md) | 20 templates; ~65% generated from records |
+| [35 — Decision Trees](docs/35-decision-trees.md) | 16 trees, with recorded traversal |
+| [36 — Tool Capability Taxonomy](docs/36-tool-capability-taxonomy.md) | 97 vendor-neutral capabilities; catalogue ships empty |
+| [37 — Data Schema](docs/37-data-schema.md) | 61 tables, 15 enforced invariants, implementation-ready |
+| **[38 — Placeholder Register](docs/38-placeholder-register.md)** | **17 defaults applied · 5 shapes · 7 blocking · 5 facts** |
 
 ---
 
