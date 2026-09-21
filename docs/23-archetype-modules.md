@@ -187,12 +187,15 @@ standing authorisation cannot quietly run for years — the failure mode this ar
 | Procedures specified | 11 | 15 | 15 | 9 |
 | `SME-VALIDATED` | 0 | 0 | 0 | 0 |
 | `DRAFT` | 11 | 15 | 15 | 9 |
-| Blocking `GAP`s | 1 | 1 | 0 | 1 |
+| Blocking `GAP`s | 0 | 0 | 0 | 0 |
 
 **Blocking gaps at archetype level:**
 
-| Gap | Consequence |
+| Gap | Status |
 |---|---|
-| `A1-06` maturity scale not defined | Ratings are not comparable across engagements or over time until Sleuth chooses one |
-| `A2-09` intrusiveness ceiling not defined | An analyst cannot be told "stop at proof of access" without a definition of proof of access that Sleuth stands behind. **This is the most important single gap in the current design** |
-| `A4-02` collection cadence not defined | Cycle scheduling is unspecified |
+| `A1-06` maturity scale | ✓ **CLOSED 2026-09-21** — five-level NIST CSF-aligned scale, `32` §9 |
+| `A2-09` intrusiveness ceiling | ✓ **CLOSED 2026-09-21** — three levels, default *Validate safely*, `32` §1. *Was the largest gap in the design* |
+| `A4-02` collection cadence | ✓ **CLOSED 2026-09-21** — `32` §11 |
+
+**No blocking gaps remain at archetype level.** Archetype procedures remain `DRAFT — NEEDS SME
+VALIDATION`; policy is settled, technical validation is not.

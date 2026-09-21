@@ -67,7 +67,7 @@ whether a lighter "progress review" product should exist.
 
 ### §16 Closure `[CORE]` no delta.
 
-**`[GAP]` blocking:** the maturity scale (`A1-06`). **`[GAP]` non-blocking:** the domain set for `SPA-04`.
+**`[GAP]` maturity scale — ✓ **CLOSED 2026-09-21**** (`32` §9). **`[GAP]` non-blocking:** the domain set for `SPA-04`.
 
 ---
 
@@ -178,8 +178,10 @@ steps · architecture recommendations *(`SITE-DERIVED` language)*.
 Re-extraction and comparison after remediation. **Recommended as standard** — it is cheap and the
 client values it. **Needs Sleuth Confirmation.**
 
-**`[GAP]` blocking per pack:** the benchmark Sleuth adopts (CIS? vendor? Sleuth baseline?) and the
-extraction method. **This is the single largest authoring item in A1.**
+**`[GAP]` benchmark source — ✓ **CLOSED 2026-09-21**:** **CIS Benchmarks** baseline, vendor guidance where CIS has no
+coverage (`32` §9). **Now authoring work rather than a decision** — each pack's control set and
+extraction method still needs writing and SME validation. **This remains the single largest authoring
+item in A1.**
 
 ---
 
@@ -273,7 +275,10 @@ Maturity scorecard · log source coverage analysis · **detection coverage map a
 alert quality analysis · process recommendations · SIEM optimisation recommendations · detection
 rule library or improvements *(`SITE-DERIVED`)*.
 
-**`[GAP]` blocking:** the atomic test set and safety rules for `SOA-07`.
+**Detection validation in scope — ✓ **CLOSED 2026-09-21**** (B7). Note it carries a Letter of Authorisation requirement
+into an otherwise non-intrusive engagement. Intrusiveness is L1/L2-equivalent: telemetry without real
+impact (`32` §1).
+**`[GAP]` remaining, non-blocking:** the atomic test set itself — authoring work for an SME.
 
 ---
 

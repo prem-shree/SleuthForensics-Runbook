@@ -76,10 +76,11 @@ Each cycle validates the last. Coverage review per `A4-08`.
 **None while the contract runs.** On contract end: final cycle report · monitoring withdrawn and
 confirmed · retained snapshots dispositioned · standing authorisation formally ended.
 
-**`[GAP]` blocking:** cycle cadence and alert-severity model — **Needs Sleuth Confirmation**, as both
-are commercial as much as technical decisions.
-**`[GAP]` blocking:** whether Sleuth performs takedowns *(NC-17)*. It changes the deliverable and
-introduces a third-party interaction the current design does not model.
+**`[GAP]` cycle cadence and alert severity — ✓ **CLOSED 2026-09-21**:** continuous discovery · weekly delta · monthly
+report · quarterly coverage review; alert response Critical immediate / High 24h / Medium-Low in cycle
+(`32` §11).
+**`[GAP]` takedowns — ✓ **CLOSED 2026-09-21**: not offered.** `SF-A4-ASM` reports and advises on the takedown route; it
+does not pursue takedowns on the client's behalf (`32` §8).
 
 ---
 
@@ -150,9 +151,9 @@ On retainer end: handover pack delivered · access revoked · advisory record cl
 confirms transition of ownership.
 
 **`[GAP]` non-blocking:** board reporting pack format.
-**`[GAP]` blocking:** Sleuth's independence policy where it provides both vCISO and assessment
-services to the same client. **This is a professional-ethics decision for Sleuth, and it is the one
-I would resolve before selling both to the same client.**
+**`[GAP]` independence policy — ✓ **CLOSED 2026-09-21**:** a Sleuth-supplied vCISO may not authorise Sleuth's own testing
+at that client; an independent client-side signatory is required, enforced on the Authorisation Gate
+(`32` §7).
 
 ---
 
@@ -164,4 +165,4 @@ I would resolve before selling both to the same client.**
 | Cycle | Configurable *(gap)* | Monthly/quarterly *(assumption)* |
 | Deliverable | Cycle report + alerts | Board reports + advisory |
 | Distinct risk | Alert fatigue; silent coverage lapse | Independence conflict; ownership ambiguity |
-| Blocking gaps | 2 | 1 |
+| Blocking gaps | 0 | 0 |

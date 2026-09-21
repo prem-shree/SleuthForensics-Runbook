@@ -99,10 +99,11 @@ Post-incident review · eradication verification after recovery · improvement e
 Plus: confirm any Sleuth-provided monitoring is withdrawn · confirm IOCs were handed over · confirm
 the client's own preservation obligations are understood before Sleuth's involvement ends.
 
-**`[GAP]` blocking:** triage collection scope — what Sleuth collects first, from which systems, in
-what order. **This is the single most operationally important gap in A3 and is genuinely
-Sleuth-specific: it depends on their tooling and their responders' judgement.**
-**`[GAP]` blocking:** Sleuth's position on ransom-payment advice *(policy, not technical)*.
+**`[GAP]` ransom-payment position — ✓ **CLOSED 2026-09-21**:** Sleuth supplies facts; it does not advise on payment,
+negotiate or facilitate (`32` §6).
+**`[GAP]` BLOCKING — triage collection scope:** what Sleuth collects first, from which systems, in
+what order. **Genuinely Sleuth-specific — it depends on their tooling and their responders'
+judgement, and it is now the single most operationally important remaining gap in the whole design.**
 
 ---
 
@@ -159,9 +160,10 @@ artefact analysis · executive summary and conclusions · recommendations where 
 Device return with signed acknowledgement, or retention under legal hold with a review date.
 ⊗ **Closure is blocked until every device is dispositioned.**
 
-**`[GAP]` blocking:** whether Sleuth produces expert reports for proceedings or gives testimony, and
-whether it issues certificates for electronic records. **This changes the report format materially
-and is a question for Sleuth and its counsel** *(NC-09)*.
+**`[GAP]` BLOCKING — expert reports, testimony and electronic-record certificates.** Sleuth agreed to
+obtain counsel's advice; the advice itself is outstanding. **Until it is answered, `SF-A3-DFE` can be
+built but should not be run for any matter heading toward proceedings** — the report format and
+custody documentation both depend on the answer *(NC-09 / E4)*.
 
 ---
 
@@ -221,11 +223,12 @@ where possible · timeline of suspected activity · remediation and hardening gu
 suggestions *(`SITE-DERIVED`)*. **Including explicit statement of acquisition completeness and its
 limits.**
 
-**`[GAP]` blocking:** Sleuth's **safeguarding policy for individual clients in domestic-abuse
-contexts** — what Sleuth does, what it will not do, and who it refers to. This is a duty-of-care
-question, not a technical one, and it should be settled before this service is run through the
-platform *(NC-15)*.
-**`[GAP]` blocking:** indicator sources and their currency for `SPY-07` — this field moves quickly.
+**`[GAP]` safeguarding position — ✓ **CLOSED 2026-09-21** in principle; drafted at `32` §3.** Still requires a **named
+Sleuth owner**, **counsel review**, and **a referral list of appropriate support organisations in
+India** — which I will not invent, because a wrong referral in this context is worse than none.
+**Until those three exist, this service should not run through the platform.**
+**`[GAP]` non-blocking:** indicator sources and their currency for `SPY-07` — better maintained as a
+living reference than as runbook text.
 
 ---
 
@@ -268,8 +271,9 @@ Assessment report with findings and evidence · IOCs identified · **threat hunt
 methodology documentation** · coverage statement · detection improvement recommendations ·
 escalation record if applicable *(`SITE-DERIVED`)*.
 
-**`[GAP]` blocking:** the hunt hypothesis library and the standard sweep set — genuinely
-Sleuth-specific, dependent on their tooling and threat intelligence sources.
+**`[GAP]` BLOCKING — hunt hypothesis library and standard sweep set.** Genuinely Sleuth-specific:
+dependent on their telemetry access, tooling and intelligence sources. Cannot be drafted from general
+practice.
 
 ---
 
@@ -322,5 +326,5 @@ recommendations *(`SITE-DERIVED`)*.
 Sample disposition — retained under a stated policy, or destroyed with certificate.
 ⊗ Analysis environment sanitised and confirmed.
 
-**`[GAP]` blocking:** the isolated analysis environment specification and its network policy —
-Sleuth-specific infrastructure, and getting it wrong risks Sleuth's own network.
+**`[GAP]` BLOCKING — isolated analysis environment specification and network policy.**
+Sleuth-specific infrastructure; getting it wrong risks Sleuth's own network.

@@ -276,5 +276,5 @@ either the gate is wrong or the process is under strain; both are worth knowing.
 | Non-overridable gates | 2 *(Custody, Release)* |
 | `SME-VALIDATED` | **0** |
 
-**`[GAP]` non-blocking:** threshold values — how long a blocked item may age before escalating, and
-how long an override may run. **Needs Sleuth Confirmation.**
+**`[GAP]` thresholds — ✓ **CLOSED 2026-09-21**:** blocked item escalates at **3 business days**; gate override maximum
+**14 days** then the gate re-blocks; emergency ratification **24 hours** (`32` §11).

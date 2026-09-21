@@ -74,8 +74,9 @@ impact · prioritised remediation · executive summary · **retest support** *(a
 **In scope by default** — the website promises it for VAPT. Retest only remediated findings; new
 findings discovered during retest are reported but flagged as out of the original scope.
 
-**`[GAP]` blocking:** intrusiveness ceiling definition *(inherited from `A2-09` — the most important
-gap in the design)*. **`[GAP]` non-blocking:** wireless physical-boundary procedure.
+**`[GAP]` intrusiveness ceiling — ✓ **CLOSED 2026-09-21**.** Default **Level 2 Validate safely**; Level 3 available with
+RoE authorisation; VA mode is Level 1 (`32` §1).
+**`[GAP]` non-blocking:** wireless physical-boundary procedure.
 
 ---
 
@@ -123,8 +124,8 @@ Vulnerability report with evidence and **reproduction steps** · risk ratings wi
 
 ### §15 Retest In scope by default — promised on the site.
 
-**`[GAP]` non-blocking:** whether Sleuth tests against a named standard baseline (OWASP ASVS level,
-WSTG coverage) and to what depth. **Needs Sleuth Confirmation** — it affects what "complete" means.
+**`[GAP]` testing standard and depth — ✓ **CLOSED 2026-09-21**:** **OWASP WSTG** for coverage, **ASVS Level 2** as
+default depth (`32` §9). Intrusiveness **Level 2**.
 
 ---
 
@@ -162,8 +163,8 @@ requirement agreed in advance**.
 Platform-specific findings · risk ratings aligned with **industry mobile security standards** ·
 per-platform developer remediation guidance · executive summary *(`SITE-DERIVED`)*.
 
-**`[GAP]` non-blocking:** which mobile standard Sleuth aligns to. The site says "industry mobile
-security standards" without naming one — **Needs Sleuth Confirmation** *(OWASP MASVS is the common choice)*.
+**`[GAP]` mobile standard — ✓ **CLOSED 2026-09-21**: OWASP MASVS** (`32` §9). Intrusiveness **Level 2**.
+*(Worth reconciling the website's unnamed "industry mobile security standards" with this.)*
 
 ---
 
@@ -242,9 +243,9 @@ relationships routinely lead somewhere the client did not think to mention.
 Attack paths with evidence · **privilege escalation analysis with visual path mapping** ·
 configuration hardening recommendations · prioritised roadmap *(`SITE-DERIVED`)*.
 
-**`[GAP]` blocking:** how far path validation may go before it becomes disruptive — a specific
-instance of the intrusiveness-ceiling gap, and acute here because validating a path to domain admin
-means *becoming* domain admin.
+**`[GAP]` path validation depth — ✓ **CLOSED 2026-09-21**.** Default **Level 2**; **validation of a path to domain admin
+is Level 3 and requires explicit RoE authorisation naming that ceiling** — because proving the path
+means becoming domain admin (`32` §1).
 
 ---
 
@@ -295,8 +296,9 @@ response improvement recommendations · technical debrief · executive summary *
 `RED-10` is a Closure Gate condition with **individual verification per artefact**. A forgotten red
 team implant is a genuine and recurring industry failure.
 
-**`[GAP]` blocking:** permitted TTP set and the persistence mechanisms Sleuth will and will not use.
-**This must come from Sleuth — it is a risk-appetite decision, not a technical one.**
+**`[GAP]` permitted techniques — ✓ **CLOSED 2026-09-21** in principle; baseline drafted at `32` §5 and awaiting a named
+owner's sign-off.** Intrusiveness **Level 3, mandatory**. Persistence requires explicit per-engagement
+approval and every mechanism is inventoried at deployment for individually verified removal.
 
 ---
 
@@ -341,5 +343,6 @@ effectiveness · process gaps · awareness recommendations.
 > engagement, never a reporting decision afterwards. Recommended position: decline.**
 > **Needs Sleuth Confirmation.**
 
-**`[GAP]` blocking:** Sleuth's policy on credential capture and on naming individuals. Both are
-policy decisions only Sleuth can make.
+**`[GAP]` credential capture and individual naming — ✓ **CLOSED 2026-09-21**: no to both** (`32` §4). Credentials are
+never captured or stored — only the fact of submission. Reporting is aggregate; no individual is
+ever named, for any client, at any severity.

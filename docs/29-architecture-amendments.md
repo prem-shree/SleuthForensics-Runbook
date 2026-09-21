@@ -32,11 +32,9 @@ One scale across all three kinds, so a client with several engagement types gets
 `Critical · High · Medium · Low · Informational`, with **written rationale mandatory** and CVSS
 optional and supplementary for A2.
 
-> **`[GAP]` blocking.** Sleuth's severity definitions — what makes something Critical rather than
-> High *for this firm*. Without them, calibration (`08` §1.1) has nothing to calibrate against.
-> **Needs Sleuth Confirmation.** My recommendation: define it by *business consequence* rather than
-> technical severity, because that is how the site positions its reporting ("risk-rated vulnerabilities
-> with business impact context").
+> **`[GAP]` severity definitions — ✓ **CLOSED 2026-09-21**.** Defined by **business consequence**, not technical
+> severity, with a five-level scale and anchor rules at `32` §2. Two clients with the identical
+> technical flaw may legitimately receive different severities; the written rationale must say why.
 
 ---
 
