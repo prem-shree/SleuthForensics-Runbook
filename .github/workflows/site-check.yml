@@ -1,0 +1,41 @@
+# Fails if the committed site is out of date with docs/.
+#
+# The built HTML is committed so the site can be served straight from the
+# branch. That only works if it is regenerated whenever a document changes,
+# so this check makes a stale build visible rather than silent.
+
+name: Site build is current
+
+on:
+  push:
+    paths:
+      - "docs/**"
+      - "README.md"
+      - "tools/build_site.py"
+  pull_request:
+    paths:
+      - "docs/**"
+      - "README.md"
+      - "tools/build_site.py"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild
+        run: python3 tools/build_site.py
+      - name: Committed output must match docs/
+        run: |
+          if ! git diff --quiet; then
+            echo "::error::The committed site is stale. Run: python3 tools/build_site.py"
+            git diff --stat
+            exit 1
+          fi
+          echo "Site is current."

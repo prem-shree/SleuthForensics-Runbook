@@ -1,14 +1,17 @@
-name: Build and deploy documentation site
+# Deploys the documentation site to GitHub Pages.
+#
+# This runs on demand only. GitHub Pages must be enabled once by a repository
+# admin before it can succeed — the workflow token is not permitted to create a
+# Pages site itself.
+#
+#   Settings -> Pages -> Source: "GitHub Actions", then run this workflow.
+#
+# If Pages is instead set to "Deploy from a branch" (root), nothing here is
+# needed: the built site is committed and is served directly.
+
+name: Deploy documentation site to Pages
 
 on:
-  push:
-    branches: ["**"]
-    paths:
-      - "docs/**"
-      - "README.md"
-      - "assets/**"
-      - "tools/build_site.py"
-      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:

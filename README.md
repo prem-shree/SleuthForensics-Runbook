@@ -91,8 +91,13 @@ JavaScript. Rebuild after editing any document:
 python3 tools/build_site.py
 ```
 
-Generated output (`index.html`, `p/`, `assets/site.css` is hand-written, `search-index.json`) is
-committed so the site can be served straight from the branch.
+Generated output (`index.html`, `p/`, `search-index.json`) is committed so the site can be served
+straight from the branch; `assets/` is hand-written. A CI check fails if the committed build is stale.
+
+**To publish:** Settings → Pages → Source → *Deploy from a branch* → branch
+`claude/sleuth-forensics-platform-design-ifiv1a`, folder `/ (root)`. Nothing else is required.
+Alternatively set the source to *GitHub Actions* and run the "Deploy documentation site" workflow —
+GitHub does not permit a workflow token to enable Pages, so either way the one-time setting is manual.
 
 ## Read in this order
 
