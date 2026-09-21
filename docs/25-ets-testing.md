@@ -296,8 +296,8 @@ response improvement recommendations · technical debrief · executive summary *
 `RED-10` is a Closure Gate condition with **individual verification per artefact**. A forgotten red
 team implant is a genuine and recurring industry failure.
 
-**`[GAP]` permitted techniques — ✓ **CLOSED 2026-09-21** in principle; baseline drafted at `32` §5 and awaiting a named
-owner's sign-off.** Intrusiveness **Level 3, mandatory**. Persistence requires explicit per-engagement
+**`[GAP]` BLOCKING (sign-off) — permitted techniques.** Principle confirmed 2026-09-21; baseline
+drafted at `32` §5, awaiting a named owner's sign-off. Intrusiveness **Level 3, mandatory**. Persistence requires explicit per-engagement
 approval and every mechanism is inventoried at deployment for individually verified removal.
 
 ---

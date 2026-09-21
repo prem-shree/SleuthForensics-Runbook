@@ -2,9 +2,19 @@
 
 **Status: ARCHITECTURE IN PROGRESS. No application code has been written.**
 
-**20 engagement types** specified across 4 execution archetypes, covering all 21 public services.
-**109 procedures** specified (59 core + 50 archetype) plus service-specific procedures per type.
-**0% SME-validated · 21 blocking gaps** — see [`docs/30-decisions-needed.md`](docs/30-decisions-needed.md).
+**20 engagement types** across 4 execution archetypes, covering all 21 public services.
+**109 shared procedures** (59 core spine + 50 archetype) plus service-specific procedures per type.
+**17 policy decisions confirmed by Sleuth (2026-09-21)** — see
+[`docs/31-confirmed-decisions.md`](docs/31-confirmed-decisions.md) and
+[`docs/32-operating-policies.md`](docs/32-operating-policies.md).
+
+**Blocking gaps: 21 → 7.** All remaining ones need Sleuth specifically: 4 technical (incident triage
+scope, hunt hypothesis library, malware analysis environment, OT passive observation), 2 awaiting a
+named owner's sign-off (safeguarding, red team techniques), 1 awaiting counsel (expert reports and
+electronic-record certificates).
+
+**Still 0% SME-validated — that is now the real constraint**, and it needs named validators per
+pillar before it can move.
 
 Seven governing constraints issued by Sleuth on 2026-09-20 are **binding** on all work here:
 see [`docs/17-governing-constraints.md`](docs/17-governing-constraints.md). In short — everything
@@ -99,7 +109,9 @@ neutrals, Inter and IBM Plex Mono, flat, no gradients. The site's own stylesheet
 | [27 — ETS: Continuous](docs/27-ets-continuous.md) | 2 A4 engagement types, populated |
 | [28 — Checklists & Gates](docs/28-checklist-and-gate-architecture.md) | 7 gates, 63 conditions, 71% fact-evaluated |
 | [29 — Architecture Amendments](docs/29-architecture-amendments.md) | Deltas to findings, reporting, roles, data model, nav, UX, exports |
-| **[30 — Decisions Needed](docs/30-decisions-needed.md)** | **Plain English, with a recommendation for each** |
+| [30 — Decisions Needed](docs/30-decisions-needed.md) | Plain English, with a recommendation for each |
+| **[31 — Confirmed Decisions](docs/31-confirmed-decisions.md)** | **What Sleuth confirmed, what it closed, and what it did not** |
+| **[32 — Operating Policies](docs/32-operating-policies.md)** | **Intrusiveness ceiling · severity · safeguarding · red team · standards** |
 
 ---
 
@@ -107,17 +119,18 @@ neutrals, Inter and IBM Plex Mono, flat, no gradients. The site's own stylesheet
 
 Detail in [doc 15](docs/15-assumptions-and-open-questions.md). The four that matter most:
 
-| | Decision | State |
+| | Open item | State |
 |---|---|---|
-| **D9** | Which engagement types are actually sold, and in what volume? | **A catalogue of 20 is now recommended** (doc 21). Volumes still needed — they set authoring order |
+| **C2** | **Who validates methodology, per pillar** | **The critical path.** Rule 1 does nothing without named people, and nothing is SME-validated yet |
+| **C1** | Which of the 20 types are live, and annual volume | Sets runbook authoring order |
+| **C3** | Where evidence is physically held today | The register's vocabulary must match reality |
+| **C4** | Hosting and data residency | India assumed; confirm early |
+| **D** | Investigation vs security-testing revenue split | Proceeding on `SF-A2-IPT` first as a recorded assumption; reversible until Phase 1 |
+| ~~A1–A9, B1–B7~~ | Policy decisions | **All confirmed 2026-09-21** — docs 31, 32 |
 | ~~D1~~ | Evidence content storage | **Closed by Rule 3 — register-only** |
-| **D8** | Who authors and validates the runbooks, starting when? | Open. Name an SME per pillar — this is the critical path |
-| **D6** | Hosting and data residency | Open. India assumed; confirm early |
 
-Plus **NC-26 to NC-32**, newly raised by the constraints — chiefly: who the validating SMEs are
-(Rule 1 is inert without named people), where Sleuth actually holds evidence today (the register's
-vocabulary must match reality), and whether contemporaneous records are referenced like all other
-evidence or attached.
+Counsel matters **E1–E7** remain open and are not resolved by client acceptance. Rule 5 stands: no
+document template is counsel-approved, and no workflow inside the platform can make one so.
 
 **NC-09 to NC-15** remain questions for qualified legal counsel; several change the forensic report
 format.

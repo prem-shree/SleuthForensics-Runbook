@@ -223,7 +223,8 @@ where possible · timeline of suspected activity · remediation and hardening gu
 suggestions *(`SITE-DERIVED`)*. **Including explicit statement of acquisition completeness and its
 limits.**
 
-**`[GAP]` safeguarding position — ✓ **CLOSED 2026-09-21** in principle; drafted at `32` §3.** Still requires a **named
+**`[GAP]` BLOCKING (sign-off) — safeguarding position.** Principle confirmed 2026-09-21; drafted at
+`32` §3. Still requires a **named
 Sleuth owner**, **counsel review**, and **a referral list of appropriate support organisations in
 India** — which I will not invent, because a wrong referral in this context is worse than none.
 **Until those three exist, this service should not run through the platform.**
