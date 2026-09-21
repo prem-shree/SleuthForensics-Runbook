@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>03 — Engagement Lifecycle &amp; Gates — Sleuth Runbook Platform</title>
+<meta name="description" content="Engagement lifecycle">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Sleuth&nbsp;&middot;&nbsp;Runbook Platform</a>
+    <span class="badge">Design proposal &middot; not built</span>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Documents">
+    <div class="search-wrap">
+      <input type="search" id="q" placeholder="Search…" aria-label="Search documents" autocomplete="off">
+      <div id="results" class="results" hidden></div>
+    </div>
+    <div class="navgroup"><div class="navgroup-h">Start here</div><a class="" href="../p/30-decisions-needed.html"><span class="num">30</span>Decisions needed</a><a class="" href="../p/31-confirmed-decisions.html"><span class="num">31</span>Confirmed decisions</a><a class="" href="../p/38-placeholder-register.html"><span class="num">38</span>Placeholder register</a></div><div class="navgroup"><div class="navgroup-h">Research &amp; catalogue</div><a class="" href="../p/00-research-findings.html"><span class="num">00</span>Research findings</a><a class="" href="../p/01-service-catalogue.html"><span class="num">01</span>Service catalogue v1</a><a class="" href="../p/21-engagement-catalogue-v2.html"><span class="num">21</span>Engagement catalogue v2</a></div><div class="navgroup"><div class="navgroup-h">Operating model</div><a class="" href="../p/02-users-and-roles.html"><span class="num">02</span>Users &amp; roles</a><a class="on" href="../p/03-engagement-lifecycle.html"><span class="num">03</span>Engagement lifecycle</a><a class="" href="../p/28-checklist-and-gate-architecture.html"><span class="num">28</span>Checklists &amp; gates</a><a class="" href="../p/35-decision-trees.html"><span class="num">35</span>Decision trees</a><a class="" href="../p/32-operating-policies.html"><span class="num">32</span>Operating policies</a></div><div class="navgroup"><div class="navgroup-h">Runbook architecture</div><a class="" href="../p/04-runbook-architecture.html"><span class="num">04</span>Runbook architecture</a><a class="" href="../p/19-engagement-type-specification.html"><span class="num">19</span>Engagement type spec</a><a class="" href="../p/20-shared-module-inheritance.html"><span class="num">20</span>Shared modules</a><a class="" href="../p/22-core-spine-specification.html"><span class="num">22</span>Core spine</a><a class="" href="../p/23-archetype-modules.html"><span class="num">23</span>Archetype modules</a></div><div class="navgroup"><div class="navgroup-h">Engagement types</div><a class="" href="../p/24-ets-assessment.html"><span class="num">24</span>ETS — Assessment</a><a class="" href="../p/25-ets-testing.html"><span class="num">25</span>ETS — Testing</a><a class="" href="../p/26-ets-investigation.html"><span class="num">26</span>ETS — Investigation</a><a class="" href="../p/27-ets-continuous.html"><span class="num">27</span>ETS — Continuous</a></div><div class="navgroup"><div class="navgroup-h">Client information &amp; output</div><a class="" href="../p/05-questionnaire-architecture.html"><span class="num">05</span>Questionnaire architecture</a><a class="" href="../p/33-questionnaire-instruments.html"><span class="num">33</span>Questionnaire instruments</a><a class="" href="../p/08-reporting-architecture.html"><span class="num">08</span>Findings &amp; reporting</a><a class="" href="../p/34-report-templates.html"><span class="num">34</span>Report templates</a><a class="" href="../p/14-excel-exports.html"><span class="num">14</span>Excel exports</a></div><div class="navgroup"><div class="navgroup-h">Evidence &amp; tools</div><a class="" href="../p/06-evidence-model.html"><span class="num">06</span>Evidence model</a><a class="" href="../p/07-tools-and-templates.html"><span class="num">07</span>Tools &amp; templates</a><a class="" href="../p/36-tool-capability-taxonomy.html"><span class="num">36</span>Tool capabilities</a></div><div class="navgroup"><div class="navgroup-h">Product &amp; architecture</div><a class="" href="../p/09-information-architecture.html"><span class="num">09</span>Information architecture</a><a class="" href="../p/11-ux-structure.html"><span class="num">11</span>UX structure</a><a class="" href="../p/12-visual-design-direction.html"><span class="num">12</span>Visual design direction</a><a class="" href="../p/10-data-model.html"><span class="num">10</span>Data model</a><a class="" href="../p/37-data-schema.html"><span class="num">37</span>Data schema</a><a class="" href="../p/39-api-and-permission-enforcement.html"><span class="num">39</span>API &amp; permissions</a><a class="" href="../p/40-build-and-operations.html"><span class="num">40</span>Build &amp; operations</a><a class="" href="../p/13-security-architecture.html"><span class="num">13</span>Security architecture</a></div><div class="navgroup"><div class="navgroup-h">Programme</div><a class="" href="../p/15-assumptions-and-open-questions.html"><span class="num">15</span>Assumptions &amp; questions</a><a class="" href="../p/16-implementation-plan.html"><span class="num">16</span>Implementation plan</a><a class="" href="../p/17-governing-constraints.html"><span class="num">17</span>Governing constraints</a><a class="" href="../p/18-content-provenance-and-validation.html"><span class="num">18</span>Provenance &amp; validation</a><a class="" href="../p/29-architecture-amendments.html"><span class="num">29</span>Architecture amendments</a></div>
+  </nav>
+  <main id="main" class="content">
+    <h1 id="03-engagement-lifecycle-gates">03 — Engagement Lifecycle &amp; Gates<a class="anchor" href="#03-engagement-lifecycle-gates" aria-label="Link to this section">#</a></h1>
+<blockquote><p><strong>Status — DRAFT / NEEDS SME VALIDATION.</strong> Per Rule 1 of <a href="17-governing-constraints.html" ><code>17-governing-constraints.md</code></a>, nothing in this document is confirmed Sleuth practice. Procedures, tools, legal requirements and operational rules here are proposals for SME review, not internal SOP. Content drawn from the public website is <code>SITE-SUGGESTED</code> and carries no authority over internal method (Rule 6). Gaps are named rather than filled (Rule 2). Validation vocabulary: <a href="18-content-provenance-and-validation.html" ><code>18-content-provenance-and-validation.md</code></a>.</p></blockquote>
+<hr>
+<h2 id="1-the-lifecycle-is-sleuths-own-published-method">1. The lifecycle is Sleuth's own published method<a class="anchor" href="#1-the-lifecycle-is-sleuths-own-published-method" aria-label="Link to this section">#</a></h2>
+<p>The homepage and about page both publish a six-step method: <strong>Understand → Examine → Analyse → Report → Improve → Validate</strong>.</p>
+<p>The platform's lifecycle <em>is</em> that method, wrapped at both ends with what the six steps do not cover: getting lawfully and commercially authorised to start, and properly finishing.</p>
+<div class="codewrap"><pre><code>┌─ PRE-ENGAGEMENT ──────────────┐ ┌─ SLEUTH'S PUBLISHED METHOD ─────────────────────────┐ ┌─ CLOSURE ─┐
+│                               │ │                                                     │ │           │
+│  0        1          2        │ │  3          4         5        6        7      8    │ │     9     │
+│ Enquiry  Qualify  Authorise   │ │ Understand Examine  Analyse  Report  Improve Validate│ │   Close   │
+│    &amp;        &amp;        &amp;        │ │                                                     │ │           │
+│  Triage  Contract   Scope     │ │                                                     │ │           │
+└───────────────────────────────┘ └─────────────────────────────────────────────────────┘ └───────────┘
+             ▲                                 ▲          ▲         ▲                            ▲
+        ╔════╧═════╗                      ╔════╧════╗ ╔═══╧════╗╔═══╧════╗                  ╔════╧════╗
+        ║   AUTH   ║                      ║READINESS║ ║EVIDENCE║║   QA   ║                  ║ CLOSURE ║
+        ║   GATE   ║                      ║  GATE   ║ ║INTEGRITY║║  GATE  ║                  ║  GATE   ║
+        ╚══════════╝                      ╚═════════╝ ╚════════╝╚════════╝                  ╚═════════╝
+                                                                     │
+                                                                ╔════╧════╗
+                                                                ║ RELEASE ║
+                                                                ║  GATE   ║
+                                                                ╚═════════╝</code></pre></div>
+<p>Report is split into <strong>Report</strong> (build + QA) and <strong>Deliver</strong> (release + acceptance) because they fail differently and therefore need different gates: a report can be technically sound but sent to the wrong recipient.</p>
+<hr>
+<h2 id="2-phase-by-phase">2. Phase by phase<a class="anchor" href="#2-phase-by-phase" aria-label="Link to this section">#</a></h2>
+<h3 id="phase-0-enquiry-triage">Phase 0 — Enquiry &amp; Triage<a class="anchor" href="#phase-0-enquiry-triage" aria-label="Link to this section">#</a></h3>
+<p><strong>Ends when:</strong> qualified in or out.</p>
+<p>Mirrors the live contact form (research §4.3): name, company, work email, phone, <strong>Area of Interest</strong> (21 services + Other/Not Sure), <strong>Urgency</strong> (4 values), message. Stated commitment: response within one business day.</p>
+<ul><li>If Area of Interest = "Other / Not Sure" → run the <strong>service-selection decision tree</strong> rather than guessing.</li><li>If Urgency = <strong>"Urgent — Active Incident or Immediate Need"</strong> → immediately branch to the emergency path (§4). Triage begins before contracting completes.</li><li>Conflict check and client identity check happen here, before any confidential detail is taken.</li></ul>
+<h3 id="phase-1-qualification-commercials">Phase 1 — Qualification &amp; Commercials<a class="anchor" href="#phase-1-qualification-commercials" aria-label="Link to this section">#</a></h3>
+<p><strong>Ends when:</strong> NDA and engagement agreement are executed. NDA → MSA (if a repeat client) → SOW. For <code>client_type = Individual</code>, a simplified single agreement replaces MSA/SOW. Commercial terms, team assignment, indicative dates.</p>
+<h3 id="phase-2-authorisation-scope">Phase 2 — Authorisation &amp; Scope<a class="anchor" href="#phase-2-authorisation-scope" aria-label="Link to this section">#</a></h3>
+<p><strong>Ends when:</strong> the <strong>Authorisation Gate</strong> passes. The most important phase in the system and the one most often compressed in practice. Letter of Authorisation with a named signatory and their authority to give it; scope definition (in-scope <em>and</em> explicitly out-of-scope); Rules of Engagement for A2; testing window; third-party authorisation where assets are not client-owned; emergency contacts on both sides.</p>
+<h3 id="phase-3-understand">Phase 3 — Understand<a class="anchor" href="#phase-3-understand" aria-label="Link to this section">#</a></h3>
+<p><strong>Ends when:</strong> the <strong>Readiness Gate</strong> passes. The service questionnaire is completed and reviewed. Prerequisites confirmed (access, credentials delivered, test accounts, point of contact available). Kickoff held. Runbook version <strong>pinned</strong> to the engagement. Team briefed on stop conditions and escalation contacts — before, not during.</p>
+<h3 id="phase-4-examine">Phase 4 — Examine<a class="anchor" href="#phase-4-examine" aria-label="Link to this section">#</a></h3>
+<p><strong>Ends when:</strong> all required procedures are complete, deferred with reason, or marked not-applicable with reason. Technical execution against the pinned runbook. Evidence captured as work happens, not reconstructed afterwards. Decision points recorded with who decided and why. Stop conditions live and visible throughout.</p>
+<h3 id="phase-5-analyse">Phase 5 — Analyse<a class="anchor" href="#phase-5-analyse" aria-label="Link to this section">#</a></h3>
+<p><strong>Ends when:</strong> the <strong>Evidence Integrity Gate</strong> passes and findings are drafted. Correlation, timeline construction, hypothesis testing, finding drafting. Every finding must reference at least one evidence record — this is "evidence over assumption" made structural rather than aspirational.</p>
+<h3 id="phase-6-report">Phase 6 — Report<a class="anchor" href="#phase-6-report" aria-label="Link to this section">#</a></h3>
+<p><strong>Ends when:</strong> the <strong>QA Gate</strong> passes. Report assembled from the service's report template. Technical review by someone who did not author the work. Severity moderation. Limitations section completed honestly — including what could <em>not</em> be tested and why.</p>
+<h3 id="phase-7-deliver">Phase 7 — Deliver<a class="anchor" href="#phase-7-deliver" aria-label="Link to this section">#</a></h3>
+<p><strong>Ends when:</strong> the <strong>Release Gate</strong> passes and delivery is acknowledged. Recipient list verified. Classification and watermarking applied. Delivery via the approved channel. Walkthrough session. Client acceptance recorded.</p>
+<h3 id="phase-8-improve">Phase 8 — Improve<a class="anchor" href="#phase-8-improve" aria-label="Link to this section">#</a></h3>
+<p><strong>Ends when:</strong> remediation guidance is delivered and, where in scope, client remediation is reported complete. Remediation items tracked as structured objects with owner and target date, not prose in a PDF. Clarification support. Re-prioritisation as the client's context changes.</p>
+<h3 id="phase-9-validate">Phase 9 — Validate<a class="anchor" href="#phase-9-validate" aria-label="Link to this section">#</a></h3>
+<p><strong>Ends when:</strong> retest is complete, or formally waived. Retest of remediated findings; each gets a verified outcome: <code>Resolved</code> / <code>Partially Resolved</code> / <code>Not Resolved</code> / <code>Risk Accepted</code> / <code>Unable to Verify</code>. A retest report or an addendum is issued. Only VAPT and Web/API Security promise retest on the website — whether it is standard elsewhere is <strong>Needs Confirmation</strong>.</p>
+<h3 id="phase-10-close">Phase 10 — Close<a class="anchor" href="#phase-10-close" aria-label="Link to this section">#</a></h3>
+<p><strong>Ends when:</strong> the <strong>Closure Gate</strong> passes. Evidence disposition executed (return, secure destruction, or retention under a documented policy with a review date). Client access revoked, test accounts disabled, any tester-created artefacts removed from client systems. Lessons learned captured into the Knowledge Base. Runbook improvement proposals raised against the runbook that was used.</p>
+<hr>
+<h2 id="3-the-gates">3. The gates<a class="anchor" href="#3-the-gates" aria-label="Link to this section">#</a></h2>
+<p>A gate is not a checkbox. It is a <strong>live evaluation of engagement state</strong>: a set of conditions the system can actually check, evaluated continuously, showing <code>BLOCKED</code> or <code>READY</code> with a specific reason for every unmet condition.</p>
+<p>The brief's own example is the model:</p>
+<div class="codewrap"><pre><code>╔══════════════════════════════════════════════════════════════╗
+║  AUTHORISATION GATE                             ● BLOCKED    ║
+╠══════════════════════════════════════════════════════════════╣
+║  ✓  NDA executed                    2026-09-02 · A. Rao      ║
+║  ✓  SOW executed                    2026-09-09 · A. Rao      ║
+║  ✕  Letter of Authorisation         Not received             ║
+║  ✓  Scope approved                  2026-09-11 · 14 assets   ║
+║  ✕  Rules of Engagement approved    Draft — awaiting client  ║
+║  ✓  Testing window agreed           22–26 Sep, 09:00–18:00   ║
+║  ✕  Third-party authorisation       2 assets on AWS —        ║
+║                                     provider check pending   ║
+╠══════════════════════════════════════════════════════════════╣
+║  3 conditions unmet. Technical execution cannot begin.       ║
+║  [ Request override ]          Requires Management approval  ║
+╚══════════════════════════════════════════════════════════════╝</code></pre></div>
+<h3 id="gate-definitions">Gate definitions<a class="anchor" href="#gate-definitions" aria-label="Link to this section">#</a></h3>
+<div class="tablewrap"><table><thead><tr><th>Gate</th><th>Blocks</th><th>Conditions</th><th>Who passes it</th></tr></thead><tbody><tr><td><strong>Authorisation</strong></td><td>Any technical execution (Phase 4)</td><td>NDA executed · Engagement agreement executed · LoA signed by verified authorised signatory · Scope approved with explicit out-of-scope list · RoE approved <em>(A2 only)</em> · Testing window agreed <em>(A2)</em> · Third-party authorisation obtained where assets are not client-owned · Emergency contacts recorded both sides</td><td>Engagement Manager</td></tr><tr><td><strong>Readiness</strong></td><td>Start of execution</td><td>Questionnaire complete (all required answered, or marked unavailable with reason) · Prerequisites confirmed · Access verified working · Runbook version pinned · Stop conditions acknowledged by every assigned team member · Tools for this engagement are Approved and validated</td><td>Engagement Manager</td></tr><tr><td><strong>Evidence Integrity</strong></td><td>Findings → Report (Phase 5→6)</td><td>Every evidence item has acquisition hash + algorithm · Verification hash recorded and matching · No custody gaps · Working copies derived from verified sources · Examiner recorded for each acquisition · Every finding references ≥1 evidence item</td><td>Reviewer</td></tr><tr><td><strong>QA</strong></td><td>Report → Delivery (Phase 6→7)</td><td>Technical review complete by a non-author · Every finding has severity + rationale + evidence · All required report sections complete · Scope statement matches approved scope · Limitations section completed · No open <code>Needs Review</code> items · No unresolved reviewer rejections</td><td>Reviewer</td></tr><tr><td><strong>Release</strong></td><td>Delivery to client</td><td>Recipient list approved by Engagement Manager · Recipients verified against client contact record · Classification applied · Watermark applied · Delivery channel approved · Report version frozen</td><td>Engagement Manager</td></tr><tr><td><strong>Closure</strong></td><td>Engagement → Closed</td><td>Client acceptance recorded · Retest complete or formally waived · Evidence disposition executed or scheduled with a date · Client access revoked · Test accounts disabled · Tester artefacts removed from client systems · Lessons learned captured · Invoicing complete</td><td>Engagement Manager</td></tr></tbody></table></div>
+<h3 id="gates-for-a1-a3-and-a4">Gates for A1, A3 and A4<a class="anchor" href="#gates-for-a1-a3-and-a4" aria-label="Link to this section">#</a></h3>
+<p>The six gates above are the full set for A2. Other archetypes use a subset, plus their own:</p>
+<ul><li><strong>A1</strong> — Authorisation Gate is lighter (no RoE, no testing window) but still requires the agreement and scope. No Evidence Integrity Gate in the forensic sense; instead an <strong>Evidence Sufficiency</strong> check: every maturity rating must cite the document, interview or observation supporting it. A maturity score with no source is the A1 equivalent of a finding with no evidence.</li><li><strong>A3</strong> — adds a <strong>Custody Gate</strong> at the point of acquisition (before any analysis touches an image): source write-protected, acquisition hash computed, verification hash matched, custody record opened. This gate sits <em>earlier</em> than the Evidence Integrity Gate and is unskippable, including on the emergency path.</li><li><strong>A4</strong> — has no Closure Gate (the contract continues). Instead each cycle has a <strong>Cycle Close</strong> checkpoint, and the <em>contract</em> has a periodic re-authorisation gate so a standing authorisation cannot quietly run for years.</li></ul>
+<h3 id="override-semantics">Override semantics<a class="anchor" href="#override-semantics" aria-label="Link to this section">#</a></h3>
+<p>Overrides exist because reality does. They are designed to be <em>possible, expensive and visible</em>:</p>
+<ul><li>Requested by the Engagement Manager, approved by Management. Never one person.</li><li>A written justification is mandatory and becomes part of the engagement record.</li><li><strong>Every override is time-boxed.</strong> It carries an expiry and a mandatory remediation task ("obtain the signed LoA by 2026-09-23"). When the clock runs out, the gate re-blocks.</li><li>The override appears on the engagement header, in the report's limitations section draft, on the Oversight dashboard, and in the audit log.</li><li><strong>The Custody Gate cannot be overridden.</strong> Acquiring evidence without an integrity record does not produce weaker evidence; it produces no evidence. There is no business justification that changes that, so the system does not offer the option.</li></ul>
+<hr>
+<h2 id="4-the-emergency-path">4. The emergency path<a class="anchor" href="#4-the-emergency-path" aria-label="Link to this section">#</a></h2>
+<p>The contact form's "Urgent — Active Incident or Immediate Need" is a real intake route, and an organisation whose servers are encrypting cannot wait for a contracting cycle. Modelling this honestly is better than pretending every engagement starts on a Monday.</p>
+<div class="codewrap"><pre><code>Enquiry (Urgent)
+   │
+   ├─► IMMEDIATE:  Emergency Authorisation record
+   │               · named client approver + their role + how identity was verified
+   │               · verbal/written authority scope — what Sleuth may and may not do
+   │               · timestamp, taken by
+   │               · auto-created RATIFICATION TASK, due in 24h, owner = Eng. Manager
+   │
+   ├─► Triage and CONTAINMENT ADVICE may begin
+   │   Forensic ACQUISITION may begin — Custody Gate still applies, un-overridable
+   │
+   ├─► BLOCKED until full authorisation:
+   │       · any active testing
+   │       · any change to client systems made by Sleuth
+   │       · any external communication on the client's behalf
+   │       · report delivery
+   │
+   └─► Ratification: NDA + agreement + written LoA executed retrospectively
+           │
+           ├─ done within 24h  → normal lifecycle resumes, override closes
+           └─ not done         → ESCALATE to Management; work pauses; the lapse is
+                                 recorded and appears in the report's limitations</code></pre></div>
+<p>The emergency path is deliberately narrow: it unblocks <em>understanding and preserving</em>, never <em>changing or disclosing</em>.</p>
+<hr>
+<h2 id="5-lifecycle-variation-by-archetype">5. Lifecycle variation by archetype<a class="anchor" href="#5-lifecycle-variation-by-archetype" aria-label="Link to this section">#</a></h2>
+<p>Same spine, different emphasis. This is the whole argument for four archetypes rather than 41 workflows.</p>
+<div class="tablewrap"><table><thead><tr><th>Phase</th><th>A1 Assessment</th><th>A2 Testing</th><th>A3 Investigation</th><th>A4 Continuous</th></tr></thead><tbody><tr><td>0 Enquiry</td><td>Standard</td><td>Standard</td><td><strong>Often urgent</strong></td><td>Contract-initiated</td></tr><tr><td>1 Commercials</td><td>Standard</td><td>Standard</td><td>May be <strong>retrospective</strong></td><td>Once, then dormant</td></tr><tr><td>2 Authorise</td><td>Agreement + scope</td><td><strong>+ LoA, RoE, window, 3rd-party</strong></td><td>Authority to investigate; data/device ownership; <strong>may be emergency</strong></td><td>Standing, <strong>re-authorised per period</strong></td></tr><tr><td>3 Understand</td><td>Framework selection, doc request</td><td>Asset confirmation, access, test accounts</td><td><strong>What happened? who touched it?</strong></td><td>Baseline carried forward from last cycle</td></tr><tr><td>4 Examine</td><td>Interviews, doc review, config review</td><td>Active testing in window</td><td><strong>Acquire → verify → preserve → analyse</strong></td><td>Scheduled collection</td></tr><tr><td>5 Analyse</td><td>Control maturity rating</td><td>Exploitability &amp; business impact</td><td><strong>Timeline &amp; hypothesis testing</strong></td><td>Delta vs previous cycle</td></tr><tr><td>6 Report</td><td>Scorecard + gap analysis</td><td>Findings register</td><td><strong>Narrative + timeline + inventory</strong></td><td>Cycle report</td></tr><tr><td>7 Deliver</td><td>Workshop</td><td>Debrief</td><td><strong>Often to legal/HR/board</strong></td><td>Automated + periodic briefing</td></tr><tr><td>8 Improve</td><td>Roadmap</td><td>Remediation guidance</td><td>Containment / hardening</td><td>Continuous recommendations</td></tr><tr><td>9 Validate</td><td>Re-assessment (often next year)</td><td><strong>Retest</strong></td><td>Verification of eradication</td><td>Next cycle <em>is</em> the validation</td></tr><tr><td>10 Close</td><td>Report accepted</td><td>Retest closed</td><td><strong>Evidence disposition — the critical step</strong></td><td>No closure; contract continues</td></tr></tbody></table></div>
+<hr>
+<h2 id="6-decision-points-stop-conditions-and-escalation">6. Decision points, stop conditions and escalation<a class="anchor" href="#6-decision-points-stop-conditions-and-escalation" aria-label="Link to this section">#</a></h2>
+<p>Every procedure in a runbook declares four things. They are fields, not prose, so the system can surface them at the right moment.</p>
+<p><strong>Decision points</strong> — a branch with recorded outcome:</p>
+<div class="codewrap"><pre><code>Is any in-scope asset a production system?
+  YES → attach Production Systems context module
+        → require change-window approval
+        → substitute production-safe procedure variants
+        → record client on-call contact
+  NO  → standard procedure
+Recorded: decision, decided_by, timestamp, rationale.</code></pre></div>
+<p><strong>Stop conditions</strong> — work halts immediately, no judgement call required. Archetype-level examples:</p>
+<div class="tablewrap"><table><thead><tr><th>Archetype</th><th>Stop condition</th></tr></thead><tbody><tr><td>A2</td><td>Evidence of a <strong>pre-existing compromise</strong> is discovered</td></tr><tr><td>A2</td><td>A production system becomes unstable or unavailable</td></tr><tr><td>A2</td><td>Testing reaches an asset that is not in the approved scope</td></tr><tr><td>A2</td><td>The testing window has expired</td></tr><tr><td>A3</td><td>Evidence integrity cannot be established or is found broken</td></tr><tr><td>A3</td><td>Material conflict of interest emerges</td></tr><tr><td>A3</td><td>Findings implicate the person who commissioned the investigation</td></tr><tr><td>A1</td><td>Client cannot provide evidence for a control they assert exists</td></tr><tr><td>All</td><td>Authorisation lapses or is withdrawn</td></tr><tr><td>All</td><td>A safety risk to people is identified (OT, physical, social engineering)</td></tr></tbody></table></div>
+<p>The third A3 row is the uncomfortable one and the reason it must be a <em>system</em> stop condition rather than an individual's judgement: an examiner discovering that the sponsoring executive is implicated should be routed to a pre-agreed escalation path, not left to decide alone at 11pm.</p>
+<p><strong>Escalation conditions</strong> — who is woken, and how fast:</p>
+<div class="tablewrap"><table><thead><tr><th>Trigger</th><th>Escalate to</th><th>Target</th></tr></thead><tbody><tr><td>Pre-existing compromise found during testing</td><td>Engagement Manager → client emergency contact</td><td>Immediate</td></tr><tr><td>Active compromise confirmed in a compromise assessment</td><td>Engagement Manager; propose IR child engagement</td><td>Immediate</td></tr><tr><td>Evidence integrity failure</td><td>Reviewer + Engagement Manager</td><td>Immediate, work paused</td></tr><tr><td>Safety risk identified</td><td>Engagement Manager → Management</td><td>Immediate</td></tr><tr><td>Authorisation lapse or scope dispute</td><td>Engagement Manager → Management</td><td>Same day</td></tr><tr><td>Findings implicate the engagement sponsor</td><td>Management directly, bypassing the Engagement Manager</td><td>Immediate, confidential</td></tr><tr><td>Client requests something outside approved scope</td><td>Engagement Manager; scope change or refusal</td><td>Before acting</td></tr><tr><td>Gate override requested</td><td>Management</td><td>Before proceeding</td></tr></tbody></table></div>
+<p><strong>Approval requirements</strong> — declared per procedure: none / Reviewer / Engagement Manager / Management / client-side named approver.</p>
+<hr>
+<h2 id="7-what-an-engagement-record-retains-forever">7. What an engagement record retains forever<a class="anchor" href="#7-what-an-engagement-record-retains-forever" aria-label="Link to this section">#</a></h2>
+<p>When an engagement closes, these must remain reconstructable — this is the difference between a workflow tool and a defensible record:</p>
+<ul><li>The <strong>runbook version</strong> that was executed, in full, as it read at the time</li><li>Every gate evaluation, including passes, blocks and overrides with their justifications</li><li>Every decision point outcome with who decided and why</li><li>The complete evidence register and custody chain, including items later destroyed</li><li>Every finding with its evidence links and severity history</li><li>The delivered report version, byte-identical</li><li>The disposition record for every evidence item</li><li>The full audit log</li></ul>
+<p>The engagement is closed, not deleted. Deletion is a separate, deliberate, policy-driven act with its own retention schedule — see <code>09-security-architecture.md</code>.</p>
+    <footer class="pagefoot">
+      <p>Sleuth Forensics — internal runbook &amp; engagement platform. Design documentation.
+      Nothing here is SME-validated; see <a href="../p/17-governing-constraints.html">governing constraints</a>.</p>
+    </footer>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="l2" href="#1-the-lifecycle-is-sleuths-own-published-method">1. The lifecycle is Sleuth's own published method</a><a class="l2" href="#2-phase-by-phase">2. Phase by phase</a><a class="l3" href="#phase-0-enquiry-triage">Phase 0 — Enquiry &amp;amp; Triage</a><a class="l3" href="#phase-1-qualification-commercials">Phase 1 — Qualification &amp;amp; Commercials</a><a class="l3" href="#phase-2-authorisation-scope">Phase 2 — Authorisation &amp;amp; Scope</a><a class="l3" href="#phase-3-understand">Phase 3 — Understand</a><a class="l3" href="#phase-4-examine">Phase 4 — Examine</a><a class="l3" href="#phase-5-analyse">Phase 5 — Analyse</a><a class="l3" href="#phase-6-report">Phase 6 — Report</a><a class="l3" href="#phase-7-deliver">Phase 7 — Deliver</a><a class="l3" href="#phase-8-improve">Phase 8 — Improve</a><a class="l3" href="#phase-9-validate">Phase 9 — Validate</a><a class="l3" href="#phase-10-close">Phase 10 — Close</a><a class="l2" href="#3-the-gates">3. The gates</a><a class="l3" href="#gate-definitions">Gate definitions</a><a class="l3" href="#gates-for-a1-a3-and-a4">Gates for A1, A3 and A4</a><a class="l3" href="#override-semantics">Override semantics</a><a class="l2" href="#4-the-emergency-path">4. The emergency path</a><a class="l2" href="#5-lifecycle-variation-by-archetype">5. Lifecycle variation by archetype</a><a class="l2" href="#6-decision-points-stop-conditions-and-escalation">6. Decision points, stop conditions and escalation</a><a class="l2" href="#7-what-an-engagement-record-retains-forever">7. What an engagement record retains forever</a></aside>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

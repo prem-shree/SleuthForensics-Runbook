@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>09 — Information Architecture &amp; Navigation — Sleuth Runbook Platform</title>
+<meta name="description" content="Information architecture">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Sleuth&nbsp;&middot;&nbsp;Runbook Platform</a>
+    <span class="badge">Design proposal &middot; not built</span>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Documents">
+    <div class="search-wrap">
+      <input type="search" id="q" placeholder="Search…" aria-label="Search documents" autocomplete="off">
+      <div id="results" class="results" hidden></div>
+    </div>
+    <div class="navgroup"><div class="navgroup-h">Start here</div><a class="" href="../p/30-decisions-needed.html"><span class="num">30</span>Decisions needed</a><a class="" href="../p/31-confirmed-decisions.html"><span class="num">31</span>Confirmed decisions</a><a class="" href="../p/38-placeholder-register.html"><span class="num">38</span>Placeholder register</a></div><div class="navgroup"><div class="navgroup-h">Research &amp; catalogue</div><a class="" href="../p/00-research-findings.html"><span class="num">00</span>Research findings</a><a class="" href="../p/01-service-catalogue.html"><span class="num">01</span>Service catalogue v1</a><a class="" href="../p/21-engagement-catalogue-v2.html"><span class="num">21</span>Engagement catalogue v2</a></div><div class="navgroup"><div class="navgroup-h">Operating model</div><a class="" href="../p/02-users-and-roles.html"><span class="num">02</span>Users &amp; roles</a><a class="" href="../p/03-engagement-lifecycle.html"><span class="num">03</span>Engagement lifecycle</a><a class="" href="../p/28-checklist-and-gate-architecture.html"><span class="num">28</span>Checklists &amp; gates</a><a class="" href="../p/35-decision-trees.html"><span class="num">35</span>Decision trees</a><a class="" href="../p/32-operating-policies.html"><span class="num">32</span>Operating policies</a></div><div class="navgroup"><div class="navgroup-h">Runbook architecture</div><a class="" href="../p/04-runbook-architecture.html"><span class="num">04</span>Runbook architecture</a><a class="" href="../p/19-engagement-type-specification.html"><span class="num">19</span>Engagement type spec</a><a class="" href="../p/20-shared-module-inheritance.html"><span class="num">20</span>Shared modules</a><a class="" href="../p/22-core-spine-specification.html"><span class="num">22</span>Core spine</a><a class="" href="../p/23-archetype-modules.html"><span class="num">23</span>Archetype modules</a></div><div class="navgroup"><div class="navgroup-h">Engagement types</div><a class="" href="../p/24-ets-assessment.html"><span class="num">24</span>ETS — Assessment</a><a class="" href="../p/25-ets-testing.html"><span class="num">25</span>ETS — Testing</a><a class="" href="../p/26-ets-investigation.html"><span class="num">26</span>ETS — Investigation</a><a class="" href="../p/27-ets-continuous.html"><span class="num">27</span>ETS — Continuous</a></div><div class="navgroup"><div class="navgroup-h">Client information &amp; output</div><a class="" href="../p/05-questionnaire-architecture.html"><span class="num">05</span>Questionnaire architecture</a><a class="" href="../p/33-questionnaire-instruments.html"><span class="num">33</span>Questionnaire instruments</a><a class="" href="../p/08-reporting-architecture.html"><span class="num">08</span>Findings &amp; reporting</a><a class="" href="../p/34-report-templates.html"><span class="num">34</span>Report templates</a><a class="" href="../p/14-excel-exports.html"><span class="num">14</span>Excel exports</a></div><div class="navgroup"><div class="navgroup-h">Evidence &amp; tools</div><a class="" href="../p/06-evidence-model.html"><span class="num">06</span>Evidence model</a><a class="" href="../p/07-tools-and-templates.html"><span class="num">07</span>Tools &amp; templates</a><a class="" href="../p/36-tool-capability-taxonomy.html"><span class="num">36</span>Tool capabilities</a></div><div class="navgroup"><div class="navgroup-h">Product &amp; architecture</div><a class="on" href="../p/09-information-architecture.html"><span class="num">09</span>Information architecture</a><a class="" href="../p/11-ux-structure.html"><span class="num">11</span>UX structure</a><a class="" href="../p/12-visual-design-direction.html"><span class="num">12</span>Visual design direction</a><a class="" href="../p/10-data-model.html"><span class="num">10</span>Data model</a><a class="" href="../p/37-data-schema.html"><span class="num">37</span>Data schema</a><a class="" href="../p/39-api-and-permission-enforcement.html"><span class="num">39</span>API &amp; permissions</a><a class="" href="../p/40-build-and-operations.html"><span class="num">40</span>Build &amp; operations</a><a class="" href="../p/13-security-architecture.html"><span class="num">13</span>Security architecture</a></div><div class="navgroup"><div class="navgroup-h">Programme</div><a class="" href="../p/15-assumptions-and-open-questions.html"><span class="num">15</span>Assumptions &amp; questions</a><a class="" href="../p/16-implementation-plan.html"><span class="num">16</span>Implementation plan</a><a class="" href="../p/17-governing-constraints.html"><span class="num">17</span>Governing constraints</a><a class="" href="../p/18-content-provenance-and-validation.html"><span class="num">18</span>Provenance &amp; validation</a><a class="" href="../p/29-architecture-amendments.html"><span class="num">29</span>Architecture amendments</a></div>
+  </nav>
+  <main id="main" class="content">
+    <h1 id="09-information-architecture-navigation">09 — Information Architecture &amp; Navigation<a class="anchor" href="#09-information-architecture-navigation" aria-label="Link to this section">#</a></h1>
+<blockquote><p><strong>Status — <code>PROPOSED</code>, awaiting approval.</strong> Structural and design proposals, not confirmed Sleuth practice. See <a href="17-governing-constraints.html" ><code>17-governing-constraints.md</code></a>. Partly superseded on arrival of Sleuth's engagement-type list — <a href="19-engagement-type-specification.html" ><code>19-engagement-type-specification.md</code></a> §5.</p></blockquote>
+<blockquote><p>The brief lists 17 candidate areas and then says: <em>"Do not blindly make all of these top-level navigation items. Design the information architecture properly."</em></p></blockquote>
+<hr>
+<h2 id="1-the-organising-insight">1. The organising insight<a class="anchor" href="#1-the-organising-insight" aria-label="Link to this section">#</a></h2>
+<p>Those 17 concepts are not peers. They divide cleanly into three kinds of thing, and the division does the architectural work:</p>
+<div class="tablewrap"><table><thead><tr><th></th><th><strong>Work</strong></th><th><strong>Content</strong></th><th><strong>Governance</strong></th></tr></thead><tbody><tr><td>What it is</td><td>An engagement in flight</td><td>Versioned, approved material reused across engagements</td><td>Oversight and control of the platform</td></tr><tr><td>Changes</td><td>Constantly, by the hour</td><td>Rarely, under approval</td><td>Rarely, by Admin</td></tr><tr><td>Scoped to</td><td>One client, one engagement</td><td>The whole practice</td><td>The whole practice</td></tr><tr><td>Who lives here</td><td>Analyst, Reviewer</td><td>Runbook Author</td><td>Management, Admin</td></tr><tr><td>Contains</td><td>Tasks, Checklists, Questionnaire responses, Evidence, Findings, Reports, Documents</td><td>Services, Runbooks, Questionnaire templates, Tools, Document templates, Knowledge Base</td><td>Users, Roles, Audit log, Settings, Metrics</td></tr></tbody></table></div>
+<p><strong>Evidence, Findings, Tasks, Checklists and Questionnaires are not destinations.</strong> They are always <em>of</em> an engagement. Making them top-level would force the consultant to answer "which engagement?" on every navigation — the exact friction the brief says to remove, and a confidentiality risk besides, since a global Evidence list is a list of every client's material in one view.</p>
+<p>They surface globally only as <strong>registers</strong>: deliberate, filtered, cross-engagement views for Reviewers and Managers who genuinely work across engagements.</p>
+<hr>
+<h2 id="2-top-level-navigation-seven-items">2. Top-level navigation: seven items<a class="anchor" href="#2-top-level-navigation-seven-items" aria-label="Link to this section">#</a></h2>
+<div class="codewrap"><pre><code>┌──────────────────────┐
+│  SLEUTH              │
+│  ──────────────────  │
+│  ▸ Today             │   personal work queue — the default landing
+│  ▸ Engagements       │   portfolio → engagement workspace
+│  ▸ Clients           │   client record, history, contacts, contracts
+│  ▸ Registers         │   cross-engagement: Evidence · Findings · Reports · Documents
+│  ▸ Library           │   Services · Runbooks · Questionnaires · Tools · Templates · KB
+│  ▸ Oversight         │   practice state, metrics, obligations      (Mgmt/EM)
+│  ▸ Administration    │   users, roles, config, audit log           (Admin)
+└──────────────────────┘</code></pre></div>
+<p>Seven items, of which most roles see four or five (<code>02-users-and-roles.md</code> §4). Everything else is reached in context.</p>
+<h3 id="why-each-earns-its-place">Why each earns its place<a class="anchor" href="#why-each-earns-its-place" aria-label="Link to this section">#</a></h3>
+<ul><li><strong>Today</strong> — answers "what do I do next" across engagements. It is the North Star at the personal scale, and it is why an Analyst never has to navigate to start work.</li><li><strong>Engagements</strong> — the portfolio. Filterable by state, gate status, service, client, team, urgency.</li><li><strong>Clients</strong> — clients persist across engagements. Contracts, contacts, history, standing authorisations, prior findings and open remediation all belong to the client, not to any one engagement. Without this, the second engagement for a client repeats the first engagement's discovery work.</li><li><strong>Registers</strong> — the cross-engagement views, each existing for a specific real question: <em>Evidence</em> → "what are we holding, and what is overdue for disposition?" <em>Findings</em> → "have we seen this before, and how did we rate it?" <em>Reports</em> → "what is in QA and what is late?" <em>Documents</em> → "what is unsigned or expiring?"</li><li><strong>Library</strong> — the controlled content plane. Separated from work because it changes under a different regime and by different people.</li><li><strong>Oversight</strong> — read-only practice state for Management.</li><li><strong>Administration</strong> — platform control, deliberately distant from client work.</li></ul>
+<h3 id="what-was-deliberately-not-made-top-level">What was deliberately <em>not</em> made top-level<a class="anchor" href="#what-was-deliberately-not-made-top-level" aria-label="Link to this section">#</a></h3>
+<div class="tablewrap"><table><thead><tr><th>Concept</th><th>Where it lives instead</th><th>Why</th></tr></thead><tbody><tr><td>Tasks</td><td>Engagement → Now / Runbook; aggregated in Today</td><td>Only meaningful inside an engagement</td></tr><tr><td>Checklists</td><td>Engagement → Checklists &amp; Gates</td><td>Same</td></tr><tr><td>Questionnaires (responses)</td><td>Engagement → Questionnaire</td><td>Same. <em>Templates</em> live in Library</td></tr><tr><td>Evidence</td><td>Engagement → Evidence; register for cross-view</td><td>A global evidence list is a confidentiality hazard</td></tr><tr><td>Findings</td><td>Engagement → Findings; register for cross-view</td><td>Same</td></tr><tr><td>Reports</td><td>Engagement → Report; register for QA queue</td><td>Same</td></tr><tr><td>Documents</td><td>Engagement → Documents; templates in Library</td><td>Instances belong to engagements</td></tr><tr><td>Services</td><td>Library → Services</td><td>Reference content</td></tr><tr><td>Runbooks</td><td>Library → Runbooks</td><td>Content plane</td></tr><tr><td>Tools</td><td>Library → Tools</td><td>Content plane</td></tr><tr><td>Knowledge Base</td><td>Library → KB, and contextually inside procedures</td><td>Its highest value is <em>in situ</em>, not as a destination</td></tr><tr><td>Reviews / QA</td><td>Today (queue) + Engagement → Report</td><td>A queue, not a place</td></tr><tr><td>Audit Log</td><td>Administration; scoped view inside each engagement</td><td>Two different audiences, two different scopes</td></tr><tr><td>Dashboard</td><td>Split into Today (personal) and Oversight (practice)</td><td>"Dashboard" is not a user need; it is two different user needs wearing one word</td></tr></tbody></table></div>
+<hr>
+<h2 id="3-the-engagement-workspace">3. The engagement workspace<a class="anchor" href="#3-the-engagement-workspace" aria-label="Link to this section">#</a></h2>
+<p>Once inside an engagement, the whole context changes. This is where a consultant spends the overwhelming majority of their time.</p>
+<div class="codewrap"><pre><code>┌────────────────────────────────────────────────────────────────────────────────┐
+│ CLIENT CONFIDENTIAL · ENG-2026-0141 · Meridian Logistics · VAPT External       │  ← classification bar
+├────────────────────────────────────────────────────────────────────────────────┤
+│ Phase 4 Examine · SF-SEC-VAP-EXT v1.2 · Window closes in 2d 4h · ● 2 gates open│  ← engagement header
+├────────────────────────────────────────────────────────────────────────────────┤
+│  Now │ Runbook │ Checklists &amp; Gates │ Questionnaire │ Evidence │ Findings │     │
+│      │         │                    │               │          │          │     │
+│  Report │ Documents │ Activity                                                  │
+└────────────────────────────────────────────────────────────────────────────────┘</code></pre></div>
+<div class="tablewrap"><table><thead><tr><th>Tab</th><th>Purpose</th><th>Default for</th></tr></thead><tbody><tr><td><strong>Now</strong></td><td>The next action, in context. The North Star screen.</td><td>Analyst</td></tr><tr><td>Runbook</td><td>The full phase/procedure structure — progress and navigation</td><td></td></tr><tr><td>Checklists &amp; Gates</td><td>Gate status and blockers; every checklist in one place</td><td>Engagement Manager</td></tr><tr><td>Questionnaire</td><td>Client information: asked, answered, verified, outstanding</td><td></td></tr><tr><td>Evidence</td><td>Register, custody, integrity, disposition</td><td></td></tr><tr><td>Findings</td><td>Draft, review, confirm, retest</td><td></td></tr><tr><td>Report</td><td>Build, review, release, acceptance</td><td>Reviewer</td></tr><tr><td>Documents</td><td>Contracts, authorisations, executed instances</td><td></td></tr><tr><td>Activity</td><td>Immutable timeline of everything that happened</td><td></td></tr></tbody></table></div>
+<p><strong>The classification bar is persistent and cannot be dismissed.</strong> It names the client and engagement on every screen, and it is carried into print and export. Working on two engagements in two browser tabs is normal; attaching evidence to the wrong one is a serious incident. A permanently visible client name is a cheap and effective defence.</p>
+<hr>
+<h2 id="4-navigation-depth-and-progressive-disclosure">4. Navigation depth and progressive disclosure<a class="anchor" href="#4-navigation-depth-and-progressive-disclosure" aria-label="Link to this section">#</a></h2>
+<p>The brief: <em>"A consultant under time pressure should not be forced to read an enormous page to find the next action."</em></p>
+<p>Three depths, with a hard rule about which is the default:</p>
+<div class="codewrap"><pre><code>DEPTH 1 — DIRECTIVE        one action, one line, always visible
+  "Acquire memory from SRV-DB-02 before shutdown."
+  [ Start ]  [ Blocked ]  [ Not applicable ]
+
+DEPTH 2 — PROCEDURE        expanded on demand, or automatically on Start
+  steps · inputs · approved tools · evidence to capture · expected output ·
+  stop conditions · escalation contacts
+
+DEPTH 3 — REFERENCE        one click further
+  full rationale · KB articles · standards references · prior engagement
+  examples · runbook version notes · training material</code></pre></div>
+<p><strong>Depth 1 is the default. Always.</strong> Depth 2 opens on demand or when work starts. Depth 3 is never automatic.</p>
+<p>The exception, and it is the important one: <strong>stop conditions and escalation contacts are promoted to Depth 1</strong> whenever a procedure carries them. They are the information a consultant needs at the exact moment they are least able to go looking for it.</p>
+<h3 id="navigation-rules">Navigation rules<a class="anchor" href="#navigation-rules" aria-label="Link to this section">#</a></h3>
+<ol><li><strong>Two clicks to the next action</strong> from anywhere: <code>Today → task</code>, or <code>Engagement → Now</code>.</li><li><strong>The engagement is never lost.</strong> Client and engagement identity are present on every screen inside an engagement.</li><li><strong>Deep-linkable.</strong> Every procedure, finding, evidence item and gate has a stable URL. Consultants share links in chat; the platform should make that reliable rather than fight it.</li><li><strong>The back button works.</strong> Modals are for confirmation and capture, never for navigation or extended work.</li><li><strong>Blocked is a state, not a dead end.</strong> Every block names a reason, an owner and a next action.</li></ol>
+<hr>
+<h2 id="5-search">5. Search<a class="anchor" href="#5-search" aria-label="Link to this section">#</a></h2>
+<p>One search across everything the user is permitted to see, scoped by default to the current engagement with an explicit widening step. Typed results — Engagement · Client · Procedure · Evidence · Finding · Runbook · Tool · Document · KB — with the type visible in the result row.</p>
+<p>Identifier search must be exact-match and instant: <code>ENG-2026-0141</code>, <code>F012</code>, <code>E007</code>, <code>SF-SEC-VAP-EXT</code>, a SHA-256 prefix, an IP, a hostname. These are how consultants actually refer to things to each other, which is precisely why the ID scheme is short, typeable and rendered in monospace.</p>
+<hr>
+<h2 id="6-mobile-and-field-use">6. Mobile and field use<a class="anchor" href="#6-mobile-and-field-use" aria-label="Link to this section">#</a></h2>
+<p>Not a responsive afterthought — a specific, narrow set of situations:</p>
+<div class="tablewrap"><table><thead><tr><th>Situation</th><th>Need</th></tr></thead><tbody><tr><td>Evidence collection at a client site</td><td>Capture custody events, photograph an item, record a transfer, scan a seal number</td></tr><tr><td>A consultant challenged on site</td><td>Retrieve the Letter of Authorisation <strong>immediately</strong></td></tr><tr><td>An incident at 2am</td><td>Read the runbook, see stop conditions, reach the escalation contact in one tap</td></tr><tr><td>A manager away from a desk</td><td>Approve a gate, read a blocker, respond to an escalation</td></tr></tbody></table></div>
+<p>Everything else — report authoring, analysis, runbook editing — is desktop work and should not be compromised to accommodate a phone. The mobile surface is small, deliberate, and built for the four situations above.</p>
+    <footer class="pagefoot">
+      <p>Sleuth Forensics — internal runbook &amp; engagement platform. Design documentation.
+      Nothing here is SME-validated; see <a href="../p/17-governing-constraints.html">governing constraints</a>.</p>
+    </footer>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="l2" href="#1-the-organising-insight">1. The organising insight</a><a class="l2" href="#2-top-level-navigation-seven-items">2. Top-level navigation: seven items</a><a class="l3" href="#why-each-earns-its-place">Why each earns its place</a><a class="l3" href="#what-was-deliberately-not-made-top-level">What was deliberately not made top-level</a><a class="l2" href="#3-the-engagement-workspace">3. The engagement workspace</a><a class="l2" href="#4-navigation-depth-and-progressive-disclosure">4. Navigation depth and progressive disclosure</a><a class="l3" href="#navigation-rules">Navigation rules</a><a class="l2" href="#5-search">5. Search</a><a class="l2" href="#6-mobile-and-field-use">6. Mobile and field use</a></aside>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

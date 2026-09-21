@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>20 — Shared Modules &amp; the &quot;Change Once&quot; Guarantee — Sleuth Runbook Platform</title>
+<meta name="description" content="Shared modules">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Sleuth&nbsp;&middot;&nbsp;Runbook Platform</a>
+    <span class="badge">Design proposal &middot; not built</span>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Documents">
+    <div class="search-wrap">
+      <input type="search" id="q" placeholder="Search…" aria-label="Search documents" autocomplete="off">
+      <div id="results" class="results" hidden></div>
+    </div>
+    <div class="navgroup"><div class="navgroup-h">Start here</div><a class="" href="../p/30-decisions-needed.html"><span class="num">30</span>Decisions needed</a><a class="" href="../p/31-confirmed-decisions.html"><span class="num">31</span>Confirmed decisions</a><a class="" href="../p/38-placeholder-register.html"><span class="num">38</span>Placeholder register</a></div><div class="navgroup"><div class="navgroup-h">Research &amp; catalogue</div><a class="" href="../p/00-research-findings.html"><span class="num">00</span>Research findings</a><a class="" href="../p/01-service-catalogue.html"><span class="num">01</span>Service catalogue v1</a><a class="" href="../p/21-engagement-catalogue-v2.html"><span class="num">21</span>Engagement catalogue v2</a></div><div class="navgroup"><div class="navgroup-h">Operating model</div><a class="" href="../p/02-users-and-roles.html"><span class="num">02</span>Users &amp; roles</a><a class="" href="../p/03-engagement-lifecycle.html"><span class="num">03</span>Engagement lifecycle</a><a class="" href="../p/28-checklist-and-gate-architecture.html"><span class="num">28</span>Checklists &amp; gates</a><a class="" href="../p/35-decision-trees.html"><span class="num">35</span>Decision trees</a><a class="" href="../p/32-operating-policies.html"><span class="num">32</span>Operating policies</a></div><div class="navgroup"><div class="navgroup-h">Runbook architecture</div><a class="" href="../p/04-runbook-architecture.html"><span class="num">04</span>Runbook architecture</a><a class="" href="../p/19-engagement-type-specification.html"><span class="num">19</span>Engagement type spec</a><a class="on" href="../p/20-shared-module-inheritance.html"><span class="num">20</span>Shared modules</a><a class="" href="../p/22-core-spine-specification.html"><span class="num">22</span>Core spine</a><a class="" href="../p/23-archetype-modules.html"><span class="num">23</span>Archetype modules</a></div><div class="navgroup"><div class="navgroup-h">Engagement types</div><a class="" href="../p/24-ets-assessment.html"><span class="num">24</span>ETS — Assessment</a><a class="" href="../p/25-ets-testing.html"><span class="num">25</span>ETS — Testing</a><a class="" href="../p/26-ets-investigation.html"><span class="num">26</span>ETS — Investigation</a><a class="" href="../p/27-ets-continuous.html"><span class="num">27</span>ETS — Continuous</a></div><div class="navgroup"><div class="navgroup-h">Client information &amp; output</div><a class="" href="../p/05-questionnaire-architecture.html"><span class="num">05</span>Questionnaire architecture</a><a class="" href="../p/33-questionnaire-instruments.html"><span class="num">33</span>Questionnaire instruments</a><a class="" href="../p/08-reporting-architecture.html"><span class="num">08</span>Findings &amp; reporting</a><a class="" href="../p/34-report-templates.html"><span class="num">34</span>Report templates</a><a class="" href="../p/14-excel-exports.html"><span class="num">14</span>Excel exports</a></div><div class="navgroup"><div class="navgroup-h">Evidence &amp; tools</div><a class="" href="../p/06-evidence-model.html"><span class="num">06</span>Evidence model</a><a class="" href="../p/07-tools-and-templates.html"><span class="num">07</span>Tools &amp; templates</a><a class="" href="../p/36-tool-capability-taxonomy.html"><span class="num">36</span>Tool capabilities</a></div><div class="navgroup"><div class="navgroup-h">Product &amp; architecture</div><a class="" href="../p/09-information-architecture.html"><span class="num">09</span>Information architecture</a><a class="" href="../p/11-ux-structure.html"><span class="num">11</span>UX structure</a><a class="" href="../p/12-visual-design-direction.html"><span class="num">12</span>Visual design direction</a><a class="" href="../p/10-data-model.html"><span class="num">10</span>Data model</a><a class="" href="../p/37-data-schema.html"><span class="num">37</span>Data schema</a><a class="" href="../p/39-api-and-permission-enforcement.html"><span class="num">39</span>API &amp; permissions</a><a class="" href="../p/40-build-and-operations.html"><span class="num">40</span>Build &amp; operations</a><a class="" href="../p/13-security-architecture.html"><span class="num">13</span>Security architecture</a></div><div class="navgroup"><div class="navgroup-h">Programme</div><a class="" href="../p/15-assumptions-and-open-questions.html"><span class="num">15</span>Assumptions &amp; questions</a><a class="" href="../p/16-implementation-plan.html"><span class="num">16</span>Implementation plan</a><a class="" href="../p/17-governing-constraints.html"><span class="num">17</span>Governing constraints</a><a class="" href="../p/18-content-provenance-and-validation.html"><span class="num">18</span>Provenance &amp; validation</a><a class="" href="../p/29-architecture-amendments.html"><span class="num">29</span>Architecture amendments</a></div>
+  </nav>
+  <main id="main" class="content">
+    <h1 id="20-shared-modules-the-change-once-guarantee">20 — Shared Modules &amp; the "Change Once" Guarantee<a class="anchor" href="#20-shared-modules-the-change-once-guarantee" aria-label="Link to this section">#</a></h1>
+<blockquote><p>Sleuth's requirement: <em>"when a common procedure changes — evidence handling, authorization, QA, reporting, engagement closure — we can update it once rather than manually updating dozens of runbooks."</em></p></blockquote>
+<p>This document specifies exactly how that is guaranteed, including the failure modes that quietly break it in systems that claim to have it.</p>
+<hr>
+<h2 id="1-the-guarantee-stated-precisely">1. The guarantee, stated precisely<a class="anchor" href="#1-the-guarantee-stated-precisely" aria-label="Link to this section">#</a></h2>
+<blockquote><p>A shared concern has <strong>one definition</strong>. Every runbook that uses it holds a <strong>reference</strong> to that definition, never a copy. Changing the definition changes every runbook that references it, in one edit, under one approval — while every engagement already in flight continues to execute exactly the version it pinned.</p></blockquote>
+<p>Both halves matter. The first half is the efficiency requirement. The second half is the defensibility requirement from <code>04-runbook-architecture.md</code> §4 — and a naive "update everything everywhere" implementation would break it by silently rewriting the methodology of live engagements.</p>
+<hr>
+<h2 id="2-single-definition-points">2. Single definition points<a class="anchor" href="#2-single-definition-points" aria-label="Link to this section">#</a></h2>
+<p>Each shared concern is defined once, owned by one person, versioned independently:</p>
+<div class="tablewrap"><table><thead><tr><th>Shared module</th><th>Covers</th><th>Referenced by</th></tr></thead><tbody><tr><td><code>core.intake</code></td><td>Enquiry, triage, conflict check, client identity, qualification</td><td>All</td></tr><tr><td><code>core.commercial</code></td><td>NDA, MSA, SOW, commercial approval, team assignment</td><td>All</td></tr><tr><td><code>core.authorisation</code></td><td>Scope, signatory verification, LoA, Authorisation Gate</td><td>All</td></tr><tr><td><code>core.readiness</code></td><td>Questionnaire issue and review, prerequisites, access verification, runbook pinning, kickoff, Readiness Gate</td><td>All</td></tr><tr><td><code>core.evidence</code></td><td>Evidence registration, hashing, verification, custody, access, integrity</td><td>All (depth varies by archetype)</td></tr><tr><td><code>core.qa</code></td><td>Review workflow, segregation of duty, QA Gate</td><td>All</td></tr><tr><td><code>core.reporting</code></td><td>Report spine, document control, limitations, generation, versioning</td><td>All</td></tr><tr><td><code>core.delivery</code></td><td>Recipient verification, classification, release, acceptance, Release Gate</td><td>All</td></tr><tr><td><code>core.remediation</code></td><td>Remediation items, tracking, clarification support</td><td>All</td></tr><tr><td><code>core.closure</code></td><td>Acceptance, disposition, access and credential revocation, artefact removal, lessons learned, Closure Gate</td><td>All</td></tr><tr><td><code>arch.A1</code> … <code>arch.A4</code></td><td>Archetype-specific execution, phases 4–6</td><td>Types of that archetype</td></tr><tr><td><code>ctx.*</code></td><td>The nine context modules</td><td>Conditionally</td></tr></tbody></table></div>
+<p>Nine core modules plus four archetype modules plus nine context modules. <strong>Twenty-two shared definitions carry the common content of every engagement type Sleuth runs.</strong></p>
+<hr>
+<h2 id="3-reference-not-copy-and-how-that-is-enforced">3. Reference, not copy — and how that is enforced<a class="anchor" href="#3-reference-not-copy-and-how-that-is-enforced" aria-label="Link to this section">#</a></h2>
+<p>A runbook version stores a <strong>composition manifest</strong>: module identity plus version. It does not store module content.</p>
+<div class="codewrap"><pre><code>SF-&lt;type&gt; v1.2 — composition manifest
+  core.intake         v3.1
+  core.commercial     v2.0
+  core.authorisation  v4.2
+  core.readiness      v3.0
+  core.evidence       v5.1
+  core.qa             v2.3
+  core.reporting      v3.4
+  core.delivery       v2.1
+  core.remediation    v1.8
+  core.closure        v3.2
+  arch.&lt;A?&gt;           v2.x
+  service.&lt;svc&gt;       v1.4      ← the only module this runbook owns
+  ctx.&lt;…&gt;             declared, attached conditionally</code></pre></div>
+<p>Rendering a runbook resolves the manifest. There is no second copy of core content to drift.</p>
+<p><strong>The failure mode this prevents, and how it is actively blocked.</strong> Every system with an inheritance model eventually acquires a service module that pastes a core procedure in to "just change one line". The copy is invisible, and the next core update silently misses it. Countermeasures:</p>
+<ol><li>The runbook editor offers <strong>reference, extend or delta</strong> — there is no "copy into this module".</li><li>A near-duplicate check runs at authoring time: service content substantially matching a core procedure is flagged before it can be saved.</li><li>Composition manifests are reviewed at approval; an unexplained service procedure that duplicates core scope is a review rejection reason, aggregated like any other.</li></ol>
+<hr>
+<h2 id="4-extension-points">4. Extension points<a class="anchor" href="#4-extension-points" aria-label="Link to this section">#</a></h2>
+<p>Most real variation is not "replace the core procedure" but "core procedure, plus one thing that is true only here". Handled by <strong>declared extension points</strong>: named slots a core procedure exposes.</p>
+<div class="codewrap"><pre><code>core.evidence — procedure ev.04  "Acquire and verify"
+  steps 1..6                                          [fixed]
+  ⟨ extension: pre_acquisition_checks ⟩               ← declared slot
+  steps 7..9                                          [fixed]
+  ⟨ extension: additional_verification ⟩              ← declared slot</code></pre></div>
+<p>A service or context module injects into a slot. It cannot reach into the fixed steps. So a service-specific pre-acquisition check lives beside the core procedure without forking it, and the core steps keep improving underneath it.</p>
+<p>Slots are part of the core module's public interface: adding one is routine, removing one is a breaking change (§6).</p>
+<hr>
+<h2 id="5-deltas-divergence-that-is-explicit-and-approved">5. Deltas — divergence that is explicit and approved<a class="anchor" href="#5-deltas-divergence-that-is-explicit-and-approved" aria-label="Link to this section">#</a></h2>
+<p>Occasionally a service genuinely must diverge from core. That is allowed, and it is never silent.</p>
+<div class="codewrap"><pre><code>DELTA  service.&lt;svc&gt; against core.authorisation v4.2
+  Diverges     &lt;which inherited element&gt;
+  Reason       &lt;why the inherited content cannot apply here&gt;
+  Approved by  &lt;Management&gt; on &lt;date&gt;
+  Review by    &lt;date&gt;
+  Visible on   the engagement header and the report's methodology section</code></pre></div>
+<p>Properties of a delta, all deliberate:</p>
+<ul><li>It requires Management approval, not the module author's own say-so.</li><li>It is <strong>reported</strong>: an Oversight panel lists every live delta across the practice. A concern with many deltas is a signal the core module is wrong, not that the services are unusual.</li><li>It carries a <strong>review date</strong>. Deltas are meant to be temporary; most should resolve into a change to the core module.</li><li>It is surfaced to the client in the report's methodology section, for the same reason gate overrides are.</li></ul>
+<hr>
+<h2 id="6-change-classification-and-propagation">6. Change classification and propagation<a class="anchor" href="#6-change-classification-and-propagation" aria-label="Link to this section">#</a></h2>
+<p>Not every change carries the same consequence, so not every change needs the same approval weight. The author classifies; the system enforces.</p>
+<div class="tablewrap"><table><thead><tr><th>Class</th><th>Definition</th><th>Dependent runbooks</th><th>In-flight engagements</th></tr></thead><tbody><tr><td><strong>Editorial</strong></td><td>Wording, typo, clarification. <strong>No change to what a person does</strong></td><td>Auto-propagate. Manifests move to the new patch version. No re-approval</td><td>Untouched. Still pinned</td></tr><tr><td><strong>Substantive</strong></td><td>Changes what a person does, in what order, or what they must record</td><td>Each dependent runbook enters <code>Pending re-approval</code>. It stays <code>Approved</code> on its current manifest until its owner accepts the new module version</td><td>Untouched. Still pinned</td></tr><tr><td><strong>Breaking</strong></td><td>Adds or removes a gate condition, a mandatory evidence requirement, a stop condition, an approval, or an extension slot</td><td>Dependent runbooks enter <code>Pending re-approval</code> and are <strong>flagged as blocking</strong> — the new version is not adoptable without an explicit decision</td><td>Untouched by default, <strong>plus</strong> a migration decision is raised per live engagement: migrate, or continue on the pinned version with the reason recorded</td></tr></tbody></table></div>
+<p>Misclassification is the obvious risk. Two mitigations: the system derives a <strong>suggested class</strong> by diffing structural elements (a changed gate condition cannot be classified Editorial — the classifier refuses it), and the class is visible at review.</p>
+<h3 id="the-safety-property">The safety property<a class="anchor" href="#the-safety-property" aria-label="Link to this section">#</a></h3>
+<p><strong>No class of change, at any approval level, rewrites what an in-flight engagement is executing.</strong> Migration is always an explicit, per-engagement, recorded decision. The "change once" guarantee applies to the library, never retroactively to work already under way.</p>
+<hr>
+<h2 id="7-impact-analysis-before-publishing">7. Impact analysis before publishing<a class="anchor" href="#7-impact-analysis-before-publishing" aria-label="Link to this section">#</a></h2>
+<p>A module author sees the full consequence before the change is published — not after.</p>
+<div class="codewrap"><pre><code>PUBLISH  core.evidence  v5.1 → v5.2                    class: SUBSTANTIVE (suggested)
+
+WHAT CHANGED
+  ~ ev.04  "Acquire and verify"     verification step reordered before custody open
+  + ev.07  "Record acquisition environment"                            NEW — mandatory
+
+AFFECTS
+  Runbooks           &lt;n&gt; referencing core.evidence     → Pending re-approval
+    of which             &lt;n&gt; currently Approved
+                         &lt;n&gt; in Draft (adopt automatically)
+  Engagements        &lt;n&gt; in flight, pinned to manifests containing v5.1
+                     → unaffected. Migration offered per engagement.
+  Checklists         &lt;n&gt; instances gain 1 required item on adoption
+  Gates              Evidence Integrity Gate — no condition change
+  Excel exports      Evidence Register gains 1 column
+
+APPROVAL         module owner + Management
+NOTIFIES         owners of &lt;n&gt; dependent runbooks</code></pre></div>
+<p>The number in "affects <code>&lt;n&gt;</code> runbooks" is the whole argument for this architecture, made visible at the moment of the edit. It is also the honest cost signal: a change touching thirty runbooks deserves more care than one touching two.</p>
+<hr>
+<h2 id="8-worked-example-the-requirements-own-example">8. Worked example — the requirement's own example<a class="anchor" href="#8-worked-example-the-requirements-own-example" aria-label="Link to this section">#</a></h2>
+<p><em>Sleuth changes how evidence handling works: verification must now be recorded before the custody record opens, and the acquisition environment must be captured.</em></p>
+<div class="codewrap"><pre><code>1  SME edits  core.evidence  — one module, one editor, one place
+2  Classifier reads the diff: a new mandatory evidence requirement → SUBSTANTIVE
+3  Impact analysis shows every dependent runbook and every live engagement
+4  Module owner + Management approve.  core.evidence v5.2 published
+5  Draft runbooks adopt v5.2 automatically
+   Approved runbooks enter Pending re-approval; each owner accepts, bumping that
+   runbook's version with a change-history entry naming the module change
+6  Live engagements continue on their pinned manifests. A migration is offered
+   per engagement; declining is recorded with a reason
+7  From adoption, every affected runbook renders the new procedure — with no
+   edit made to any of them</code></pre></div>
+<p><strong>Edits made to individual runbooks: zero.</strong> Approvals: one module approval, plus one acceptance per Approved runbook — and that acceptance is a deliberate control, not busywork. A runbook owner should know their methodology changed.</p>
+<h3 id="why-acceptance-is-not-automatic-for-approved-runbooks">Why acceptance is not automatic for Approved runbooks<a class="anchor" href="#why-acceptance-is-not-automatic-for-approved-runbooks" aria-label="Link to this section">#</a></h3>
+<p>Auto-propagating a substantive change into approved methodology would mean a runbook's owner could discover that their approved method had changed without their knowledge. The efficiency gain is real — one edit instead of thirty — but the approval is what makes the library trustworthy, and removing it would trade the wrong thing away.</p>
+<hr>
+<h2 id="9-what-the-analyst-sees">9. What the analyst sees<a class="anchor" href="#9-what-the-analyst-sees" aria-label="Link to this section">#</a></h2>
+<p>None of this. They open a procedure and it is correct.</p>
+<p>The machinery surfaces in exactly two places: the runbook ID and version stamped on the engagement and in the report, and a delta or unvalidated-content banner where one applies (<code>18-content-provenance-and-validation.md</code> §3).</p>
+<hr>
+<h2 id="10-consequences-for-the-build">10. Consequences for the build<a class="anchor" href="#10-consequences-for-the-build" aria-label="Link to this section">#</a></h2>
+<div class="tablewrap"><table><thead><tr><th>Requirement</th><th>Phase</th></tr></thead><tbody><tr><td>Composition manifests on runbook versions</td><td>Phase 1 — foundational, cannot be retrofitted</td></tr><tr><td>Extension points on core procedures</td><td>Phase 1</td></tr><tr><td>Change classification with structural diffing</td><td>Phase 1</td></tr><tr><td>Impact analysis view</td><td>Phase 1</td></tr><tr><td>Delta workflow with approval and review dates</td><td>Phase 2</td></tr><tr><td>Near-duplicate detection in the editor</td><td>Phase 2</td></tr><tr><td>Per-engagement migration decisions</td><td>Phase 2</td></tr><tr><td>Delta and validation reporting on Oversight</td><td>Phase 7</td></tr></tbody></table></div>
+<p>The first four are Phase 1 because a runbook engine that stores content by copy cannot be converted into one that stores it by reference without rewriting every runbook authored in the meantime.</p>
+    <footer class="pagefoot">
+      <p>Sleuth Forensics — internal runbook &amp; engagement platform. Design documentation.
+      Nothing here is SME-validated; see <a href="../p/17-governing-constraints.html">governing constraints</a>.</p>
+    </footer>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="l2" href="#1-the-guarantee-stated-precisely">1. The guarantee, stated precisely</a><a class="l2" href="#2-single-definition-points">2. Single definition points</a><a class="l2" href="#3-reference-not-copy-and-how-that-is-enforced">3. Reference, not copy — and how that is enforced</a><a class="l2" href="#4-extension-points">4. Extension points</a><a class="l2" href="#5-deltas-divergence-that-is-explicit-and-approved">5. Deltas — divergence that is explicit and approved</a><a class="l2" href="#6-change-classification-and-propagation">6. Change classification and propagation</a><a class="l3" href="#the-safety-property">The safety property</a><a class="l2" href="#7-impact-analysis-before-publishing">7. Impact analysis before publishing</a><a class="l2" href="#8-worked-example-the-requirements-own-example">8. Worked example — the requirement's own example</a><a class="l3" href="#why-acceptance-is-not-automatic-for-approved-runbooks">Why acceptance is not automatic for Approved runbooks</a><a class="l2" href="#9-what-the-analyst-sees">9. What the analyst sees</a><a class="l2" href="#10-consequences-for-the-build">10. Consequences for the build</a></aside>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

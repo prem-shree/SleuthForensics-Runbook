@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>39 — API Surface &amp; Permission Enforcement — Sleuth Runbook Platform</title>
+<meta name="description" content="API &amp; permissions">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Sleuth&nbsp;&middot;&nbsp;Runbook Platform</a>
+    <span class="badge">Design proposal &middot; not built</span>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Documents">
+    <div class="search-wrap">
+      <input type="search" id="q" placeholder="Search…" aria-label="Search documents" autocomplete="off">
+      <div id="results" class="results" hidden></div>
+    </div>
+    <div class="navgroup"><div class="navgroup-h">Start here</div><a class="" href="../p/30-decisions-needed.html"><span class="num">30</span>Decisions needed</a><a class="" href="../p/31-confirmed-decisions.html"><span class="num">31</span>Confirmed decisions</a><a class="" href="../p/38-placeholder-register.html"><span class="num">38</span>Placeholder register</a></div><div class="navgroup"><div class="navgroup-h">Research &amp; catalogue</div><a class="" href="../p/00-research-findings.html"><span class="num">00</span>Research findings</a><a class="" href="../p/01-service-catalogue.html"><span class="num">01</span>Service catalogue v1</a><a class="" href="../p/21-engagement-catalogue-v2.html"><span class="num">21</span>Engagement catalogue v2</a></div><div class="navgroup"><div class="navgroup-h">Operating model</div><a class="" href="../p/02-users-and-roles.html"><span class="num">02</span>Users &amp; roles</a><a class="" href="../p/03-engagement-lifecycle.html"><span class="num">03</span>Engagement lifecycle</a><a class="" href="../p/28-checklist-and-gate-architecture.html"><span class="num">28</span>Checklists &amp; gates</a><a class="" href="../p/35-decision-trees.html"><span class="num">35</span>Decision trees</a><a class="" href="../p/32-operating-policies.html"><span class="num">32</span>Operating policies</a></div><div class="navgroup"><div class="navgroup-h">Runbook architecture</div><a class="" href="../p/04-runbook-architecture.html"><span class="num">04</span>Runbook architecture</a><a class="" href="../p/19-engagement-type-specification.html"><span class="num">19</span>Engagement type spec</a><a class="" href="../p/20-shared-module-inheritance.html"><span class="num">20</span>Shared modules</a><a class="" href="../p/22-core-spine-specification.html"><span class="num">22</span>Core spine</a><a class="" href="../p/23-archetype-modules.html"><span class="num">23</span>Archetype modules</a></div><div class="navgroup"><div class="navgroup-h">Engagement types</div><a class="" href="../p/24-ets-assessment.html"><span class="num">24</span>ETS — Assessment</a><a class="" href="../p/25-ets-testing.html"><span class="num">25</span>ETS — Testing</a><a class="" href="../p/26-ets-investigation.html"><span class="num">26</span>ETS — Investigation</a><a class="" href="../p/27-ets-continuous.html"><span class="num">27</span>ETS — Continuous</a></div><div class="navgroup"><div class="navgroup-h">Client information &amp; output</div><a class="" href="../p/05-questionnaire-architecture.html"><span class="num">05</span>Questionnaire architecture</a><a class="" href="../p/33-questionnaire-instruments.html"><span class="num">33</span>Questionnaire instruments</a><a class="" href="../p/08-reporting-architecture.html"><span class="num">08</span>Findings &amp; reporting</a><a class="" href="../p/34-report-templates.html"><span class="num">34</span>Report templates</a><a class="" href="../p/14-excel-exports.html"><span class="num">14</span>Excel exports</a></div><div class="navgroup"><div class="navgroup-h">Evidence &amp; tools</div><a class="" href="../p/06-evidence-model.html"><span class="num">06</span>Evidence model</a><a class="" href="../p/07-tools-and-templates.html"><span class="num">07</span>Tools &amp; templates</a><a class="" href="../p/36-tool-capability-taxonomy.html"><span class="num">36</span>Tool capabilities</a></div><div class="navgroup"><div class="navgroup-h">Product &amp; architecture</div><a class="" href="../p/09-information-architecture.html"><span class="num">09</span>Information architecture</a><a class="" href="../p/11-ux-structure.html"><span class="num">11</span>UX structure</a><a class="" href="../p/12-visual-design-direction.html"><span class="num">12</span>Visual design direction</a><a class="" href="../p/10-data-model.html"><span class="num">10</span>Data model</a><a class="" href="../p/37-data-schema.html"><span class="num">37</span>Data schema</a><a class="on" href="../p/39-api-and-permission-enforcement.html"><span class="num">39</span>API &amp; permissions</a><a class="" href="../p/40-build-and-operations.html"><span class="num">40</span>Build &amp; operations</a><a class="" href="../p/13-security-architecture.html"><span class="num">13</span>Security architecture</a></div><div class="navgroup"><div class="navgroup-h">Programme</div><a class="" href="../p/15-assumptions-and-open-questions.html"><span class="num">15</span>Assumptions &amp; questions</a><a class="" href="../p/16-implementation-plan.html"><span class="num">16</span>Implementation plan</a><a class="" href="../p/17-governing-constraints.html"><span class="num">17</span>Governing constraints</a><a class="" href="../p/18-content-provenance-and-validation.html"><span class="num">18</span>Provenance &amp; validation</a><a class="" href="../p/29-architecture-amendments.html"><span class="num">29</span>Architecture amendments</a></div>
+  </nav>
+  <main id="main" class="content">
+    <h1 id="39-api-surface-permission-enforcement">39 — API Surface &amp; Permission Enforcement<a class="anchor" href="#39-api-surface-permission-enforcement" aria-label="Link to this section">#</a></h1>
+<blockquote><p><strong>Status — <code>PROPOSED</code>, implementation-ready specification.</strong> <strong>Rule 7 holds: this is a specification, not code.</strong> No source is committed.</p></blockquote>
+<hr>
+<h2 id="1-shape">1. Shape<a class="anchor" href="#1-shape" aria-label="Link to this section">#</a></h2>
+<p>Server-rendered pages for the operational surface, with a JSON API beneath for the interactive parts (gate evaluation, evidence capture, search, checklist state). One route table serves both — an HTML request and a JSON request hit the same handler and the same authorisation.</p>
+<p><strong>Why not a single-page app.</strong> Correctness here depends on the server's view of state: whether a gate passes, whether a finding may enter a report, whether an override has expired. A client-side cache of those answers is a cache of security decisions. Dense tables, print-quality output and strong URL semantics also favour server rendering.</p>
+<hr>
+<h2 id="2-route-table">2. Route table<a class="anchor" href="#2-route-table" aria-label="Link to this section">#</a></h2>
+<p><code>{eng}</code> = engagement code. All routes are engagement-scoped unless marked <em>(global)</em>.</p>
+<h3 id="work">Work<a class="anchor" href="#work" aria-label="Link to this section">#</a></h3>
+<div class="tablewrap"><table><thead><tr><th>Method</th><th>Route</th><th>Purpose</th></tr></thead><tbody><tr><td>GET</td><td><code>/today</code></td><td>Personal queue <em>(global)</em></td></tr><tr><td>GET</td><td><code>/e/{eng}</code></td><td>Engagement → Now</td></tr><tr><td>GET</td><td><code>/e/{eng}/runbook</code></td><td>Phase/procedure tree</td></tr><tr><td>GET</td><td><code>/e/{eng}/p/{proc}</code></td><td>Procedure execution view</td></tr><tr><td>POST</td><td><code>/e/{eng}/p/{proc}/start</code></td><td>Begin — records actor and time</td></tr><tr><td>POST</td><td><code>/e/{eng}/p/{proc}/complete</code></td><td>Complete. <strong>Rejected if required evidence is missing</strong></td></tr><tr><td>POST</td><td><code>/e/{eng}/p/{proc}/block</code></td><td>Requires reason + owner</td></tr><tr><td>POST</td><td><code>/e/{eng}/p/{proc}/na</code></td><td>Requires reason</td></tr><tr><td>PATCH</td><td><code>/e/{eng}/checklist/{item}</code></td><td>State change. Reason required for <code>blocked</code> / <code>not_applicable</code></td></tr><tr><td>POST</td><td><code>/e/{eng}/decision/{tree}</code></td><td>Record a traversal</td></tr></tbody></table></div>
+<h3 id="gates">Gates<a class="anchor" href="#gates" aria-label="Link to this section">#</a></h3>
+<div class="tablewrap"><table><thead><tr><th>Method</th><th>Route</th><th>Purpose</th></tr></thead><tbody><tr><td>GET</td><td><code>/e/{eng}/gates</code></td><td>All gates, live evaluation</td></tr><tr><td>GET</td><td><code>/e/{eng}/gates/{gate}</code></td><td>One gate, per-condition detail</td></tr><tr><td>POST</td><td><code>/e/{eng}/gates/{gate}/evaluate</code></td><td>Force re-evaluation</td></tr><tr><td>POST</td><td><code>/e/{eng}/gates/{gate}/pass</code></td><td>Role-restricted per gate</td></tr><tr><td>POST</td><td><code>/e/{eng}/gates/{gate}/override/request</code></td><td>Manager. Justification + expiry required</td></tr><tr><td>POST</td><td><code>/e/{eng}/gates/{gate}/override/approve</code></td><td>Management. <strong><code>requested_by ≠ approved_by</code></strong></td></tr></tbody></table></div>
+<p><strong>Gate evaluation is never cached.</strong> It reads current state on every request. A gate that passed an hour ago may be blocked now — an expired Letter of Authorisation, a failed integrity check, a withdrawn approval.</p>
+<h3 id="evidence">Evidence<a class="anchor" href="#evidence" aria-label="Link to this section">#</a></h3>
+<div class="tablewrap"><table><thead><tr><th>Method</th><th>Route</th><th>Purpose</th></tr></thead><tbody><tr><td>GET</td><td><code>/e/{eng}/evidence</code></td><td>Register</td></tr><tr><td>POST</td><td><code>/e/{eng}/evidence</code></td><td>Register an item</td></tr><tr><td>GET</td><td><code>/e/{eng}/evidence/{id}</code></td><td>Record + custody strip</td></tr><tr><td>POST</td><td><code>/e/{eng}/evidence/{id}/verify</code></td><td>Record verification hash. <strong>Mismatch is terminal</strong></td></tr><tr><td>POST</td><td><code>/e/{eng}/evidence/{id}/custody</code></td><td>Append a custody event <em>(insert-only)</em></td></tr><tr><td>POST</td><td><code>/e/{eng}/evidence/{id}/derive</code></td><td>Create a working copy. Verifies parent first</td></tr><tr><td>POST</td><td><code>/e/{eng}/evidence/{id}/disposition</code></td><td>Manager only. Step-up auth</td></tr></tbody></table></div>
+<blockquote><p><strong>There is no evidence content endpoint.</strong> No upload, no download, no signed URL <em>(Rule 3)</em>. <code>GET /evidence/{id}</code> returns the record; the content lives in Sleuth's lab storage and <code>storage_location</code> says where.</p></blockquote>
+<h3 id="findings-reports-documents">Findings, reports, documents<a class="anchor" href="#findings-reports-documents" aria-label="Link to this section">#</a></h3>
+<p><code>/e/{eng}/findings</code> · <code>/findings/{id}</code> · <code>/findings/{id}/review</code> <em>(Reviewer, non-author)</em> · <code>/findings/{id}/severity</code> <em>(rationale required)</em> · <code>/findings/{id}/retest</code> <code>/e/{eng}/report</code> · <code>/report/build</code> · <code>/report/review</code> · <code>/report/release</code> <em>(Release Gate + step-up)</em> · <code>/report/acceptance</code> <code>/e/{eng}/documents</code> · <code>/documents/{id}/execute</code></p>
+<h3 id="library-global">Library <em>(global)</em><a class="anchor" href="#library-global" aria-label="Link to this section">#</a></h3>
+<p><code>/library/runbooks</code> · <code>/runbooks/{code}/v/{ver}</code> · <code>/runbooks/{code}/v/{ver}/publish</code> <em>(Management)</em> · <code>/library/modules/{code}/impact</code> <em>(pre-publish impact analysis)</em> · <code>/library/validation</code> <em>(SME queue)</em> · <code>/library/gaps</code> <em>(gap register)</em> · <code>/library/tools</code> · <code>/library/templates</code></p>
+<h3 id="oversight-admin-global">Oversight &amp; admin <em>(global)</em><a class="anchor" href="#oversight-admin-global" aria-label="Link to this section">#</a></h3>
+<p><code>/oversight</code> · <code>/oversight/obligations</code> · <code>/oversight/overrides</code> · <code>/oversight/deltas</code> · <code>/admin/users</code> · <code>/admin/audit</code> · <code>/admin/break-glass</code> <em>(logged, notified)</em></p>
+<h3 id="exports">Exports<a class="anchor" href="#exports" aria-label="Link to this section">#</a></h3>
+<p><code>POST /e/{eng}/export/{workbook}</code> · <code>POST /export/{register}</code> <em>(global registers)</em>. Every export writes an <code>audit_event</code> with the filters applied. Bulk export requires Manager approval.</p>
+<hr>
+<h2 id="3-permission-enforcement-four-layers">3. Permission enforcement — four layers<a class="anchor" href="#3-permission-enforcement-four-layers" aria-label="Link to this section">#</a></h2>
+<p>Each layer independently sufficient to deny. <strong>Defence in depth is the point: any single layer being wrong should not open access.</strong></p>
+<div class="codewrap"><pre><code>1  ROUTE GUARD      Does this role hold the capability at all?
+                    Fails fast, before any query runs.
+                    Source: the capability matrix (02 §3).
+
+2  MEMBERSHIP       Is the user a member of this engagement, in date?
+                    Or an approved, logged break-glass session?
+
+3  OBJECT RULE      The rules no role can be granted past:
+                    · author ≠ reviewer
+                    · append-only audit and custody
+                    · version immutability
+                    · non-overridable gates
+                    · vCISO cannot authorise own-firm testing
+
+4  ROW-LEVEL        PostgreSQL RLS. The database refuses even when a
+   SECURITY         WHERE clause is forgotten.</code></pre></div>
+<p>Layer 4 exists because layers 1–3 are application code, and application code has bugs. A missed <code>WHERE engagement_id = ?</code> in a reporting query is the single most common way a system like this leaks one client's data into another client's view. RLS makes that failure mode impossible rather than unlikely.</p>
+<h3 id="denials-are-logged">Denials are logged<a class="anchor" href="#denials-are-logged" aria-label="Link to this section">#</a></h3>
+<p>Every denial writes an <code>audit_event</code> with the attempted action. A pattern of denials is a signal — either someone needs access they do not have, or something is wrong. Silent denials hide both.</p>
+<hr>
+<h2 id="4-step-up-authentication">4. Step-up authentication<a class="anchor" href="#4-step-up-authentication" aria-label="Link to this section">#</a></h2>
+<p>Re-authentication within the last 5 minutes, required for:</p>
+<div class="tablewrap"><table><thead><tr><th>Action</th><th>Why</th></tr></thead><tbody><tr><td>Evidence disposition</td><td>Irreversible. Destroys client property</td></tr><tr><td>Gate override approval</td><td>Bypasses a control</td></tr><tr><td>Report release</td><td>Sends client-confidential material externally</td></tr><tr><td>Bulk export</td><td>Concentrates data</td></tr><tr><td>User or role change</td><td>Changes who can do what</td></tr><tr><td>Break-glass access</td><td>Reaches into an engagement the user is not on</td></tr><tr><td>Runbook version publish</td><td>Changes practice-wide methodology</td></tr></tbody></table></div>
+<p><strong>Deliberately not step-up:</strong> anything on the critical path during an active incident — evidence registration, custody events, procedure completion. Forcing re-authentication at 4am mid-acquisition creates worse risks than it removes. The protection there is the audit trail, not friction.</p>
+<hr>
+<h2 id="5-concurrency">5. Concurrency<a class="anchor" href="#5-concurrency" aria-label="Link to this section">#</a></h2>
+<p>Two people editing the same engagement is normal; two people editing the same finding is not.</p>
+<div class="tablewrap"><table><thead><tr><th>Object</th><th>Strategy</th></tr></thead><tbody><tr><td>Finding, report section, questionnaire answer</td><td><strong>Optimistic locking</strong> on <code>version</code>. Conflict returns both versions and the diff</td></tr><tr><td>Checklist item, task state</td><td>Last-write-wins, but every transition is audited, so the history is recoverable</td></tr><tr><td>Custody and audit events</td><td>Append-only. No conflict is possible</td></tr><tr><td>Gate pass</td><td><strong>Serialised.</strong> A gate cannot be passed twice; the second attempt sees the first's snapshot</td></tr><tr><td>Runbook version publish</td><td>Advisory lock on the module. Impact analysis and publish are one transaction</td></tr></tbody></table></div>
+<p>Writes that change engagement state are <strong>idempotent by client-supplied key</strong>, so a retried request after a dropped connection does not double-register evidence or double-pass a gate. This matters disproportionately during incidents, which is exactly when connections are flaky and people retry.</p>
+<hr>
+<h2 id="6-errors">6. Errors<a class="anchor" href="#6-errors" aria-label="Link to this section">#</a></h2>
+<p>Errors are operational instructions, not status codes. Every 4xx names what is wrong, what would fix it, and who owns it.</p>
+<div class="codewrap"><pre><code>{
+  "error": "gate_blocked",
+  "gate": "authorisation",
+  "message": "Technical execution cannot begin. 3 conditions unmet.",
+  "conditions": [
+    { "code": "loa_executed", "state": "failed",
+      "detail": "Letter of Authorisation not received. Issued 8 days ago.",
+      "owner": "R. Mehta", "remediation": "Record as received, or resend." }
+  ],
+  "override_available": true,
+  "override_requires": "Management approval, written justification, expiry date"
+}</code></pre></div>
+<p>Never leak across the boundary: another engagement's existence, another client's name, whether a record exists when the user lacks reach. <strong>Not-permitted and not-found return the same shape</strong> — the distinction is in the audit log, not the response.</p>
+<hr>
+<h2 id="7-integration-surface-deliberately-small">7. Integration surface — deliberately small<a class="anchor" href="#7-integration-surface-deliberately-small" aria-label="Link to this section">#</a></h2>
+<div class="tablewrap"><table><thead><tr><th>Integration</th><th>Direction</th><th>Phase</th></tr></thead><tbody><tr><td>Identity provider (OIDC)</td><td>in</td><td>0</td></tr><tr><td>Enquiry intake from the website contact form</td><td>in</td><td>1 — mirrors the live field set</td></tr><tr><td>Calendar (testing windows, cycles)</td><td>out</td><td>6</td></tr><tr><td>Notification (escalations, gate blocks, review queue)</td><td>out</td><td>1</td></tr></tbody></table></div>
+<p><strong>Explicitly not integrated:</strong> scanners and testing tools <em>(the catalogue references tools, it does not run them)</em> · SIEM <em>(the platform is not a detection system)</em> · billing <em>(Decision D4)</em> · client systems of any kind.</p>
+<p>Webhooks are outbound-only, signed, with no client-confidential content in the payload — an identifier and an event type, never a finding or an evidence detail. A notification that leaks its subject is a disclosure.</p>
+<hr>
+<h2 id="8-rate-limiting-and-abuse">8. Rate limiting and abuse<a class="anchor" href="#8-rate-limiting-and-abuse" aria-label="Link to this section">#</a></h2>
+<p>Authentication endpoints rate-limited per account and per source. Export endpoints limited per user per hour — a legitimate user does not need forty exports in an hour, and an exfiltrating one does. Search is limited to prevent enumeration of identifiers the user cannot reach.</p>
+<hr>
+<h2 id="9-counts">9. Counts<a class="anchor" href="#9-counts" aria-label="Link to this section">#</a></h2>
+<div class="tablewrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Routes specified</td><td><strong>58</strong></td></tr><tr><td>Enforcement layers</td><td>4, independently sufficient</td></tr><tr><td>Step-up actions</td><td>7</td></tr><tr><td>Explicitly excluded integrations</td><td>4</td></tr><tr><td>Endpoints serving evidence content</td><td><strong>0</strong> <em>(Rule 3)</em></td></tr></tbody></table></div>
+    <footer class="pagefoot">
+      <p>Sleuth Forensics — internal runbook &amp; engagement platform. Design documentation.
+      Nothing here is SME-validated; see <a href="../p/17-governing-constraints.html">governing constraints</a>.</p>
+    </footer>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="l2" href="#1-shape">1. Shape</a><a class="l2" href="#2-route-table">2. Route table</a><a class="l3" href="#work">Work</a><a class="l3" href="#gates">Gates</a><a class="l3" href="#evidence">Evidence</a><a class="l3" href="#findings-reports-documents">Findings, reports, documents</a><a class="l3" href="#library-global">Library (global)</a><a class="l3" href="#oversight-admin-global">Oversight &amp;amp; admin (global)</a><a class="l3" href="#exports">Exports</a><a class="l2" href="#3-permission-enforcement-four-layers">3. Permission enforcement — four layers</a><a class="l3" href="#denials-are-logged">Denials are logged</a><a class="l2" href="#4-step-up-authentication">4. Step-up authentication</a><a class="l2" href="#5-concurrency">5. Concurrency</a><a class="l2" href="#6-errors">6. Errors</a><a class="l2" href="#7-integration-surface-deliberately-small">7. Integration surface — deliberately small</a><a class="l2" href="#8-rate-limiting-and-abuse">8. Rate limiting and abuse</a><a class="l2" href="#9-counts">9. Counts</a></aside>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

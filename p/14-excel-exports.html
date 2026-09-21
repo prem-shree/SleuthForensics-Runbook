@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>14 — Excel Export Layer — Sleuth Runbook Platform</title>
+<meta name="description" content="Excel exports">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Sleuth&nbsp;&middot;&nbsp;Runbook Platform</a>
+    <span class="badge">Design proposal &middot; not built</span>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Documents">
+    <div class="search-wrap">
+      <input type="search" id="q" placeholder="Search…" aria-label="Search documents" autocomplete="off">
+      <div id="results" class="results" hidden></div>
+    </div>
+    <div class="navgroup"><div class="navgroup-h">Start here</div><a class="" href="../p/30-decisions-needed.html"><span class="num">30</span>Decisions needed</a><a class="" href="../p/31-confirmed-decisions.html"><span class="num">31</span>Confirmed decisions</a><a class="" href="../p/38-placeholder-register.html"><span class="num">38</span>Placeholder register</a></div><div class="navgroup"><div class="navgroup-h">Research &amp; catalogue</div><a class="" href="../p/00-research-findings.html"><span class="num">00</span>Research findings</a><a class="" href="../p/01-service-catalogue.html"><span class="num">01</span>Service catalogue v1</a><a class="" href="../p/21-engagement-catalogue-v2.html"><span class="num">21</span>Engagement catalogue v2</a></div><div class="navgroup"><div class="navgroup-h">Operating model</div><a class="" href="../p/02-users-and-roles.html"><span class="num">02</span>Users &amp; roles</a><a class="" href="../p/03-engagement-lifecycle.html"><span class="num">03</span>Engagement lifecycle</a><a class="" href="../p/28-checklist-and-gate-architecture.html"><span class="num">28</span>Checklists &amp; gates</a><a class="" href="../p/35-decision-trees.html"><span class="num">35</span>Decision trees</a><a class="" href="../p/32-operating-policies.html"><span class="num">32</span>Operating policies</a></div><div class="navgroup"><div class="navgroup-h">Runbook architecture</div><a class="" href="../p/04-runbook-architecture.html"><span class="num">04</span>Runbook architecture</a><a class="" href="../p/19-engagement-type-specification.html"><span class="num">19</span>Engagement type spec</a><a class="" href="../p/20-shared-module-inheritance.html"><span class="num">20</span>Shared modules</a><a class="" href="../p/22-core-spine-specification.html"><span class="num">22</span>Core spine</a><a class="" href="../p/23-archetype-modules.html"><span class="num">23</span>Archetype modules</a></div><div class="navgroup"><div class="navgroup-h">Engagement types</div><a class="" href="../p/24-ets-assessment.html"><span class="num">24</span>ETS — Assessment</a><a class="" href="../p/25-ets-testing.html"><span class="num">25</span>ETS — Testing</a><a class="" href="../p/26-ets-investigation.html"><span class="num">26</span>ETS — Investigation</a><a class="" href="../p/27-ets-continuous.html"><span class="num">27</span>ETS — Continuous</a></div><div class="navgroup"><div class="navgroup-h">Client information &amp; output</div><a class="" href="../p/05-questionnaire-architecture.html"><span class="num">05</span>Questionnaire architecture</a><a class="" href="../p/33-questionnaire-instruments.html"><span class="num">33</span>Questionnaire instruments</a><a class="" href="../p/08-reporting-architecture.html"><span class="num">08</span>Findings &amp; reporting</a><a class="" href="../p/34-report-templates.html"><span class="num">34</span>Report templates</a><a class="on" href="../p/14-excel-exports.html"><span class="num">14</span>Excel exports</a></div><div class="navgroup"><div class="navgroup-h">Evidence &amp; tools</div><a class="" href="../p/06-evidence-model.html"><span class="num">06</span>Evidence model</a><a class="" href="../p/07-tools-and-templates.html"><span class="num">07</span>Tools &amp; templates</a><a class="" href="../p/36-tool-capability-taxonomy.html"><span class="num">36</span>Tool capabilities</a></div><div class="navgroup"><div class="navgroup-h">Product &amp; architecture</div><a class="" href="../p/09-information-architecture.html"><span class="num">09</span>Information architecture</a><a class="" href="../p/11-ux-structure.html"><span class="num">11</span>UX structure</a><a class="" href="../p/12-visual-design-direction.html"><span class="num">12</span>Visual design direction</a><a class="" href="../p/10-data-model.html"><span class="num">10</span>Data model</a><a class="" href="../p/37-data-schema.html"><span class="num">37</span>Data schema</a><a class="" href="../p/39-api-and-permission-enforcement.html"><span class="num">39</span>API &amp; permissions</a><a class="" href="../p/40-build-and-operations.html"><span class="num">40</span>Build &amp; operations</a><a class="" href="../p/13-security-architecture.html"><span class="num">13</span>Security architecture</a></div><div class="navgroup"><div class="navgroup-h">Programme</div><a class="" href="../p/15-assumptions-and-open-questions.html"><span class="num">15</span>Assumptions &amp; questions</a><a class="" href="../p/16-implementation-plan.html"><span class="num">16</span>Implementation plan</a><a class="" href="../p/17-governing-constraints.html"><span class="num">17</span>Governing constraints</a><a class="" href="../p/18-content-provenance-and-validation.html"><span class="num">18</span>Provenance &amp; validation</a><a class="" href="../p/29-architecture-amendments.html"><span class="num">29</span>Architecture amendments</a></div>
+  </nav>
+  <main id="main" class="content">
+    <h1 id="14-excel-export-layer">14 — Excel Export Layer<a class="anchor" href="#14-excel-export-layer" aria-label="Link to this section">#</a></h1>
+<blockquote><p><strong>Status — <code>PROPOSED</code>, awaiting approval.</strong> Structural and design proposals, not confirmed Sleuth practice. See <a href="17-governing-constraints.html" ><code>17-governing-constraints.md</code></a>. Partly superseded on arrival of Sleuth's engagement-type list — <a href="19-engagement-type-specification.html" ><code>19-engagement-type-specification.md</code></a> §5.</p></blockquote>
+<blockquote><p>The brief: <em>"Excel is a future output layer, not the primary system. The web application should remain the source of structured information."</em></p></blockquote>
+<hr>
+<h2 id="1-position">1. Position<a class="anchor" href="#1-position" aria-label="Link to this section">#</a></h2>
+<p>Excel is a <strong>projection</strong>, never a source. Data is never authored in a workbook and imported back. The workbook is a rendering of platform state at a moment in time, for people and processes that live in spreadsheets — clients, auditors, insurers, and colleagues working offline.</p>
+<p>Every generated workbook therefore carries a provenance header on every sheet:</p>
+<div class="codewrap"><pre><code>SLEUTH FORENSICS                                    CLIENT CONFIDENTIAL
+Engagement    ENG-2026-0141  Meridian Logistics — VAPT External
+Runbook       SF-SEC-VAP-EXT v1.2
+Generated     2026-09-24 16:42 IST  by  P. Nair
+Source        Sleuth Runbook Platform — this export is a point-in-time extract
+Checksum      a91c…4d27</code></pre></div>
+<p>The checksum lets an emailed workbook be matched back to the platform state that produced it. Every export is an audit event, recording who exported what, when, and with which filters.</p>
+<h2 id="2-workbooks">2. Workbooks<a class="anchor" href="#2-workbooks" aria-label="Link to this section">#</a></h2>
+<h3 id="21-engagement-checklist">2.1 Engagement Checklist<a class="anchor" href="#21-engagement-checklist" aria-label="Link to this section">#</a></h3>
+<p>Columns per the brief: Phase · Procedure · Task · Requirement · Status · Owner · Due date · Completion date · Notes · Evidence reference. Plus: Runbook ID and version · Gate · Blocked reason · N/A reason. Grouped by phase with subtotals. Status values use a fixed enumeration so filtering works. Conditional formatting kept minimal and greyscale-safe.</p>
+<h3 id="22-evidence-register">2.2 Evidence Register<a class="anchor" href="#22-evidence-register" aria-label="Link to this section">#</a></h3>
+<p>Evidence ID · Level · Parent ID · Source · Description · Acquisition date/time and timezone · Examiner · Method · Tool and version · Hash algorithm · Hash · Integrity status · Storage location · Storage medium · Classification · Custody event count · Custody complete (Y/N) · Current holder · Legal hold · Disposition status · Disposition date. <strong>Second sheet:</strong> the full custody event stream, one row per event, which is what makes this exportable register genuinely useful to counsel.</p>
+<h3 id="23-findings-register">2.3 Findings Register<a class="anchor" href="#23-findings-register" aria-label="Link to this section">#</a></h3>
+<p>Finding ID · Title · Severity · CVSS (where used) · Asset · Category · Description · Impact · Recommendation · Remediation effort · Status · Owner · Evidence references · Author · Reviewer · Retest outcome · Retest date · Client response. Sorted by severity then asset. <strong>This is the sheet clients actually work in</strong>, tracking their own remediation — so column order is chosen for that use, and the remediation columns are left deliberately editable on the client's copy.</p>
+<h3 id="24-client-questionnaire">2.4 Client Questionnaire<a class="anchor" href="#24-client-questionnaire" aria-label="Link to this section">#</a></h3>
+<p>Section · Question · Why we ask · Answer · Respondent · Date · Source · Confidence · Verified by · Verified date · Outstanding (Y/N). Two modes: <strong>blank</strong> (for a client to complete offline, with <code>why we ask</code> visible — genuinely useful for long asset inventories) and <strong>completed</strong> (the record of what was asked and answered).</p>
+<h3 id="25-engagement-tracker">2.5 Engagement Tracker<a class="anchor" href="#25-engagement-tracker" aria-label="Link to this section">#</a></h3>
+<p>Cross-engagement, for Management. Engagement ID · Client · Service · Engagement type · Archetype · Status · Current phase · Manager · Team · Start · Target end · Actual end · Gate status · Days in phase · Blocked days · Report status · Acceptance · Retest · Disposition status.</p>
+<h3 id="26-additional-workbooks-worth-having">2.6 Additional workbooks worth having<a class="anchor" href="#26-additional-workbooks-worth-having" aria-label="Link to this section">#</a></h3>
+<ul><li><strong>Remediation Tracker</strong> — findings filtered to open items, with owner and target date, for client-side tracking between delivery and retest.</li><li><strong>Evidence Disposition Schedule</strong> — practice-wide, what is due and overdue. The operational answer to the obligation identified in <code>06-evidence-model.md</code> §5.</li><li><strong>Maturity Scorecard</strong> (A1) — domain, control, current level, target level, gap, evidence source, recommendation, priority.</li><li><strong>Asset Schedule</strong> (A2) — the approved scope as signed, which is the reference document in any scope dispute.</li></ul>
+<h2 id="3-formatting">3. Formatting<a class="anchor" href="#3-formatting" aria-label="Link to this section">#</a></h2>
+<p>Professional and plain, matching the platform's visual language: Inter-equivalent for text, monospace for identifiers and hashes, frozen header rows, defined print areas, page headers with classification, no decorative fills, no emoji, no colour-only meaning. Severity uses a text label plus a muted fill that survives greyscale.</p>
+<p>Hashes are formatted as text with a fixed column width — Excel will otherwise mangle long hex strings into scientific notation, which silently corrupts exactly the field that must not be wrong.</p>
+<h2 id="4-phasing">4. Phasing<a class="anchor" href="#4-phasing" aria-label="Link to this section">#</a></h2>
+<p>Excel arrives in <strong>Phase 7</strong>, after the registers it projects exist and have stabilised. Building exports before the underlying model settles produces workbooks that must be rewritten with every schema change.</p>
+<p>One exception is worth pulling forward: a simple <strong>Findings Register</strong> export is likely to be requested as soon as the first real engagement is delivered, because clients ask for it. Building that one export in Phase 2 alongside the findings register itself is reasonable and low-cost.</p>
+<p>PDF generation for reports and chain-of-custody forms is a separate concern and arrives earlier — it is part of the reporting engine in Phase 2, not part of this layer.</p>
+    <footer class="pagefoot">
+      <p>Sleuth Forensics — internal runbook &amp; engagement platform. Design documentation.
+      Nothing here is SME-validated; see <a href="../p/17-governing-constraints.html">governing constraints</a>.</p>
+    </footer>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="l2" href="#1-position">1. Position</a><a class="l2" href="#2-workbooks">2. Workbooks</a><a class="l3" href="#21-engagement-checklist">2.1 Engagement Checklist</a><a class="l3" href="#22-evidence-register">2.2 Evidence Register</a><a class="l3" href="#23-findings-register">2.3 Findings Register</a><a class="l3" href="#24-client-questionnaire">2.4 Client Questionnaire</a><a class="l3" href="#25-engagement-tracker">2.5 Engagement Tracker</a><a class="l3" href="#26-additional-workbooks-worth-having">2.6 Additional workbooks worth having</a><a class="l2" href="#3-formatting">3. Formatting</a><a class="l2" href="#4-phasing">4. Phasing</a></aside>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

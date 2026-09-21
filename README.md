@@ -79,6 +79,21 @@ neutrals, Inter and IBM Plex Mono, flat, no gradients. The site's own stylesheet
 
 ---
 
+## Documentation site
+
+The full set is published as a browsable site with search:
+**https://prem-shree.github.io/SleuthForensics-Runbook/**
+
+Built from `docs/*.md` by `tools/build_site.py` — no dependencies, plain HTML that works without
+JavaScript. Rebuild after editing any document:
+
+```
+python3 tools/build_site.py
+```
+
+Generated output (`index.html`, `p/`, `assets/site.css` is hand-written, `search-index.json`) is
+committed so the site can be served straight from the branch.
+
 ## Read in this order
 
 | Doc | Contents |

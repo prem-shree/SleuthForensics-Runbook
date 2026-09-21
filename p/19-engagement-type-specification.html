@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>19 — Engagement Type Specification (ETS) — Sleuth Runbook Platform</title>
+<meta name="description" content="Engagement type spec">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Sleuth&nbsp;&middot;&nbsp;Runbook Platform</a>
+    <span class="badge">Design proposal &middot; not built</span>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Documents">
+    <div class="search-wrap">
+      <input type="search" id="q" placeholder="Search…" aria-label="Search documents" autocomplete="off">
+      <div id="results" class="results" hidden></div>
+    </div>
+    <div class="navgroup"><div class="navgroup-h">Start here</div><a class="" href="../p/30-decisions-needed.html"><span class="num">30</span>Decisions needed</a><a class="" href="../p/31-confirmed-decisions.html"><span class="num">31</span>Confirmed decisions</a><a class="" href="../p/38-placeholder-register.html"><span class="num">38</span>Placeholder register</a></div><div class="navgroup"><div class="navgroup-h">Research &amp; catalogue</div><a class="" href="../p/00-research-findings.html"><span class="num">00</span>Research findings</a><a class="" href="../p/01-service-catalogue.html"><span class="num">01</span>Service catalogue v1</a><a class="" href="../p/21-engagement-catalogue-v2.html"><span class="num">21</span>Engagement catalogue v2</a></div><div class="navgroup"><div class="navgroup-h">Operating model</div><a class="" href="../p/02-users-and-roles.html"><span class="num">02</span>Users &amp; roles</a><a class="" href="../p/03-engagement-lifecycle.html"><span class="num">03</span>Engagement lifecycle</a><a class="" href="../p/28-checklist-and-gate-architecture.html"><span class="num">28</span>Checklists &amp; gates</a><a class="" href="../p/35-decision-trees.html"><span class="num">35</span>Decision trees</a><a class="" href="../p/32-operating-policies.html"><span class="num">32</span>Operating policies</a></div><div class="navgroup"><div class="navgroup-h">Runbook architecture</div><a class="" href="../p/04-runbook-architecture.html"><span class="num">04</span>Runbook architecture</a><a class="on" href="../p/19-engagement-type-specification.html"><span class="num">19</span>Engagement type spec</a><a class="" href="../p/20-shared-module-inheritance.html"><span class="num">20</span>Shared modules</a><a class="" href="../p/22-core-spine-specification.html"><span class="num">22</span>Core spine</a><a class="" href="../p/23-archetype-modules.html"><span class="num">23</span>Archetype modules</a></div><div class="navgroup"><div class="navgroup-h">Engagement types</div><a class="" href="../p/24-ets-assessment.html"><span class="num">24</span>ETS — Assessment</a><a class="" href="../p/25-ets-testing.html"><span class="num">25</span>ETS — Testing</a><a class="" href="../p/26-ets-investigation.html"><span class="num">26</span>ETS — Investigation</a><a class="" href="../p/27-ets-continuous.html"><span class="num">27</span>ETS — Continuous</a></div><div class="navgroup"><div class="navgroup-h">Client information &amp; output</div><a class="" href="../p/05-questionnaire-architecture.html"><span class="num">05</span>Questionnaire architecture</a><a class="" href="../p/33-questionnaire-instruments.html"><span class="num">33</span>Questionnaire instruments</a><a class="" href="../p/08-reporting-architecture.html"><span class="num">08</span>Findings &amp; reporting</a><a class="" href="../p/34-report-templates.html"><span class="num">34</span>Report templates</a><a class="" href="../p/14-excel-exports.html"><span class="num">14</span>Excel exports</a></div><div class="navgroup"><div class="navgroup-h">Evidence &amp; tools</div><a class="" href="../p/06-evidence-model.html"><span class="num">06</span>Evidence model</a><a class="" href="../p/07-tools-and-templates.html"><span class="num">07</span>Tools &amp; templates</a><a class="" href="../p/36-tool-capability-taxonomy.html"><span class="num">36</span>Tool capabilities</a></div><div class="navgroup"><div class="navgroup-h">Product &amp; architecture</div><a class="" href="../p/09-information-architecture.html"><span class="num">09</span>Information architecture</a><a class="" href="../p/11-ux-structure.html"><span class="num">11</span>UX structure</a><a class="" href="../p/12-visual-design-direction.html"><span class="num">12</span>Visual design direction</a><a class="" href="../p/10-data-model.html"><span class="num">10</span>Data model</a><a class="" href="../p/37-data-schema.html"><span class="num">37</span>Data schema</a><a class="" href="../p/39-api-and-permission-enforcement.html"><span class="num">39</span>API &amp; permissions</a><a class="" href="../p/40-build-and-operations.html"><span class="num">40</span>Build &amp; operations</a><a class="" href="../p/13-security-architecture.html"><span class="num">13</span>Security architecture</a></div><div class="navgroup"><div class="navgroup-h">Programme</div><a class="" href="../p/15-assumptions-and-open-questions.html"><span class="num">15</span>Assumptions &amp; questions</a><a class="" href="../p/16-implementation-plan.html"><span class="num">16</span>Implementation plan</a><a class="" href="../p/17-governing-constraints.html"><span class="num">17</span>Governing constraints</a><a class="" href="../p/18-content-provenance-and-validation.html"><span class="num">18</span>Provenance &amp; validation</a><a class="" href="../p/29-architecture-amendments.html"><span class="num">29</span>Architecture amendments</a></div>
+  </nav>
+  <main id="main" class="content">
+    <h1 id="19-engagement-type-specification-ets">19 — Engagement Type Specification (ETS)<a class="anchor" href="#19-engagement-type-specification-ets" aria-label="Link to this section">#</a></h1>
+<blockquote><p>The schema that will be populated once Sleuth supplies its actual engagement types. It is exactly the set of facts required by the operating goal in <code>17-governing-constraints.md</code>: <em>analyst selects an engagement type → the platform tells them what to collect, what documents are required, what needs approval, what to do next, what evidence to record, what output to produce, and what must be satisfied before moving forward.</em></p></blockquote>
+<p><strong>Nothing is populated yet.</strong> This document defines the format, the notation and the input Sleuth needs to supply. It is deliberately published before the content so that Sleuth's engagement-type information lands in a defined structure rather than being reshaped afterwards.</p>
+<hr>
+<h2 id="1-the-central-rule-common-content-is-derived-never-restated">1. The central rule: common content is <em>derived</em>, never restated<a class="anchor" href="#1-the-central-rule-common-content-is-derived-never-restated" aria-label="Link to this section">#</a></h2>
+<p>The brief asks each engagement type to identify "what is common" and "what is service-specific".</p>
+<p>The wrong way to do that is to write both out per engagement type. Forty engagement types each restating the evidence-handling procedure is forty copies to update — precisely the failure the "change once" requirement exists to prevent.</p>
+<p><strong>So an ETS authors only the service-specific content. The common content is computed from the composition and rendered read-only.</strong></p>
+<div class="codewrap"><pre><code>ETS  =  reference to (Core spine + Archetype module)      ← derived, never authored here
+     +  the Service module                                 ← the only part authored per type
+     +  declared attachable Context modules                ← conditions, not content
+     +  declared deltas against inherited content          ← explicit, approved, never silent</code></pre></div>
+<p>"What is common" is therefore answerable at any moment by resolving the composition, and it is correct by construction. If the core evidence-handling procedure changes tomorrow, every ETS's "what is common" changes with it, with no edits. See <code>20-shared-module-inheritance.md</code>.</p>
+<h3 id="notation">Notation<a class="anchor" href="#notation" aria-label="Link to this section">#</a></h3>
+<p>Used throughout every populated ETS:</p>
+<div class="tablewrap"><table><thead><tr><th>Marker</th><th>Meaning</th></tr></thead><tbody><tr><td><code>[CORE]</code></td><td>Inherited from the core spine. Not authored here. Reference only</td></tr><tr><td><code>[ARCH:A2]</code></td><td>Inherited from the named archetype module</td></tr><tr><td><code>[SERVICE]</code></td><td>Specific to this engagement type. <strong>The only content actually authored in an ETS</strong></td></tr><tr><td><code>[CTX:Production]</code></td><td>Conditional — attached when that context module's condition is met</td></tr><tr><td><code>[EXTENDS: core.ev.04]</code></td><td>Service content injected at a declared extension point on inherited content</td></tr><tr><td><code>[DELTA: core.auth.02]</code></td><td>An approved, recorded divergence from inherited content. Requires justification</td></tr><tr><td><code>[GAP]</code></td><td>A known hole. Rule 2's alternative to inventing content</td></tr></tbody></table></div>
+<p>Every element additionally carries <code>provenance</code> and <code>validation_status</code> per <code>18-content-provenance-and-validation.md</code>.</p>
+<hr>
+<h2 id="2-ets-schema-the-sixteen-required-facts">2. ETS schema — the sixteen required facts<a class="anchor" href="#2-ets-schema-the-sixteen-required-facts" aria-label="Link to this section">#</a></h2>
+<h3 id="header">Header<a class="anchor" href="#header" aria-label="Link to this section">#</a></h3>
+<div class="tablewrap"><table><thead><tr><th>Field</th><th>Notes</th></tr></thead><tbody><tr><td>Engagement type ID</td><td><code>SF-&lt;PILLAR&gt;-&lt;SVC&gt;-&lt;TYPE&gt;</code></td></tr><tr><td>Display name</td><td>What Sleuth calls it internally</td></tr><tr><td>Public service</td><td>Which of the 21 site services it is sold under, if any <em>(<code>SITE-DERIVED</code>)</em></td></tr><tr><td>Archetype</td><td>A1 / A2 / A3 / A4 — or a new one if Sleuth's reality needs it</td></tr><tr><td>Sold as</td><td>Fixed-scope project · time-boxed · retainer · emergency call-off</td></tr><tr><td>Typical duration</td><td></td></tr><tr><td>Team shape</td><td>Roles and indicative count</td></tr><tr><td>Runbook ID + version</td><td></td></tr><tr><td>Composition completeness / Validation completeness</td><td>Two separate figures, never merged</td></tr></tbody></table></div>
+<h3 id="1-what-is-common-derived">§1 What is common — <code>[DERIVED]</code><a class="anchor" href="#1-what-is-common-derived" aria-label="Link to this section">#</a></h3>
+<p>Rendered from the composition, not authored. Resolves to the list of inherited core and archetype procedures, checklists, gates, evidence rules, document requirements and closure obligations, each with its current version. Read-only in the ETS.</p>
+<h3 id="2-what-is-service-specific-service">§2 What is service-specific — <code>[SERVICE]</code><a class="anchor" href="#2-what-is-service-specific-service" aria-label="Link to this section">#</a></h3>
+<p>The service module: the procedures, checks, evidence requirements and outputs that exist <em>only</em> for this engagement type. <strong>This is the content Sleuth's SMEs author.</strong> Everything else in an ETS is either inherited, derived, or a declared condition.</p>
+<h3 id="3-required-client-information">§3 Required client information<a class="anchor" href="#3-required-client-information" aria-label="Link to this section">#</a></h3>
+<p>Questions this engagement type needs answered before work can start, split three ways:</p>
+<div class="tablewrap"><table><thead><tr><th>Layer</th><th>Source</th></tr></thead><tbody><tr><td>Universal block</td><td><code>[CORE]</code></td></tr><tr><td>Archetype block</td><td><code>[ARCH:*]</code></td></tr><tr><td>Service block</td><td><code>[SERVICE]</code> — authored here</td></tr></tbody></table></div>
+<p>Each question: type · required/optional · <strong>blocking</strong> (holds the Readiness Gate) · <code>why_we_ask</code> · which context module it can trigger · whether an answer must be Sleuth-verified rather than client-stated.</p>
+<p><strong>Rule 4 constraint:</strong> questions establish <em>whether</em> access material exists and <em>how it will be delivered</em>. Never <em>what it is</em>.</p>
+<h3 id="4-required-documents">§4 Required documents<a class="anchor" href="#4-required-documents" aria-label="Link to this section">#</a></h3>
+<p>Per document: which template · mandatory or conditional · which phase it is needed by · which gate it unblocks · who signs on the client side · whether signatory authority must be verified · <code>legal_review_status</code> of the template <em>(Rule 5)</em>.</p>
+<h3 id="5-authorisation-requirements">§5 Authorisation requirements<a class="anchor" href="#5-authorisation-requirements" aria-label="Link to this section">#</a></h3>
+<p>What authority is needed before any work touches a client system or a client's data. Who may grant it. How their authority to grant it is verified. Validity period. What happens on expiry. Whether an emergency path exists for this engagement type, and precisely what it does and does not unblock.</p>
+<h3 id="6-preconditions">§6 Preconditions<a class="anchor" href="#6-preconditions" aria-label="Link to this section">#</a></h3>
+<p>What must be true before Phase 4 opens: access verified working, environment confirmed, tooling approved and in validation date, team briefed on stop conditions, client contacts confirmed reachable. Each precondition is a checkable condition on the Readiness Gate, not prose.</p>
+<h3 id="7-major-phases">§7 Major phases<a class="anchor" href="#7-major-phases" aria-label="Link to this section">#</a></h3>
+<p>The lifecycle phases this engagement type actually uses, with any reordering, parallelism or omission relative to the common lifecycle — and <strong>the reason for each deviation</strong>. Deviation without a stated reason is a drafting error, not a variation.</p>
+<h3 id="8-technical-procedures-service-this-is-the-sme-content">§8 Technical procedures — <code>[SERVICE]</code> — <em>this is the SME content</em><a class="anchor" href="#8-technical-procedures-service-this-is-the-sme-content" aria-label="Link to this section">#</a></h3>
+<p>Per procedure: objective · rationale · preconditions · inputs · tasks · checklist · required tool capabilities <em>(never product names — see <code>07-tools-and-templates.md</code>)</em> · evidence requirements · decision points · stop conditions · escalations · approvals · outputs · estimated duration · role.</p>
+<p>Subject to <strong>Rule 2</strong>: where the method is not known and confirmed, the entry is a <code>[GAP]</code> with a description, a consequence and an owner. It is not filled with plausible text.</p>
+<h3 id="9-evidence-requirements">§9 Evidence requirements<a class="anchor" href="#9-evidence-requirements" aria-label="Link to this section">#</a></h3>
+<p>What must be captured, at what quality, at which point. Per item: evidence level (L0–L5), capture method, whether custody applies, whether it is mandatory for a finding, and retention class.</p>
+<p><strong>Rule 3 constraint:</strong> these are <em>register</em> requirements. The platform records that the evidence exists, its hash, its custody and where it is held. It does not hold the content.</p>
+<h3 id="10-decision-points">§10 Decision points<a class="anchor" href="#10-decision-points" aria-label="Link to this section">#</a></h3>
+<p>Branches with recorded outcomes. Per decision: the question, the branches, what each branch changes (procedures substituted, context modules attached, approvals required), who decides, and what is recorded.</p>
+<h3 id="11-stop-conditions">§11 Stop conditions<a class="anchor" href="#11-stop-conditions" aria-label="Link to this section">#</a></h3>
+<p>Conditions on which work halts immediately, without a judgement call. Per condition: the trigger, what stops, what must be preserved at the moment of stopping, who is notified, and how work resumes.</p>
+<h3 id="12-escalation-points">§12 Escalation points<a class="anchor" href="#12-escalation-points" aria-label="Link to this section">#</a></h3>
+<p>Per escalation: trigger · who is notified · target time · whether work pauses · whether the client is informed and by whom · whether it bypasses the normal chain <em>(some must — see <code>03-engagement-lifecycle.md</code> §6)</em>.</p>
+<h3 id="13-qa-gates">§13 QA gates<a class="anchor" href="#13-qa-gates" aria-label="Link to this section">#</a></h3>
+<p>Which gates apply, and any engagement-type-specific conditions added to them. Who passes each. Segregation-of-duty requirements. Whether any gate is non-overridable for this type.</p>
+<h3 id="14-deliverables">§14 Deliverables<a class="anchor" href="#14-deliverables" aria-label="Link to this section">#</a></h3>
+<p>Per deliverable: report or artefact · its template and version · required sections · audience · classification · delivery channel · acceptance mechanism. Client-facing deliverable <em>language</em> may be <code>SITE-DERIVED</code>; the <em>structure</em> is <code>[SERVICE]</code> and Draft until validated.</p>
+<h3 id="15-retest-follow-up">§15 Retest / follow-up<a class="anchor" href="#15-retest-follow-up" aria-label="Link to this section">#</a></h3>
+<p>Whether retest applies · what triggers it · what is retested and what is not · the outcome vocabulary · whether it is in the original scope or separately authorised · whether a separate authorisation or window is required · what document is issued.</p>
+<h3 id="16-closure-requirements">§16 Closure requirements<a class="anchor" href="#16-closure-requirements" aria-label="Link to this section">#</a></h3>
+<p>Acceptance · evidence disposition (the instruction, the deadline, the witness requirement) · client access revocation · <strong>test account and credential revocation confirmed</strong> <em>(Rule 4 — the platform tracked that access existed, so it can confirm it was withdrawn)</em> · removal of any artefacts Sleuth created in client systems · lessons learned · runbook improvement proposals raised against the version that was executed.</p>
+<hr>
+<h2 id="3-skeleton-the-notation-in-use">3. Skeleton — the notation in use<a class="anchor" href="#3-skeleton-the-notation-in-use" aria-label="Link to this section">#</a></h2>
+<p>Illustrative only. Content is deliberately left as <code>[GAP]</code> rather than invented (<strong>Rule 2</strong>), which is what a genuine pre-validation ETS looks like.</p>
+<div class="codewrap"><pre><code>ENGAGEMENT TYPE   &lt;id&gt;                       ARCHETYPE  &lt;A1|A2|A3|A4&gt;
+PUBLIC SERVICE    &lt;site service&gt;             SITE-DERIVED
+COMPOSITION       78% structurally complete  VALIDATION  0% — nothing SME-validated
+BLOCKING GAPS     4                          RUNBOOK     cannot be Approved
+
+§1  WHAT IS COMMON                                            [DERIVED — read only]
+    core.spine v—      35 procedures, phases 0-3 and 7-10
+    arch.&lt;A?&gt; v—       archetype procedures, phases 4-6
+    → resolved live from the composition; never restated here
+
+§3  REQUIRED CLIENT INFORMATION
+    [CORE]     universal block — client, authority, objective, constraints, logistics
+    [ARCH:A?]  archetype block
+    [SERVICE]  [GAP] service questions — awaiting SME
+               owner: &lt;Needs Confirmation&gt; · blocking: YES
+
+§5  AUTHORISATION REQUIREMENTS
+    [CORE]     engagement agreement executed
+    [CORE]     authorised signatory verified
+    [ARCH:A?]  [GAP] archetype-specific authority — awaiting SME confirmation
+    [CTX:Emergency] emergency record + 24h ratification   (if applicable to this type)
+
+§8  TECHNICAL PROCEDURES                                      [SERVICE] — SME content
+    01  [GAP]  &lt;candidate scope item from the public service page&gt;
+               provenance: SITE-SUGGESTED  ·  validation: DRAFT
+               ⚠ Rule 6 — site copy is not evidence of internal SOP.
+                 This is a prompt for the SME, not a procedure.
+    02  [GAP]  …
+               blocking: YES — the engagement type is not sellable through the
+                              platform until this exists
+
+§11 STOP CONDITIONS
+    [CORE]     authorisation lapses or is withdrawn
+    [CORE]     safety risk to people identified
+    [ARCH:A?]  [GAP] archetype stop conditions — awaiting SME
+    [SERVICE]  [GAP]
+
+§16 CLOSURE REQUIREMENTS
+    [CORE]     acceptance · disposition · access revocation · credential revocation
+               confirmed · artefact removal · lessons learned
+    [SERVICE]  [GAP] any type-specific closure obligation</code></pre></div>
+<p>A populated ETS is the same skeleton with <code>[GAP]</code> replaced by SME-validated content, and with the validation figure moving off zero.</p>
+<hr>
+<h2 id="4-what-sleuth-needs-to-supply-per-engagement-type">4. What Sleuth needs to supply per engagement type<a class="anchor" href="#4-what-sleuth-needs-to-supply-per-engagement-type" aria-label="Link to this section">#</a></h2>
+<p>Answering these is enough to populate §1–§7 and §9–§16. §8 (technical procedures) is the SME authoring work that follows, and is expected to take longer.</p>
+<p><strong>Short answers are fine. "Don't know yet" is a valid answer and produces a <code>[GAP]</code>, which is the correct outcome under Rule 2.</strong></p>
+<div class="tablewrap"><table><thead><tr><th>#</th><th>Question</th></tr></thead><tbody><tr><td>1</td><td>What do you call this internally, and which of the 21 public services is it sold under?</td></tr><tr><td>2</td><td>One sentence: what does the client get, and what question does it answer for them?</td></tr><tr><td>3</td><td>Is it planned or reactive? Fixed-scope, time-boxed, retainer, or emergency call-off?</td></tr><tr><td>4</td><td>Roughly how often do you sell it, and what is a typical duration and team shape?</td></tr><tr><td>5</td><td>Does Sleuth actively test, touch or change client systems? Does it acquire client data or devices?</td></tr><tr><td>6</td><td>What authority do you require before starting, and who at the client can give it?</td></tr><tr><td>7</td><td>What must the client give you before you can start — information, access, documents, physical items?</td></tr><tr><td>8</td><td>What are the major stages of the work, in your words?</td></tr><tr><td>9</td><td>What do you have to record as you go, to stand behind the output later?</td></tr><tr><td>10</td><td>What makes you stop, or pick up the phone?</td></tr><tr><td>11</td><td>Who reviews the work before it goes out, and what do they check?</td></tr><tr><td>12</td><td>What does the client receive, and in what form?</td></tr><tr><td>13</td><td>Is there a retest or follow-up, and is it in scope or sold separately?</td></tr><tr><td>14</td><td>What has to happen for you to consider it finished?</td></tr><tr><td>15</td><td>What most often goes wrong on this type of engagement?</td></tr></tbody></table></div>
+<p>Question 15 is not in the brief's sixteen fields, and it is the most valuable one. It surfaces the stop conditions, gate conditions and checklist items that matter in practice — the things a methodology document written from first principles reliably misses.</p>
+<hr>
+<h2 id="5-what-happens-when-sleuth-supplies-the-list">5. What happens when Sleuth supplies the list<a class="anchor" href="#5-what-happens-when-sleuth-supplies-the-list" aria-label="Link to this section">#</a></h2>
+<p>In this order:</p>
+<ol><li><strong>Reconcile</strong> the supplied engagement types against the proposed 41 in <code>01-service-catalogue.md</code>. The proposed list is superseded, not merged. Anything Sleuth does not sell is deleted rather than kept "for later".</li><li><strong>Re-test the four archetypes</strong> against the real list. If a supplied engagement type does not fit A1–A4, the archetypes change — they were derived from the public catalogue, and the real catalogue is the better evidence. A fifth archetype is a real possible outcome, and forcing a bad fit to preserve a diagram would be the wrong trade.</li><li><strong>Re-derive the common lifecycle</strong> from what is genuinely common across the real types, rather than from what looked common across the site.</li><li><strong>Create one ETS per engagement type</strong>, populated to §1–§7 and §9–§16 from Sleuth's answers, with <code>[GAP]</code> everywhere the answer is not yet known.</li><li><strong>Update the sixteen architecture areas</strong> listed by Sleuth — catalogue, types, archetypes, common lifecycle, service variations, runbook architecture, questionnaires, checklists, evidence register, findings, reporting, roles, data model, navigation, UX, exports.</li><li><strong>Publish the gap register</strong> — every blocking gap, with an owner, ordered by which engagement types it blocks. This becomes the SME work queue and the real measure of readiness.</li></ol>
+<p>Step 2 is the one worth flagging. The archetypes are the load-bearing abstraction in this architecture, and they were inferred from marketing copy. Sleuth's actual list is the first real test of whether they hold.</p>
+    <footer class="pagefoot">
+      <p>Sleuth Forensics — internal runbook &amp; engagement platform. Design documentation.
+      Nothing here is SME-validated; see <a href="../p/17-governing-constraints.html">governing constraints</a>.</p>
+    </footer>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="l2" href="#1-the-central-rule-common-content-is-derived-never-restated">1. The central rule: common content is derived, never restated</a><a class="l3" href="#notation">Notation</a><a class="l2" href="#2-ets-schema-the-sixteen-required-facts">2. ETS schema — the sixteen required facts</a><a class="l3" href="#header">Header</a><a class="l3" href="#1-what-is-common-derived">§1 What is common — [DERIVED]</a><a class="l3" href="#2-what-is-service-specific-service">§2 What is service-specific — [SERVICE]</a><a class="l3" href="#3-required-client-information">§3 Required client information</a><a class="l3" href="#4-required-documents">§4 Required documents</a><a class="l3" href="#5-authorisation-requirements">§5 Authorisation requirements</a><a class="l3" href="#6-preconditions">§6 Preconditions</a><a class="l3" href="#7-major-phases">§7 Major phases</a><a class="l3" href="#8-technical-procedures-service-this-is-the-sme-content">§8 Technical procedures — [SERVICE] — this is the SME content</a><a class="l3" href="#9-evidence-requirements">§9 Evidence requirements</a><a class="l3" href="#10-decision-points">§10 Decision points</a><a class="l3" href="#11-stop-conditions">§11 Stop conditions</a><a class="l3" href="#12-escalation-points">§12 Escalation points</a><a class="l3" href="#13-qa-gates">§13 QA gates</a><a class="l3" href="#14-deliverables">§14 Deliverables</a><a class="l3" href="#15-retest-follow-up">§15 Retest / follow-up</a><a class="l3" href="#16-closure-requirements">§16 Closure requirements</a><a class="l2" href="#3-skeleton-the-notation-in-use">3. Skeleton — the notation in use</a><a class="l2" href="#4-what-sleuth-needs-to-supply-per-engagement-type">4. What Sleuth needs to supply per engagement type</a><a class="l2" href="#5-what-happens-when-sleuth-supplies-the-list">5. What happens when Sleuth supplies the list</a></aside>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

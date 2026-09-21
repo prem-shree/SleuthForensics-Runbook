@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>06 — Evidence Model, Chain of Custody &amp; Disposition — Sleuth Runbook Platform</title>
+<meta name="description" content="Evidence model">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Sleuth&nbsp;&middot;&nbsp;Runbook Platform</a>
+    <span class="badge">Design proposal &middot; not built</span>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Documents">
+    <div class="search-wrap">
+      <input type="search" id="q" placeholder="Search…" aria-label="Search documents" autocomplete="off">
+      <div id="results" class="results" hidden></div>
+    </div>
+    <div class="navgroup"><div class="navgroup-h">Start here</div><a class="" href="../p/30-decisions-needed.html"><span class="num">30</span>Decisions needed</a><a class="" href="../p/31-confirmed-decisions.html"><span class="num">31</span>Confirmed decisions</a><a class="" href="../p/38-placeholder-register.html"><span class="num">38</span>Placeholder register</a></div><div class="navgroup"><div class="navgroup-h">Research &amp; catalogue</div><a class="" href="../p/00-research-findings.html"><span class="num">00</span>Research findings</a><a class="" href="../p/01-service-catalogue.html"><span class="num">01</span>Service catalogue v1</a><a class="" href="../p/21-engagement-catalogue-v2.html"><span class="num">21</span>Engagement catalogue v2</a></div><div class="navgroup"><div class="navgroup-h">Operating model</div><a class="" href="../p/02-users-and-roles.html"><span class="num">02</span>Users &amp; roles</a><a class="" href="../p/03-engagement-lifecycle.html"><span class="num">03</span>Engagement lifecycle</a><a class="" href="../p/28-checklist-and-gate-architecture.html"><span class="num">28</span>Checklists &amp; gates</a><a class="" href="../p/35-decision-trees.html"><span class="num">35</span>Decision trees</a><a class="" href="../p/32-operating-policies.html"><span class="num">32</span>Operating policies</a></div><div class="navgroup"><div class="navgroup-h">Runbook architecture</div><a class="" href="../p/04-runbook-architecture.html"><span class="num">04</span>Runbook architecture</a><a class="" href="../p/19-engagement-type-specification.html"><span class="num">19</span>Engagement type spec</a><a class="" href="../p/20-shared-module-inheritance.html"><span class="num">20</span>Shared modules</a><a class="" href="../p/22-core-spine-specification.html"><span class="num">22</span>Core spine</a><a class="" href="../p/23-archetype-modules.html"><span class="num">23</span>Archetype modules</a></div><div class="navgroup"><div class="navgroup-h">Engagement types</div><a class="" href="../p/24-ets-assessment.html"><span class="num">24</span>ETS — Assessment</a><a class="" href="../p/25-ets-testing.html"><span class="num">25</span>ETS — Testing</a><a class="" href="../p/26-ets-investigation.html"><span class="num">26</span>ETS — Investigation</a><a class="" href="../p/27-ets-continuous.html"><span class="num">27</span>ETS — Continuous</a></div><div class="navgroup"><div class="navgroup-h">Client information &amp; output</div><a class="" href="../p/05-questionnaire-architecture.html"><span class="num">05</span>Questionnaire architecture</a><a class="" href="../p/33-questionnaire-instruments.html"><span class="num">33</span>Questionnaire instruments</a><a class="" href="../p/08-reporting-architecture.html"><span class="num">08</span>Findings &amp; reporting</a><a class="" href="../p/34-report-templates.html"><span class="num">34</span>Report templates</a><a class="" href="../p/14-excel-exports.html"><span class="num">14</span>Excel exports</a></div><div class="navgroup"><div class="navgroup-h">Evidence &amp; tools</div><a class="on" href="../p/06-evidence-model.html"><span class="num">06</span>Evidence model</a><a class="" href="../p/07-tools-and-templates.html"><span class="num">07</span>Tools &amp; templates</a><a class="" href="../p/36-tool-capability-taxonomy.html"><span class="num">36</span>Tool capabilities</a></div><div class="navgroup"><div class="navgroup-h">Product &amp; architecture</div><a class="" href="../p/09-information-architecture.html"><span class="num">09</span>Information architecture</a><a class="" href="../p/11-ux-structure.html"><span class="num">11</span>UX structure</a><a class="" href="../p/12-visual-design-direction.html"><span class="num">12</span>Visual design direction</a><a class="" href="../p/10-data-model.html"><span class="num">10</span>Data model</a><a class="" href="../p/37-data-schema.html"><span class="num">37</span>Data schema</a><a class="" href="../p/39-api-and-permission-enforcement.html"><span class="num">39</span>API &amp; permissions</a><a class="" href="../p/40-build-and-operations.html"><span class="num">40</span>Build &amp; operations</a><a class="" href="../p/13-security-architecture.html"><span class="num">13</span>Security architecture</a></div><div class="navgroup"><div class="navgroup-h">Programme</div><a class="" href="../p/15-assumptions-and-open-questions.html"><span class="num">15</span>Assumptions &amp; questions</a><a class="" href="../p/16-implementation-plan.html"><span class="num">16</span>Implementation plan</a><a class="" href="../p/17-governing-constraints.html"><span class="num">17</span>Governing constraints</a><a class="" href="../p/18-content-provenance-and-validation.html"><span class="num">18</span>Provenance &amp; validation</a><a class="" href="../p/29-architecture-amendments.html"><span class="num">29</span>Architecture amendments</a></div>
+  </nav>
+  <main id="main" class="content">
+    <h1 id="06-evidence-model-chain-of-custody-disposition">06 — Evidence Model, Chain of Custody &amp; Disposition<a class="anchor" href="#06-evidence-model-chain-of-custody-disposition" aria-label="Link to this section">#</a></h1>
+<blockquote><p><strong>Status — DRAFT / NEEDS SME VALIDATION.</strong> Per Rule 1 of <a href="17-governing-constraints.html" ><code>17-governing-constraints.md</code></a>, nothing in this document is confirmed Sleuth practice. Procedures, tools, legal requirements and operational rules here are proposals for SME review, not internal SOP. Content drawn from the public website is <code>SITE-SUGGESTED</code> and carries no authority over internal method (Rule 6). Gaps are named rather than filled (Rule 2). Validation vocabulary: <a href="18-content-provenance-and-validation.html" ><code>18-content-provenance-and-validation.md</code></a>.</p>
+<p><strong>Rule 3 settles the open question.</strong> Register-only is now the design, not a recommendation. The platform records evidence metadata, hashes, provenance, custody, access history and disposition. It does <strong>not</strong> hold client evidence content, and no upload path is built.</p></blockquote>
+<blockquote><p>"Evidence over assumption. Every finding is supported by evidence." — sleuthforensics.in/about</p>
+<p>The platform's job is to make that statement <em>structurally true</em> rather than aspirational.</p></blockquote>
+<hr>
+<h2 id="1-the-evidence-ladder">1. The evidence ladder<a class="anchor" href="#1-the-evidence-ladder" aria-label="Link to this section">#</a></h2>
+<p>The brief asks for a clear distinction between raw evidence, working copies, processed evidence, analytical artefacts, screenshots/logs, findings and reports. Model this as a <strong>provenance ladder</strong>: every item declares its parent, so any statement in a report can be walked back to the thing it came from.</p>
+<div class="codewrap"><pre><code>  L0  SOURCE              The original. A device, an account, a system, a person's
+                          handover. Never analysed directly. Often never in Sleuth's
+                          possession at all — only referenced.
+       │  acquire  (hash, verify, custody record opened)  ⟨ CUSTODY GATE ⟩
+       ▼
+  L1  RAW EVIDENCE        Forensic image, memory dump, log export, collected file set.
+                          Immutable. Read-only. Hashed at acquisition and verified.
+       │  derive  (verify parent hash first)
+       ▼
+  L2  WORKING COPY        The copy that is actually worked on. Its own hash. Provably
+                          derived from a specific L1 item. Disposable and re-derivable.
+       │  process  (tool + version + parameters recorded)
+       ▼
+  L3  PROCESSED EVIDENCE  Parsed, normalised, carved, indexed, decoded output.
+                          Records the tool and version that produced it — so it can
+                          be reproduced or re-run when a tool is later found faulty.
+       │  analyse
+       ▼
+  L4  ANALYTICAL ARTEFACT Timelines, IOC sets, attack-path graphs, correlation matrices,
+                          diff sets. Sleuth's analytical work product.
+       │
+  L5  CONTEMPORANEOUS     Screenshots, tool logs, session recordings, examiner notes.
+      RECORD              Captured *while* working. Attaches at any level. This is what
+                          shows the work was done as described.
+       │  assert
+       ▼
+  L6  FINDING             A claim. MUST link to ≥1 item at L1–L5. A finding whose
+                          evidence links are all removed becomes invalid, not merely
+                          flagged — it cannot be included in a report.
+       │  communicate
+       ▼
+  L7  REPORT              The client-facing statement. Cites findings, which cite
+                          evidence, which traces to source.</code></pre></div>
+<p>Reading the ladder upward from any sentence in a delivered report to the physical device it came from is the single capability that distinguishes a forensic platform from a project tracker. Every link in that chain is a stored relationship, not a convention.</p>
+<h3 id="11-an-important-scoping-consequence">1.1 An important scoping consequence<a class="anchor" href="#11-an-important-scoping-consequence" aria-label="Link to this section">#</a></h3>
+<p>Only L1 and L2 are large binary objects. L3–L5 are mostly structured data and modest files. <strong>The platform does not need to store forensic images to deliver most of this value</strong> — it needs to <em>register</em> them, hash them, and track their custody and location. <strong>Rule 3 settles this: register-only.</strong> The platform stores no evidence content, and no upload path is built. <code>storage_location</code> points outward — to Sleuth's lab storage, evidence safe or medium — and is a reference, never an upload target.</p>
+<hr>
+<h2 id="2-the-evidence-record">2. The evidence record<a class="anchor" href="#2-the-evidence-record" aria-label="Link to this section">#</a></h2>
+<div class="tablewrap"><table><thead><tr><th>Field</th><th>Notes</th></tr></thead><tbody><tr><td><code>evidence_id</code></td><td>Human-usable, engagement-scoped, monospace-rendered: <code>ENG-2026-0141-E007</code></td></tr><tr><td><code>level</code></td><td>L0–L5</td></tr><tr><td><code>parent_evidence_id</code></td><td>Required for L2–L4. This is the provenance chain.</td></tr><tr><td><code>source_description</code></td><td>"Dell Latitude 5420, S/N ABC123, recovered from Finance, 3rd floor"</td></tr><tr><td><code>source_type</code></td><td>Host · Mobile device · Removable media · Cloud account · Log source · Network capture · Document · Interview record · Physical item</td></tr><tr><td><code>client_asset_ref</code></td><td>Links to the client's own asset identifier where one exists</td></tr><tr><td><code>description</code></td><td>What it is, in plain language</td></tr><tr><td><code>acquisition_datetime</code> + <code>timezone</code></td><td>Timezone is mandatory. Timeline work across sources fails silently without it.</td></tr><tr><td><code>acquisition_method</code></td><td>Physical · Logical · File-system · Targeted collection · Memory capture · Cloud API export · Live response · Manual export</td></tr><tr><td><code>acquisition_tool</code> + <code>tool_version</code></td><td>References the tool catalogue. Version matters when a tool is later found defective.</td></tr><tr><td><code>examiner</code></td><td>The person, not the team</td></tr><tr><td><code>write_blocker_used</code></td><td>Boolean + method. Required for physical acquisitions.</td></tr><tr><td><code>hash_algorithm</code></td><td>SHA-256 default; SHA-1/MD5 permitted only as <em>additional</em> values for legacy tool compatibility, never alone</td></tr><tr><td><code>acquisition_hash</code></td><td>Computed at acquisition</td></tr><tr><td><code>verification_hash</code> + <code>verified_at</code> + <code>verified_by</code></td><td>Computed independently after acquisition</td></tr><tr><td><code>integrity_status</code></td><td><code>Verified</code> · <code>Verification pending</code> · <strong><code>FAILED</code></strong> · <code>Not applicable</code></td></tr><tr><td><code>size_bytes</code>, <code>file_count</code></td><td>Sanity-check values</td></tr><tr><td><code>storage_location</code></td><td>Where it physically/logically is — evidence safe, lab NAS, encrypted volume, platform store</td></tr><tr><td><code>storage_medium_id</code></td><td>Which drive/safe/container, for physical retrieval</td></tr><tr><td><code>classification</code></td><td>Client Confidential · Restricted · Privileged · Personal Data</td></tr><tr><td><code>contains_personal_data</code></td><td>Drives retention and disposition rules</td></tr><tr><td><code>legal_hold</code></td><td>Blocks disposition entirely while set</td></tr><tr><td><code>retention_until</code></td><td>Calculated at close from policy + hold</td></tr><tr><td><code>disposition_status</code></td><td>Retained · Return scheduled · Returned · Destruction scheduled · Destroyed · <strong>Overdue</strong></td></tr></tbody></table></div>
+<h3 id="21-integrity-failure-is-a-system-event-not-a-field-update">2.1 Integrity failure is a system event, not a field update<a class="anchor" href="#21-integrity-failure-is-a-system-event-not-a-field-update" aria-label="Link to this section">#</a></h3>
+<p>If <code>verification_hash ≠ acquisition_hash</code>:</p>
+<ol><li><code>integrity_status = FAILED</code>, immediately and irreversibly for that record.</li><li>Every derived item (L2–L4) is marked <strong>provenance-suspect</strong>.</li><li>Every finding referencing any affected item is flagged and <strong>removed from the report draft</strong>.</li><li>The Evidence Integrity Gate blocks.</li><li>The Reviewer and Engagement Manager are notified. Work does not continue quietly.</li><li>The event is permanently part of the engagement record and appears in the report's limitations.</li></ol>
+<p>No role can clear a failed integrity status. A new acquisition can be taken; the failure itself remains on the record. This is deliberate: the value of an integrity check is entirely in the fact that it cannot be talked out of.</p>
+<hr>
+<h2 id="3-chain-of-custody">3. Chain of custody<a class="anchor" href="#3-chain-of-custody" aria-label="Link to this section">#</a></h2>
+<p>Custody is an <strong>append-only event stream</strong> per evidence item. Events are never edited or deleted.</p>
+<div class="tablewrap"><table><thead><tr><th>Event</th><th>Captured</th></tr></thead><tbody><tr><td><code>ACQUIRED</code></td><td>who, when, where, method, tool+version, hash, write-blocker</td></tr><tr><td><code>VERIFIED</code></td><td>who, when, hash compared, result</td></tr><tr><td><code>TRANSFERRED</code></td><td>from → to, when, method (hand carry / courier / encrypted transfer), container/seal number, both parties acknowledged</td></tr><tr><td><code>RECEIVED</code></td><td>receiver, when, seal intact yes/no, condition notes</td></tr><tr><td><code>ACCESSED</code></td><td>who, when, purpose, duration, read or copy</td></tr><tr><td><code>COPY_DERIVED</code></td><td>parent, child, method, hash of child</td></tr><tr><td><code>PROCESSED</code></td><td>tool, version, parameters, output reference</td></tr><tr><td><code>STORED</code></td><td>location, medium, container, access controls</td></tr><tr><td><code>SEALED</code> / <code>UNSEALED</code></td><td>seal number, witness where applicable</td></tr><tr><td><code>HOLD_APPLIED</code> / <code>HOLD_RELEASED</code></td><td>authority, reason, reference</td></tr><tr><td><code>RETURNED</code></td><td>recipient, their identity verification, acknowledgement reference</td></tr><tr><td><code>DESTROYED</code></td><td>method, who performed it, <strong>who witnessed it</strong>, certificate reference</td></tr></tbody></table></div>
+<h3 id="31-gap-detection">3.1 Gap detection<a class="anchor" href="#31-gap-detection" aria-label="Link to this section">#</a></h3>
+<p>A custody chain is valid when every interval between acquisition and the present is attributable to a named, recorded holder. The system computes this continuously rather than trusting the record to look complete:</p>
+<div class="codewrap"><pre><code>GAP DETECTED — ENG-2026-0141-E007
+  TRANSFERRED  2026-09-14 16:40  P. Nair → courier (AWB 88213)
+  RECEIVED     2026-09-16 09:05  S. Kulkarni, seal intact
+  ⚠ 40h 25m unattributed while in transit.
+    Courier tracking reference required, or the gap must be
+    documented as a limitation before this item supports a finding.</code></pre></div>
+<p>A detected gap does not delete evidence. It becomes a known, documented limitation that flows into the report. Pretending gaps do not happen is what makes a record indefensible; recording them honestly is what makes it survivable.</p>
+<h3 id="32-the-custody-strip">3.2 The custody strip<a class="anchor" href="#32-the-custody-strip" aria-label="Link to this section">#</a></h3>
+<p>Every place an evidence item appears in the UI carries a compact, always-visible integrity strip. It is not behind a tab, because the one thing a consultant must never have to go looking for is whether the thing they are about to rely on is sound.</p>
+<div class="codewrap"><pre><code>ENG-2026-0141-E007   L1 RAW   ● VERIFIED   SHA-256 4f2a…c81d
+custody: 6 events · complete · holder: S. Kulkarni · evidence safe A-3</code></pre></div>
+<hr>
+<h2 id="4-access-history">4. Access history<a class="anchor" href="#4-access-history" aria-label="Link to this section">#</a></h2>
+<p>Custody answers <em>who held it</em>. Access answers <em>who looked inside it</em>. Both are required, and they are different questions.</p>
+<p>Every read, preview, download or export of evidence content records: user, role, timestamp, engagement, purpose (selected, not free text), item, action, IP and device, and whether it was part of a bulk operation. Bulk export requires Engagement Manager approval and is always notified.</p>
+<p>This log is a deliverable in its own right. When a client or counsel asks "who at Sleuth has seen this?", the answer should take seconds and be complete.</p>
+<hr>
+<h2 id="5-disposition">5. Disposition<a class="anchor" href="#5-disposition" aria-label="Link to this section">#</a></h2>
+<p>The brief calls for evidence return/destruction at closure. In practice this is the obligation most likely to be quietly skipped, because by then everyone has moved on — and it is also the one that creates a growing liability.</p>
+<div class="codewrap"><pre><code>CLOSURE
+   │
+   ├─ legal_hold set? ──yes──► RETAIN. Disposition blocked. Review date set.
+   │                            Hold authority and reference recorded.
+   │
+   ├─ client instruction?
+   │     ├─ RETURN     → schedule · verify recipient identity · transfer with seal
+   │     │                · obtain signed acknowledgement · record RETURNED
+   │     ├─ DESTROY    → schedule · method per policy · performed by + WITNESSED by
+   │     │                · certificate generated · record DESTROYED
+   │     └─ RETAIN     → retention period + justification + review date
+   │                      · re-consent requirement if it holds personal data
+   │
+   └─ no instruction  → BLOCKS THE CLOSURE GATE. The engagement cannot close.</code></pre></div>
+<p><strong>Standing rules</strong></p>
+<ul><li>Disposition is authorised by the Engagement Manager only, and is always a logged privileged action.</li><li>Destruction requires a <strong>witness</strong> who is not the person performing it.</li><li>Destruction of an item <strong>does not delete its record</strong>. The evidence record, its hashes, its full custody chain and its destruction certificate remain permanently. What is destroyed is the content, never the provenance.</li><li>Derived items follow their parent unless separately held — and the system enumerates them so nothing is missed.</li><li>Overdue disposition is a standing item on the Oversight dashboard, because an unreturned client hard drive sitting in a safe eighteen months after closure is a real liability, not a housekeeping detail.</li></ul>
+<hr>
+<h2 id="6-evidence-for-non-forensic-archetypes">6. Evidence for non-forensic archetypes<a class="anchor" href="#6-evidence-for-non-forensic-archetypes" aria-label="Link to this section">#</a></h2>
+<p>Custody applies fully to A3. The other archetypes still need evidence, with proportionate handling:</p>
+<div class="tablewrap"><table><thead><tr><th>Archetype</th><th>What counts as evidence</th><th>Custody</th></tr></thead><tbody><tr><td><strong>A1</strong></td><td>Documents received, interview records, configuration exports, screenshots, observation notes</td><td>Not required. But <strong>every maturity rating must cite its source</strong> — the A1 equivalent of the evidence link, checked at the Evidence Sufficiency gate. An unsourced maturity score is an assumption wearing a number.</td></tr><tr><td><strong>A2</strong></td><td>Tool output, request/response captures, PoC artefacts, screenshots, command logs</td><td>Light: retained, hashed at collection, held for the retention period so a disputed finding can be reproduced. No transfer chain.</td></tr><tr><td><strong>A3</strong></td><td>Full ladder</td><td><strong>Mandatory, gating</strong></td></tr><tr><td><strong>A4</strong></td><td>Monitoring output, screenshots of exposures, cycle snapshots</td><td>Light; snapshot retention so a "this was exposed on this date" claim is supportable</td></tr></tbody></table></div>
+<p>A2's retention requirement deserves a note. When a client disputes a finding three months after delivery — "that was never exploitable" — the captured request/response pair settles it in a minute. Without it, Sleuth's credibility rests on a consultant's recollection.</p>
+<hr>
+<h2 id="7-what-this-model-is-not">7. What this model is not<a class="anchor" href="#7-what-this-model-is-not" aria-label="Link to this section">#</a></h2>
+<p>It is deliberately <strong>not</strong> a forensic analysis tool. It does not parse images, run carving, or replace the examiner's toolkit. It is the record of <em>what was acquired, by whom, how, where it is, who touched it, what was derived from it, and what was concluded</em> — the layer that makes the analysis defensible and that no forensic suite provides across engagements.</p>
+    <footer class="pagefoot">
+      <p>Sleuth Forensics — internal runbook &amp; engagement platform. Design documentation.
+      Nothing here is SME-validated; see <a href="../p/17-governing-constraints.html">governing constraints</a>.</p>
+    </footer>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="l2" href="#1-the-evidence-ladder">1. The evidence ladder</a><a class="l3" href="#11-an-important-scoping-consequence">1.1 An important scoping consequence</a><a class="l2" href="#2-the-evidence-record">2. The evidence record</a><a class="l3" href="#21-integrity-failure-is-a-system-event-not-a-field-update">2.1 Integrity failure is a system event, not a field update</a><a class="l2" href="#3-chain-of-custody">3. Chain of custody</a><a class="l3" href="#31-gap-detection">3.1 Gap detection</a><a class="l3" href="#32-the-custody-strip">3.2 The custody strip</a><a class="l2" href="#4-access-history">4. Access history</a><a class="l2" href="#5-disposition">5. Disposition</a><a class="l2" href="#6-evidence-for-non-forensic-archetypes">6. Evidence for non-forensic archetypes</a><a class="l2" href="#7-what-this-model-is-not">7. What this model is not</a></aside>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>10 — Data Model — Sleuth Runbook Platform</title>
+<meta name="description" content="Data model">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Sleuth&nbsp;&middot;&nbsp;Runbook Platform</a>
+    <span class="badge">Design proposal &middot; not built</span>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Documents">
+    <div class="search-wrap">
+      <input type="search" id="q" placeholder="Search…" aria-label="Search documents" autocomplete="off">
+      <div id="results" class="results" hidden></div>
+    </div>
+    <div class="navgroup"><div class="navgroup-h">Start here</div><a class="" href="../p/30-decisions-needed.html"><span class="num">30</span>Decisions needed</a><a class="" href="../p/31-confirmed-decisions.html"><span class="num">31</span>Confirmed decisions</a><a class="" href="../p/38-placeholder-register.html"><span class="num">38</span>Placeholder register</a></div><div class="navgroup"><div class="navgroup-h">Research &amp; catalogue</div><a class="" href="../p/00-research-findings.html"><span class="num">00</span>Research findings</a><a class="" href="../p/01-service-catalogue.html"><span class="num">01</span>Service catalogue v1</a><a class="" href="../p/21-engagement-catalogue-v2.html"><span class="num">21</span>Engagement catalogue v2</a></div><div class="navgroup"><div class="navgroup-h">Operating model</div><a class="" href="../p/02-users-and-roles.html"><span class="num">02</span>Users &amp; roles</a><a class="" href="../p/03-engagement-lifecycle.html"><span class="num">03</span>Engagement lifecycle</a><a class="" href="../p/28-checklist-and-gate-architecture.html"><span class="num">28</span>Checklists &amp; gates</a><a class="" href="../p/35-decision-trees.html"><span class="num">35</span>Decision trees</a><a class="" href="../p/32-operating-policies.html"><span class="num">32</span>Operating policies</a></div><div class="navgroup"><div class="navgroup-h">Runbook architecture</div><a class="" href="../p/04-runbook-architecture.html"><span class="num">04</span>Runbook architecture</a><a class="" href="../p/19-engagement-type-specification.html"><span class="num">19</span>Engagement type spec</a><a class="" href="../p/20-shared-module-inheritance.html"><span class="num">20</span>Shared modules</a><a class="" href="../p/22-core-spine-specification.html"><span class="num">22</span>Core spine</a><a class="" href="../p/23-archetype-modules.html"><span class="num">23</span>Archetype modules</a></div><div class="navgroup"><div class="navgroup-h">Engagement types</div><a class="" href="../p/24-ets-assessment.html"><span class="num">24</span>ETS — Assessment</a><a class="" href="../p/25-ets-testing.html"><span class="num">25</span>ETS — Testing</a><a class="" href="../p/26-ets-investigation.html"><span class="num">26</span>ETS — Investigation</a><a class="" href="../p/27-ets-continuous.html"><span class="num">27</span>ETS — Continuous</a></div><div class="navgroup"><div class="navgroup-h">Client information &amp; output</div><a class="" href="../p/05-questionnaire-architecture.html"><span class="num">05</span>Questionnaire architecture</a><a class="" href="../p/33-questionnaire-instruments.html"><span class="num">33</span>Questionnaire instruments</a><a class="" href="../p/08-reporting-architecture.html"><span class="num">08</span>Findings &amp; reporting</a><a class="" href="../p/34-report-templates.html"><span class="num">34</span>Report templates</a><a class="" href="../p/14-excel-exports.html"><span class="num">14</span>Excel exports</a></div><div class="navgroup"><div class="navgroup-h">Evidence &amp; tools</div><a class="" href="../p/06-evidence-model.html"><span class="num">06</span>Evidence model</a><a class="" href="../p/07-tools-and-templates.html"><span class="num">07</span>Tools &amp; templates</a><a class="" href="../p/36-tool-capability-taxonomy.html"><span class="num">36</span>Tool capabilities</a></div><div class="navgroup"><div class="navgroup-h">Product &amp; architecture</div><a class="" href="../p/09-information-architecture.html"><span class="num">09</span>Information architecture</a><a class="" href="../p/11-ux-structure.html"><span class="num">11</span>UX structure</a><a class="" href="../p/12-visual-design-direction.html"><span class="num">12</span>Visual design direction</a><a class="on" href="../p/10-data-model.html"><span class="num">10</span>Data model</a><a class="" href="../p/37-data-schema.html"><span class="num">37</span>Data schema</a><a class="" href="../p/39-api-and-permission-enforcement.html"><span class="num">39</span>API &amp; permissions</a><a class="" href="../p/40-build-and-operations.html"><span class="num">40</span>Build &amp; operations</a><a class="" href="../p/13-security-architecture.html"><span class="num">13</span>Security architecture</a></div><div class="navgroup"><div class="navgroup-h">Programme</div><a class="" href="../p/15-assumptions-and-open-questions.html"><span class="num">15</span>Assumptions &amp; questions</a><a class="" href="../p/16-implementation-plan.html"><span class="num">16</span>Implementation plan</a><a class="" href="../p/17-governing-constraints.html"><span class="num">17</span>Governing constraints</a><a class="" href="../p/18-content-provenance-and-validation.html"><span class="num">18</span>Provenance &amp; validation</a><a class="" href="../p/29-architecture-amendments.html"><span class="num">29</span>Architecture amendments</a></div>
+  </nav>
+  <main id="main" class="content">
+    <h1 id="10-data-model">10 — Data Model<a class="anchor" href="#10-data-model" aria-label="Link to this section">#</a></h1>
+<blockquote><p><strong>Status — <code>PROPOSED</code>, awaiting approval.</strong> Structural and design proposals, not confirmed Sleuth practice. See <a href="17-governing-constraints.html" ><code>17-governing-constraints.md</code></a>. Partly superseded on arrival of Sleuth's engagement-type list — <a href="19-engagement-type-specification.html" ><code>19-engagement-type-specification.md</code></a> §5.</p>
+<p><strong>Rules 3 and 4 constrain this schema.</strong> No entity, field or relation holds client evidence content or any client secret. <code>storage_location</code> is an outward reference only.</p></blockquote>
+<hr>
+<h2 id="1-two-planes">1. Two planes<a class="anchor" href="#1-two-planes" aria-label="Link to this section">#</a></h2>
+<p>The single most consequential modelling decision in this system.</p>
+<div class="codewrap"><pre><code>╔══════════════════════ CONTENT PLANE ══════════════════════╗
+║  Authored · Versioned · Approved · Practice-wide          ║
+║                                                            ║
+║  Service ─ EngagementType ─ Runbook@version                ║
+║                              ├─ Phase ─ Procedure ─ Task   ║
+║                              ├─ ChecklistTemplate          ║
+║                              ├─ GateDefinition             ║
+║                              ├─ DecisionTree               ║
+║                              └─ EvidenceRequirement        ║
+║  QuestionnaireTemplate@version · ReportTemplate@version    ║
+║  DocumentTemplate@version · Tool@version · KnowledgeArticle║
+╚════════════════════════════╤═══════════════════════════════╝
+                             │  PINNED AT PHASE 3
+                             │  (version reference, never a copy-by-value
+                             │   that can drift, never a live link that
+                             │   can change underneath a running engagement)
+╔════════════════════════════╧═══════════════════════════════╗
+║  ══════════════════ EXECUTION PLANE ══════════════════     ║
+║  Instantiated · Immutable history · Engagement-scoped      ║
+║                                                            ║
+║  Client ─ Engagement ─ EngagementPhase ─ TaskInstance      ║
+║                      ├─ ChecklistInstance ─ ItemInstance   ║
+║                      ├─ GateInstance ─ ConditionResult     ║
+║                      ├─ QuestionnaireResponse ─ Answer     ║
+║                      ├─ EvidenceItem ─ CustodyEvent        ║
+║                      │                ─ AccessEvent        ║
+║                      │                ─ IntegrityCheck     ║
+║                      │                ─ Disposition        ║
+║                      ├─ Finding ─ FindingEvidenceLink      ║
+║                      ├─ Report@version ─ ReportSection     ║
+║                      ├─ DocumentInstance                   ║
+║                      ├─ DecisionRecord                     ║
+║                      ├─ Escalation                         ║
+║                      └─ AuditEvent  (append-only)          ║
+╚════════════════════════════════════════════════════════════╝</code></pre></div>
+<p><strong>Why a reference rather than a copy.</strong> Copying the runbook into the engagement would guarantee the historical record, but it would also fork 41 runbooks into hundreds of orphaned copies that can never be improved. A version <em>reference</em> into an immutable version store gives both: the engagement always renders exactly what it pinned, and the library stays maintainable.</p>
+<hr>
+<h2 id="2-content-plane-entities">2. Content plane entities<a class="anchor" href="#2-content-plane-entities" aria-label="Link to this section">#</a></h2>
+<h3 id="service">Service<a class="anchor" href="#service" aria-label="Link to this section">#</a></h3>
+<p><code>service_id</code> · <code>display_name</code> (site-exact) · <code>short_name</code> · <code>pillar</code> (Security/Investigation/Resilience) · <code>site_slug</code> · <code>summary</code> · <code>related_services[]</code> · <code>active</code></p>
+<h3 id="engagementtype">EngagementType<a class="anchor" href="#engagementtype" aria-label="Link to this section">#</a></h3>
+<p><code>type_id</code> · <code>service_id</code> · <code>name</code> · <code>archetype</code> (A1–A4) · <code>runbook_id</code> · <code>default_context_modules[]</code> · <code>typical_duration</code> · <code>active</code></p>
+<h3 id="runbook-runbookversion">Runbook / RunbookVersion<a class="anchor" href="#runbook-runbookversion" aria-label="Link to this section">#</a></h3>
+<p><code>runbook_id</code> (<code>SF-SEC-VAP-EXT</code>) · <code>engagement_type_id</code> · <code>archetype</code> <strong>Per version:</strong> <code>version</code> · <code>status</code> (Draft/In Review/Approved/Deprecated) · <code>owner_id</code> · <code>reviewer_id</code> · <code>approver_id</code> · <code>effective_from</code> · <code>effective_to</code> · <code>next_review_date</code> · <code>change_summary</code> · <code>change_history[]</code> · <code>composition{spine_v, archetype_v, service_module_v, context_modules[]}</code></p>
+<p><code>composition</code> records exactly which module versions were combined. Without it, "v1.2" is a label; with it, it is a reproducible build.</p>
+<h3 id="phase-procedure-task">Phase → Procedure → Task<a class="anchor" href="#phase-procedure-task" aria-label="Link to this section">#</a></h3>
+<p><strong>Phase:</strong> <code>phase_id</code> · <code>runbook_version_id</code> · <code>lifecycle_phase</code> (0–10) · <code>sequence</code> · <code>entry_criteria[]</code> · <code>exit_criteria[]</code> · <code>gate_ref</code> <strong>Procedure:</strong> <code>procedure_id</code> · <code>phase_id</code> · <code>sequence</code> · <code>objective</code> · <code>rationale</code> · <code>preconditions[]</code> · <code>inputs[]</code> · <code>outputs[]</code> · <code>capability_refs[]</code> · <code>evidence_requirements[]</code> · <code>decision_tree_refs[]</code> · <code>stop_conditions[]</code> · <code>escalation_conditions[]</code> · <code>approval_required</code> · <code>estimated_duration</code> · <code>role</code> · <code>kb_refs[]</code> · <code>optional</code> · <code>context_module_id</code> (null = core) <strong>Task:</strong> <code>task_id</code> · <code>procedure_id</code> · <code>sequence</code> · <code>instruction</code> · <code>expected_result</code> · <code>duration</code> · <code>parallel_ok</code></p>
+<h3 id="templates">Templates<a class="anchor" href="#templates" aria-label="Link to this section">#</a></h3>
+<p><strong>ChecklistTemplate / ItemTemplate:</strong> <code>requirement</code> (Required/Optional/Conditional) · <code>condition_expr</code> · <code>evidence_required</code> · <code>verification_method</code> <strong>GateDefinition / GateCondition:</strong> <code>condition_expr</code> (evaluated against engagement state) · <code>failure_message</code> · <code>remediation_hint</code> · <code>overridable</code> (false for the Custody Gate) <strong>QuestionnaireTemplate → Section → Question:</strong> <code>question_type</code> · <code>blocking</code> · <code>required</code> · <code>condition_expr</code> · <code>triggers_context_module</code> · <code>help_text</code> · <code>why_we_ask</code> <strong>ReportTemplate → Section:</strong> <code>required</code> · <code>auto_generated</code> · <code>source_query</code> · <code>condition_expr</code> <strong>DocumentTemplate:</strong> <code>variables[]</code> · <code>conditional_clauses[]</code> · <code>legal_review_status</code> · <code>legal_reviewed_at</code> <strong>DecisionTree → Node → Branch:</strong> <code>node_type</code> (Question/Action/Stop/Escalate/Terminal) · <code>condition</code> · <code>next_node_id</code> · <code>records_decision</code> <strong>Tool / ToolVersion:</strong> per <code>07-tools-and-templates.md</code> §3 <strong>KnowledgeArticle:</strong> <code>article_id</code> · <code>title</code> · <code>body</code> · <code>tags[]</code> · <code>linked_procedures[]</code> · <code>source_engagement_id</code> (for lessons learned) · <code>version</code></p>
+<p><code>why_we_ask</code> on Question is small and disproportionately valuable: it lets a consultant explain to a client why a question matters, in the client's words, without improvising.</p>
+<hr>
+<h2 id="3-execution-plane-entities">3. Execution plane entities<a class="anchor" href="#3-execution-plane-entities" aria-label="Link to this section">#</a></h2>
+<h3 id="client">Client<a class="anchor" href="#client" aria-label="Link to this section">#</a></h3>
+<p><code>client_id</code> · <strong><code>client_type</code> (Organisation | Individual)</strong> · <code>legal_name</code> · <code>display_name</code> · <code>sector</code> (9-value list) · <code>regulated</code> + <code>regulators[]</code> · <code>size_band</code> · <code>locations[]</code> · <code>status</code> · <code>conflict_notes</code> · <code>standing_agreements[]</code> · <code>default_classification</code></p>
+<p>The <code>client_type</code> split is not cosmetic. An Individual has no MSA, no corporate signatory, different consent requirements and — in spyware and domestic-surveillance matters — materially different safety handling (research §4.2).</p>
+<h3 id="clientcontact">ClientContact<a class="anchor" href="#clientcontact" aria-label="Link to this section">#</a></h3>
+<p><code>contact_id</code> · <code>client_id</code> · <code>name</code> · <code>role</code> · <code>email</code> · <code>phone</code> · <code>is_authorised_signatory</code> · <code>authority_verified_by</code> · <code>authority_verified_at</code> · <code>is_emergency_contact</code> · <code>receives_reports</code> · <code>excluded_from_distribution</code> (for investigations where a contact is a subject)</p>
+<h3 id="engagement">Engagement<a class="anchor" href="#engagement" aria-label="Link to this section">#</a></h3>
+<p><code>engagement_id</code> (<code>ENG-2026-0141</code>) · <code>client_id</code> · <code>service_id</code> · <code>engagement_type_id</code> · <strong><code>runbook_version_id</code> (pinned, immutable)</strong> · <code>parent_engagement_id</code> (child engagements) · <code>name</code> · <code>status</code> · <code>current_phase</code> · <code>classification</code> · <code>urgency</code> (the four contact-form values) · <code>is_emergency</code> · <code>active_context_modules[]</code> · <code>manager_id</code> · <code>team_members[]</code> (role + from/to) · <code>start_date</code> · <code>target_end_date</code> · <code>actual_end_date</code> · <code>scope_approved_at</code> · <code>authorisation_expires_at</code> · <code>legal_hold</code></p>
+<h3 id="scope-assets">Scope &amp; Assets<a class="anchor" href="#scope-assets" aria-label="Link to this section">#</a></h3>
+<p><strong>ScopeAsset:</strong> <code>asset_id</code> · <code>engagement_id</code> · <code>identifier</code> (IP/CIDR/domain/hostname/app/account/device) · <code>type</code> · <code>description</code> · <code>environment</code> (Production/Staging/Dev/Unknown) · <code>ownership</code> (Client/Third-party/SaaS) · <code>third_party_authorised</code> · <code>in_scope</code> · <code>exclusion_reason</code> · <code>criticality</code> · <code>fragile</code> · <code>verified_by</code> · <code>verified_at</code> <strong>ScopeChange:</strong> <code>requested_by</code> · <code>requested_at</code> · <code>description</code> · <code>impact</code> · <code>approved_by</code> · <code>approved_at</code> · <code>document_instance_id</code></p>
+<p><code>environment</code> and <code>ownership</code> are not descriptive fields — they are inputs to gate conditions and context-module attachment. A single asset marked <code>Third-party</code> with <code>third_party_authorised = false</code> blocks the Authorisation Gate.</p>
+<h3 id="execution-records">Execution records<a class="anchor" href="#execution-records" aria-label="Link to this section">#</a></h3>
+<p><strong>EngagementPhase:</strong> status · started/completed · gate_instance_id <strong>TaskInstance:</strong> <code>status</code> (Not started/In progress/Complete/Blocked/Needs review/Not applicable) · <code>owner_id</code> · <code>started_at</code> · <code>completed_at</code> · <code>notes</code> · <code>evidence_refs[]</code> · <code>blocked_reason</code> · <code>na_reason</code> <strong>ChecklistItemInstance:</strong> <code>state</code> (Required/Optional/Completed/Not applicable/Blocked/Needs review) · <code>evidence_ref</code> · <code>note</code> · <code>owner_id</code> · <code>completed_at</code> — exactly the state set the brief specifies <strong>GateInstance:</strong> <code>state</code> (Blocked/Ready/Passed/Overridden) · <code>condition_results[]</code> (snapshotted at pass) · <code>passed_by</code> · <code>passed_at</code> · <code>override{requested_by, approved_by, justification, expires_at, remediation_task_id}</code> <strong>DecisionRecord:</strong> <code>decision_tree_id</code> · <code>node_path[]</code> · <code>outcome</code> · <code>decided_by</code> · <code>decided_at</code> · <code>rationale</code> <strong>Escalation:</strong> <code>trigger</code> · <code>severity</code> · <code>raised_by</code> · <code>raised_at</code> · <code>escalated_to</code> · <code>acknowledged_at</code> · <code>resolution</code> · <code>work_paused</code></p>
+<p>Snapshotting <code>condition_results</code> at the moment a gate passes matters: it records <em>why the gate was passable then</em>, which is the question asked later when something turns out to have been wrong.</p>
+<h3 id="evidence-cluster">Evidence cluster<a class="anchor" href="#evidence-cluster" aria-label="Link to this section">#</a></h3>
+<p>Per <code>06-evidence-model.md</code>. <code>EvidenceItem</code> (with <code>level</code>, <code>parent_evidence_id</code>, hashes, <code>integrity_status</code>, <code>legal_hold</code>, <code>disposition_status</code>), <code>CustodyEvent</code> (append-only), <code>AccessEvent</code>, <code>IntegrityCheck</code>, <code>Disposition</code>.</p>
+<h3 id="finding-findingevidencelink">Finding &amp; FindingEvidenceLink<a class="anchor" href="#finding-findingevidencelink" aria-label="Link to this section">#</a></h3>
+<p>Per <code>08-reporting-architecture.md</code> §1. The link table is the enforcement point for "no finding without evidence" — a constraint at the database level, not a validation rule that can be bypassed by an import.</p>
+<h3 id="report-documentinstance">Report / DocumentInstance<a class="anchor" href="#report-documentinstance" aria-label="Link to this section">#</a></h3>
+<p><strong>Report:</strong> <code>report_id</code> · <code>engagement_id</code> · <code>report_template_version_id</code> · <code>version</code> · <code>status</code> · <code>author_id</code> · <code>reviewer_id</code> · <code>qa_passed_at</code> · <code>released_at</code> · <code>released_by</code> · <code>recipients[]</code> · <code>file_ref</code> · <code>file_hash</code> · <code>accepted_at</code> · <code>accepted_by</code> <strong>DocumentInstance:</strong> <code>document_template_version_id</code> · <code>type</code> · <code>status</code> (Draft/Issued/Executed/Expired/Superseded) · <code>variables_resolved{}</code> · <code>signatories[]{name, role, authority_verified_by, signed_at, method}</code> · <code>executed_at</code> · <code>valid_from</code> · <code>valid_until</code> · <code>file_ref</code> · <code>file_hash</code></p>
+<h3 id="auditevent-append-only-hash-chained">AuditEvent (append-only, hash-chained)<a class="anchor" href="#auditevent-append-only-hash-chained" aria-label="Link to this section">#</a></h3>
+<p><code>event_id</code> · <code>sequence</code> · <code>timestamp</code> · <code>actor_id</code> · <code>actor_role</code> · <code>engagement_id</code> · <code>object_type</code> · <code>object_id</code> · <code>action</code> · <code>before{}</code> · <code>after{}</code> · <code>ip</code> · <code>user_agent</code> · <code>session_id</code> · <code>privileged</code> · <code>prev_hash</code> · <code>hash</code></p>
+<p>Hash-chaining makes tampering detectable rather than merely prohibited — the difference between a policy and a property.</p>
+<hr>
+<h2 id="4-relationships-worth-stating-explicitly">4. Relationships worth stating explicitly<a class="anchor" href="#4-relationships-worth-stating-explicitly" aria-label="Link to this section">#</a></h2>
+<div class="codewrap"><pre><code>Client 1──* Engagement *──1 EngagementType *──1 Service
+Engagement 1──1 RunbookVersion            (PINNED, immutable)
+Engagement 1──* Engagement                (parent → child engagements)
+Engagement 1──* ScopeAsset
+Engagement 1──* EvidenceItem 1──* CustodyEvent   (append-only)
+EvidenceItem *──1 EvidenceItem            (provenance: parent → derived)
+Finding *──* EvidenceItem                 (≥1 REQUIRED — enforced in the DB)
+Finding 1──* SeverityChange
+Report *──* Finding
+Report 1──1 ReportTemplateVersion         (PINNED)
+DocumentInstance 1──1 DocumentTemplateVersion (PINNED)
+GateInstance *──1 GateDefinition
+Everything 1──* AuditEvent</code></pre></div>
+<h3 id="invariants-the-system-enforces">Invariants the system enforces<a class="anchor" href="#invariants-the-system-enforces" aria-label="Link to this section">#</a></h3>
+<ol><li><code>Finding.evidence_refs.count ≥ 1</code> before a finding can enter a report.</li><li><code>author_id ≠ reviewer_id</code> on findings, reports and gate approvals.</li><li><code>EvidenceItem.level ∈ {L2,L3,L4} ⟹ parent_evidence_id IS NOT NULL</code>.</li><li>A <code>RunbookVersion</code> with <code>status = Approved</code> is immutable.</li><li><code>CustodyEvent</code> and <code>AuditEvent</code> are insert-only — no update, no delete, at any privilege level.</li><li>An engagement cannot leave Phase 3 without <code>runbook_version_id</code> set.</li><li>An engagement cannot reach <code>Closed</code> with any evidence item in <code>disposition_status = null</code>.</li><li><code>integrity_status = FAILED</code> cannot be changed to any other value.</li></ol>
+<hr>
+<h2 id="5-identifier-scheme">5. Identifier scheme<a class="anchor" href="#5-identifier-scheme" aria-label="Link to this section">#</a></h2>
+<p>Identifiers are read aloud, typed into chat, and written on physical evidence bags. They are designed for that.</p>
+<div class="tablewrap"><table><thead><tr><th>Object</th><th>Format</th><th>Example</th></tr></thead><tbody><tr><td>Engagement</td><td><code>ENG-YYYY-NNNN</code></td><td><code>ENG-2026-0141</code></td></tr><tr><td>Evidence</td><td><code>&lt;ENG&gt;-E&lt;nnn&gt;</code></td><td><code>ENG-2026-0141-E007</code></td></tr><tr><td>Finding</td><td><code>&lt;ENG&gt;-F&lt;nnn&gt;</code></td><td><code>ENG-2026-0141-F012</code></td></tr><tr><td>Runbook</td><td><code>SF-&lt;PILLAR&gt;-&lt;SVC&gt;-&lt;TYPE&gt;</code></td><td><code>SF-SEC-VAP-EXT</code></td></tr><tr><td>Report</td><td><code>&lt;ENG&gt;-RPT-v&lt;n&gt;</code></td><td><code>ENG-2026-0141-RPT-v2</code></td></tr><tr><td>Document</td><td><code>&lt;ENG&gt;-DOC-&lt;TYPE&gt;-&lt;n&gt;</code></td><td><code>ENG-2026-0141-DOC-LOA-1</code></td></tr><tr><td>Client</td><td><code>CLI-NNNN</code></td><td><code>CLI-0087</code></td></tr></tbody></table></div>
+<p>Short, unambiguous, no lookalike characters, rendered in IBM Plex Mono throughout the UI, and stable for the life of the record.</p>
+<hr>
+<h2 id="6-technical-direction-recommendation-decision-d5">6. Technical direction <em>(recommendation — Decision D5)</em><a class="anchor" href="#6-technical-direction-recommendation-decision-d5" aria-label="Link to this section">#</a></h2>
+<p>Not asked for explicitly, but it shapes the phasing, so it is stated as a proposal rather than a decision:</p>
+<ul><li><strong>PostgreSQL.</strong> The model is relational, constraint-heavy and audit-critical. Referential integrity is a feature here, not overhead. Row-level security supports engagement scoping at the database rather than only in application code. JSONB covers the genuinely variable parts (questionnaire answers, condition results).</li><li><strong>Server-rendered application with targeted interactivity.</strong> Dense tables, forms, print-quality output and strong URL semantics. A single-page framework buys little here and costs offline-state complexity in an app whose correctness depends on the server's view of state.</li><li><strong>No evidence content storage at all</strong> (Rule 3). No object store, no upload path, no signed-download infrastructure. The evidence register holds metadata, hashes, provenance, custody, access history and disposition; <code>storage_location</code> is an outward reference to where Sleuth actually holds the item.</li><li><strong>No client secrets</strong> (Rule 4). No entity or field is typed to hold a credential, key or password.</li><li><strong>Append-only audit via insert-only tables</strong> with hash chaining and periodic external anchoring.</li><li><strong>Self-hosted, India region</strong> pending confirmation of data residency requirements (Decision D6).</li></ul>
+<p>Deliberately deferred: background job infrastructure until A4 recurring cycles need it (Phase 6); search beyond PostgreSQL full-text until volume justifies it.</p>
+    <footer class="pagefoot">
+      <p>Sleuth Forensics — internal runbook &amp; engagement platform. Design documentation.
+      Nothing here is SME-validated; see <a href="../p/17-governing-constraints.html">governing constraints</a>.</p>
+    </footer>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="l2" href="#1-two-planes">1. Two planes</a><a class="l2" href="#2-content-plane-entities">2. Content plane entities</a><a class="l3" href="#service">Service</a><a class="l3" href="#engagementtype">EngagementType</a><a class="l3" href="#runbook-runbookversion">Runbook / RunbookVersion</a><a class="l3" href="#phase-procedure-task">Phase → Procedure → Task</a><a class="l3" href="#templates">Templates</a><a class="l2" href="#3-execution-plane-entities">3. Execution plane entities</a><a class="l3" href="#client">Client</a><a class="l3" href="#clientcontact">ClientContact</a><a class="l3" href="#engagement">Engagement</a><a class="l3" href="#scope-assets">Scope &amp;amp; Assets</a><a class="l3" href="#execution-records">Execution records</a><a class="l3" href="#evidence-cluster">Evidence cluster</a><a class="l3" href="#finding-findingevidencelink">Finding &amp;amp; FindingEvidenceLink</a><a class="l3" href="#report-documentinstance">Report / DocumentInstance</a><a class="l3" href="#auditevent-append-only-hash-chained">AuditEvent (append-only, hash-chained)</a><a class="l2" href="#4-relationships-worth-stating-explicitly">4. Relationships worth stating explicitly</a><a class="l3" href="#invariants-the-system-enforces">Invariants the system enforces</a><a class="l2" href="#5-identifier-scheme">5. Identifier scheme</a><a class="l2" href="#6-technical-direction-recommendation-decision-d5">6. Technical direction (recommendation — Decision D5)</a></aside>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

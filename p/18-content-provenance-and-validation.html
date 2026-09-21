@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>18 — Content Provenance &amp; Validation — Sleuth Runbook Platform</title>
+<meta name="description" content="Provenance &amp; validation">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Sleuth&nbsp;&middot;&nbsp;Runbook Platform</a>
+    <span class="badge">Design proposal &middot; not built</span>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Documents">
+    <div class="search-wrap">
+      <input type="search" id="q" placeholder="Search…" aria-label="Search documents" autocomplete="off">
+      <div id="results" class="results" hidden></div>
+    </div>
+    <div class="navgroup"><div class="navgroup-h">Start here</div><a class="" href="../p/30-decisions-needed.html"><span class="num">30</span>Decisions needed</a><a class="" href="../p/31-confirmed-decisions.html"><span class="num">31</span>Confirmed decisions</a><a class="" href="../p/38-placeholder-register.html"><span class="num">38</span>Placeholder register</a></div><div class="navgroup"><div class="navgroup-h">Research &amp; catalogue</div><a class="" href="../p/00-research-findings.html"><span class="num">00</span>Research findings</a><a class="" href="../p/01-service-catalogue.html"><span class="num">01</span>Service catalogue v1</a><a class="" href="../p/21-engagement-catalogue-v2.html"><span class="num">21</span>Engagement catalogue v2</a></div><div class="navgroup"><div class="navgroup-h">Operating model</div><a class="" href="../p/02-users-and-roles.html"><span class="num">02</span>Users &amp; roles</a><a class="" href="../p/03-engagement-lifecycle.html"><span class="num">03</span>Engagement lifecycle</a><a class="" href="../p/28-checklist-and-gate-architecture.html"><span class="num">28</span>Checklists &amp; gates</a><a class="" href="../p/35-decision-trees.html"><span class="num">35</span>Decision trees</a><a class="" href="../p/32-operating-policies.html"><span class="num">32</span>Operating policies</a></div><div class="navgroup"><div class="navgroup-h">Runbook architecture</div><a class="" href="../p/04-runbook-architecture.html"><span class="num">04</span>Runbook architecture</a><a class="" href="../p/19-engagement-type-specification.html"><span class="num">19</span>Engagement type spec</a><a class="" href="../p/20-shared-module-inheritance.html"><span class="num">20</span>Shared modules</a><a class="" href="../p/22-core-spine-specification.html"><span class="num">22</span>Core spine</a><a class="" href="../p/23-archetype-modules.html"><span class="num">23</span>Archetype modules</a></div><div class="navgroup"><div class="navgroup-h">Engagement types</div><a class="" href="../p/24-ets-assessment.html"><span class="num">24</span>ETS — Assessment</a><a class="" href="../p/25-ets-testing.html"><span class="num">25</span>ETS — Testing</a><a class="" href="../p/26-ets-investigation.html"><span class="num">26</span>ETS — Investigation</a><a class="" href="../p/27-ets-continuous.html"><span class="num">27</span>ETS — Continuous</a></div><div class="navgroup"><div class="navgroup-h">Client information &amp; output</div><a class="" href="../p/05-questionnaire-architecture.html"><span class="num">05</span>Questionnaire architecture</a><a class="" href="../p/33-questionnaire-instruments.html"><span class="num">33</span>Questionnaire instruments</a><a class="" href="../p/08-reporting-architecture.html"><span class="num">08</span>Findings &amp; reporting</a><a class="" href="../p/34-report-templates.html"><span class="num">34</span>Report templates</a><a class="" href="../p/14-excel-exports.html"><span class="num">14</span>Excel exports</a></div><div class="navgroup"><div class="navgroup-h">Evidence &amp; tools</div><a class="" href="../p/06-evidence-model.html"><span class="num">06</span>Evidence model</a><a class="" href="../p/07-tools-and-templates.html"><span class="num">07</span>Tools &amp; templates</a><a class="" href="../p/36-tool-capability-taxonomy.html"><span class="num">36</span>Tool capabilities</a></div><div class="navgroup"><div class="navgroup-h">Product &amp; architecture</div><a class="" href="../p/09-information-architecture.html"><span class="num">09</span>Information architecture</a><a class="" href="../p/11-ux-structure.html"><span class="num">11</span>UX structure</a><a class="" href="../p/12-visual-design-direction.html"><span class="num">12</span>Visual design direction</a><a class="" href="../p/10-data-model.html"><span class="num">10</span>Data model</a><a class="" href="../p/37-data-schema.html"><span class="num">37</span>Data schema</a><a class="" href="../p/39-api-and-permission-enforcement.html"><span class="num">39</span>API &amp; permissions</a><a class="" href="../p/40-build-and-operations.html"><span class="num">40</span>Build &amp; operations</a><a class="" href="../p/13-security-architecture.html"><span class="num">13</span>Security architecture</a></div><div class="navgroup"><div class="navgroup-h">Programme</div><a class="" href="../p/15-assumptions-and-open-questions.html"><span class="num">15</span>Assumptions &amp; questions</a><a class="" href="../p/16-implementation-plan.html"><span class="num">16</span>Implementation plan</a><a class="" href="../p/17-governing-constraints.html"><span class="num">17</span>Governing constraints</a><a class="on" href="../p/18-content-provenance-and-validation.html"><span class="num">18</span>Provenance &amp; validation</a><a class="" href="../p/29-architecture-amendments.html"><span class="num">29</span>Architecture amendments</a></div>
+  </nav>
+  <main id="main" class="content">
+    <h1 id="18-content-provenance-validation">18 — Content Provenance &amp; Validation<a class="anchor" href="#18-content-provenance-validation" aria-label="Link to this section">#</a></h1>
+<blockquote><p>Implements <strong>Rule 1</strong> (default Draft), <strong>Rule 2</strong> (no invented procedures) and <strong>Rule 6</strong> (website ≠ SOP) from <code>17-governing-constraints.md</code>.</p></blockquote>
+<p>The requirement "mark anything that requires confirmation from Sleuth" cannot live in document footnotes. It has to be a property of every piece of content, queryable, and visible to the analyst at the moment they rely on it.</p>
+<hr>
+<h2 id="1-two-independent-axes">1. Two independent axes<a class="anchor" href="#1-two-independent-axes" aria-label="Link to this section">#</a></h2>
+<p>Conflating these is the mistake to avoid. <em>Where content came from</em> and <em>whether it has been validated</em> are different questions with different answers.</p>
+<h3 id="axis-1-provenance-where-did-this-come-from">Axis 1 — Provenance: where did this come from?<a class="anchor" href="#axis-1-provenance-where-did-this-come-from" aria-label="Link to this section">#</a></h3>
+<div class="tablewrap"><table><thead><tr><th>Value</th><th>Meaning</th><th>Authority</th></tr></thead><tbody><tr><td><code>SLEUTH-SUPPLIED</code></td><td>Sleuth wrote it or supplied it directly</td><td>Authoritative</td></tr><tr><td><code>SITE-DERIVED</code></td><td>Reproduced from sleuthforensics.in</td><td>Authoritative <strong>for the public catalogue only</strong> — service names, pillar grouping, public descriptions, client-facing deliverable language, contact-form taxonomy</td></tr><tr><td><code>SITE-SUGGESTED</code></td><td>A candidate inferred from site copy</td><td><strong>No authority over internal method.</strong> A prompt for the SME, nothing more</td></tr><tr><td><code>PROPOSED</code></td><td>Architectural or structural proposal by Claude</td><td>No authority. Awaiting decision</td></tr><tr><td><code>EXTERNAL-STANDARD</code></td><td>From a named public standard or framework</td><td>Authoritative only for what that standard says, and only once Sleuth confirms it applies</td></tr></tbody></table></div>
+<h3 id="axis-2-validation-has-sleuth-confirmed-it">Axis 2 — Validation: has Sleuth confirmed it?<a class="anchor" href="#axis-2-validation-has-sleuth-confirmed-it" aria-label="Link to this section">#</a></h3>
+<div class="tablewrap"><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td><code>DRAFT — NEEDS SME VALIDATION</code></td><td><strong>The default for everything.</strong> Not confirmed Sleuth practice</td></tr><tr><td><code>IN SME REVIEW</code></td><td>Assigned to a named SME, in progress</td></tr><tr><td><code>SME-VALIDATED</code></td><td>A named SME confirmed it, with a date</td></tr><tr><td><code>APPROVED</code></td><td>SME-validated <em>and</em> approved for use by Management</td></tr><tr><td><code>REJECTED</code></td><td>SME determined it is wrong. Retained with the reason — rejections are useful content</td></tr><tr><td><code>NEEDS CONFIRMATION</code></td><td>A factual gap about the firm, not a methodology question (the existing doc-15 vocabulary)</td></tr><tr><td><code>GAP</code></td><td>A known, named hole. Rule 2's alternative to inventing something</td></tr></tbody></table></div>
+<p><strong>Nothing is <code>SME-VALIDATED</code> today.</strong> Everything produced so far is <code>DRAFT</code> or <code>NEEDS CONFIRMATION</code>.</p>
+<h3 id="why-two-axes-and-not-one-combined-status">Why two axes and not one combined status<a class="anchor" href="#why-two-axes-and-not-one-combined-status" aria-label="Link to this section">#</a></h3>
+<p><code>SITE-DERIVED</code> + <code>APPROVED</code> is a legitimate combination — the service name "Vulnerability Assessment &amp; Penetration Testing" is both from the site and confirmed. <code>SITE-SUGGESTED</code> + <code>SME-VALIDATED</code> is also legitimate, and is the normal path for a candidate procedure that turns out to be right. <code>SITE-DERIVED</code> + <code>DRAFT</code> is the state of most of the current catalogue. A single flattened status cannot express these, and would force exactly the confusion Rule 6 exists to prevent.</p>
+<hr>
+<h2 id="2-validation-metadata-on-every-content-object">2. Validation metadata on every content object<a class="anchor" href="#2-validation-metadata-on-every-content-object" aria-label="Link to this section">#</a></h2>
+<p>Carried by: Procedure · Task · ChecklistItem · Question · Tool · DocumentTemplate · ReportSection · DecisionNode · GateCondition · EvidenceRequirement · StopCondition · EscalationRule · KnowledgeArticle.</p>
+<div class="tablewrap"><table><thead><tr><th>Field</th><th>Notes</th></tr></thead><tbody><tr><td><code>provenance</code></td><td>Axis 1</td></tr><tr><td><code>provenance_ref</code></td><td>The specific source — a site URL, a standard clause, a Sleuth message</td></tr><tr><td><code>validation_status</code></td><td>Axis 2</td></tr><tr><td><code>validated_by</code></td><td>Named SME. Not a team, a person</td></tr><tr><td><code>validated_at</code></td><td></td></tr><tr><td><code>validation_note</code></td><td>What the SME changed, confirmed or qualified</td></tr><tr><td><code>revalidation_due</code></td><td>Methodology decays. Tooling changes, techniques change</td></tr><tr><td><code>rejection_reason</code></td><td>Populated on <code>REJECTED</code></td></tr><tr><td><code>gap_description</code></td><td>Populated on <code>GAP</code> — what is missing and why it matters</td></tr><tr><td><code>gap_owner</code></td><td>Who is expected to fill it</td></tr><tr><td><code>blocking</code></td><td>Does this gap block the engagement type from being sellable through the platform?</td></tr></tbody></table></div>
+<hr>
+<h2 id="3-what-validation-state-does-at-runtime">3. What validation state does at runtime<a class="anchor" href="#3-what-validation-state-does-at-runtime" aria-label="Link to this section">#</a></h2>
+<p>This is the part that makes Rule 1 real rather than decorative.</p>
+<h3 id="it-gates-runbook-approval">It gates runbook approval<a class="anchor" href="#it-gates-runbook-approval" aria-label="Link to this section">#</a></h3>
+<div class="codewrap"><pre><code>A RunbookVersion may reach `Approved` only when:
+  · every composed procedure is SME-VALIDATED or APPROVED
+  · no composed procedure is DRAFT or IN SME REVIEW
+  · every remaining GAP is explicitly non-blocking and acknowledged by the approver</code></pre></div>
+<p>A runbook with unvalidated content can still exist, still be composed, still be read, and still be used in a <strong>pilot</strong> engagement — but it cannot be <code>Approved</code>, and an engagement running an unapproved runbook is visibly flagged as a pilot on the engagement header and in the report's methodology section.</p>
+<h3 id="it-is-visible-to-the-analyst">It is visible to the analyst<a class="anchor" href="#it-is-visible-to-the-analyst" aria-label="Link to this section">#</a></h3>
+<p>An analyst executing an unvalidated procedure must know. Not in a tooltip — on the procedure.</p>
+<div class="codewrap"><pre><code>┌──────────────────────────────────────────────────────────────────────┐
+│  DRAFT — NEEDS SME VALIDATION                                        │
+│  This procedure has not been confirmed as Sleuth method.             │
+│  Source: candidate derived from the public service page.             │
+│  Owner: &lt;unassigned&gt;                       [ Flag an issue ]         │
+├──────────────────────────────────────────────────────────────────────┤
+│  Manual validation of identified vulnerabilities                     │
+│  …                                                                   │</code></pre></div>
+<p>Two consequences follow, and both are deliberate. The analyst applies their own judgement rather than trusting the text, which is the correct behaviour when the text is unvalidated. And the fact that the engagement ran unvalidated content is recorded, so it reaches the report's limitations rather than being discovered later.</p>
+<h3 id="it-is-visible-to-the-sme-as-a-work-queue">It is visible to the SME as a work queue<a class="anchor" href="#it-is-visible-to-the-sme-as-a-work-queue" aria-label="Link to this section">#</a></h3>
+<p>Validation is a backlog with an owner, a count and a rate — the same discipline as the review queue in <code>08-reporting-architecture.md</code>. Practice progress is measured in validated procedures, not in documents written.</p>
+<div class="codewrap"><pre><code>VALIDATION QUEUE — Investigation pillar          owner: &lt;Needs Confirmation&gt;
+  ●  7 procedures  DRAFT
+  ◐  2 procedures  IN SME REVIEW
+  ✓ 11 procedures  SME-VALIDATED
+  ▲  3 GAPS        2 blocking
+                                        runbook cannot be Approved</code></pre></div>
+<h3 id="it-drives-the-gap-register">It drives the gap register<a class="anchor" href="#it-drives-the-gap-register" aria-label="Link to this section">#</a></h3>
+<p>Rule 2 forbids inventing a procedure to fill a hole. The <code>GAP</code> object is what replaces invention:</p>
+<div class="codewrap"><pre><code>GAP — SF-SEC-VAP-EXT, Phase 4
+  What is missing   The exploitation-depth standard: how far validation may go before it
+                    becomes exploitation, and what requires additional approval
+  Why it matters    Blocks a stop condition and an approval requirement. An analyst cannot
+                    be told "do not exploit beyond proof of access" without a definition of
+                    proof of access that Sleuth stands behind
+  Blocking          YES — the runbook cannot be Approved without it
+  Owner             &lt;Needs Confirmation&gt;</code></pre></div>
+<p>A visible gap with a stated consequence is more useful than plausible text nobody validated.</p>
+<hr>
+<h2 id="4-reporting-on-validation-state">4. Reporting on validation state<a class="anchor" href="#4-reporting-on-validation-state" aria-label="Link to this section">#</a></h2>
+<p>Two numbers, never merged, at every level — engagement type, pillar, practice:</p>
+<ul><li><strong>Composition completeness</strong> — does the runbook have all its structural parts?</li><li><strong>Validation completeness</strong> — how much of it has Sleuth actually confirmed?</li></ul>
+<p>A runbook can be 100% composed and 30% validated. Reporting a single "80% complete" figure would hide exactly the thing that matters. The Oversight dashboard shows both, and shows blocking gaps separately again, because one blocking gap makes an otherwise-complete runbook unusable.</p>
+<hr>
+<h2 id="5-retro-marking-of-docs-0016">5. Retro-marking of docs 00–16<a class="anchor" href="#5-retro-marking-of-docs-0016" aria-label="Link to this section">#</a></h2>
+<p>Applied. Every document now carries a status banner. Summary:</p>
+<div class="tablewrap"><table><thead><tr><th>Provenance</th><th>Where</th></tr></thead><tbody><tr><td><code>SITE-DERIVED</code></td><td>Doc 00 §1–§6 — verbatim site content. Authoritative for the public catalogue only</td></tr><tr><td><code>SITE-SUGGESTED</code></td><td>Service module procedure candidates (04 §2.3), questionnaire service blocks (05 §5), report service sections (08 §3)</td></tr><tr><td><code>PROPOSED</code></td><td>Everything structural — archetypes, lifecycle, gates, IA, data model, UX, visual direction, phasing</td></tr></tbody></table></div>
+<div class="tablewrap"><table><thead><tr><th>Validation</th><th>Count</th></tr></thead><tbody><tr><td><code>SME-VALIDATED</code></td><td><strong>0</strong></td></tr><tr><td><code>DRAFT — NEEDS SME VALIDATION</code></td><td>All technical, operational and legal content</td></tr><tr><td><code>NEEDS CONFIRMATION</code></td><td>25 entries in <code>15-assumptions-and-open-questions.md</code>, plus new Rule 3 boundary cases</td></tr></tbody></table></div>
+<hr>
+<h2 id="6-new-needs-confirmation-entries-arising-from-the-rules">6. New Needs-Confirmation entries arising from the rules<a class="anchor" href="#6-new-needs-confirmation-entries-arising-from-the-rules" aria-label="Link to this section">#</a></h2>
+<div class="tablewrap"><table><thead><tr><th>#</th><th>Question</th><th>Arising from</th></tr></thead><tbody><tr><td>NC-26</td><td>Are contemporaneous records (screenshots, tool logs, examiner notes) attached to the platform, or referenced like all other evidence? Rule 3 currently excludes them</td><td>Rule 3</td></tr><tr><td>NC-27</td><td>Where does Sleuth hold evidence today — lab NAS, evidence safe, encrypted volumes? The register's <code>storage_location</code> vocabulary must match reality</td><td>Rule 3</td></tr><tr><td>NC-28</td><td>Who are the SMEs per pillar, and what validation authority do they hold? Rule 1 is inert without named people</td><td>Rule 1</td></tr><tr><td>NC-29</td><td>What is Sleuth's revalidation cadence for methodology — annual, on tooling change, on incident?</td><td>Rule 1</td></tr><tr><td>NC-30</td><td>Which counsel reviews the document templates, and on what cycle?</td><td>Rule 5</td></tr><tr><td>NC-31</td><td>Is a pilot engagement on an unapproved runbook acceptable, and if so under what conditions?</td><td>Rule 1</td></tr><tr><td>NC-32</td><td>Where the internal SOP diverges from the public site, who owns reconciling it?</td><td>Rule 6</td></tr></tbody></table></div>
+    <footer class="pagefoot">
+      <p>Sleuth Forensics — internal runbook &amp; engagement platform. Design documentation.
+      Nothing here is SME-validated; see <a href="../p/17-governing-constraints.html">governing constraints</a>.</p>
+    </footer>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="l2" href="#1-two-independent-axes">1. Two independent axes</a><a class="l3" href="#axis-1-provenance-where-did-this-come-from">Axis 1 — Provenance: where did this come from?</a><a class="l3" href="#axis-2-validation-has-sleuth-confirmed-it">Axis 2 — Validation: has Sleuth confirmed it?</a><a class="l3" href="#why-two-axes-and-not-one-combined-status">Why two axes and not one combined status</a><a class="l2" href="#2-validation-metadata-on-every-content-object">2. Validation metadata on every content object</a><a class="l2" href="#3-what-validation-state-does-at-runtime">3. What validation state does at runtime</a><a class="l3" href="#it-gates-runbook-approval">It gates runbook approval</a><a class="l3" href="#it-is-visible-to-the-analyst">It is visible to the analyst</a><a class="l3" href="#it-is-visible-to-the-sme-as-a-work-queue">It is visible to the SME as a work queue</a><a class="l3" href="#it-drives-the-gap-register">It drives the gap register</a><a class="l2" href="#4-reporting-on-validation-state">4. Reporting on validation state</a><a class="l2" href="#5-retro-marking-of-docs-0016">5. Retro-marking of docs 00–16</a><a class="l2" href="#6-new-needs-confirmation-entries-arising-from-the-rules">6. New Needs-Confirmation entries arising from the rules</a></aside>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>11 — UX Structure — Sleuth Runbook Platform</title>
+<meta name="description" content="UX structure">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Sleuth&nbsp;&middot;&nbsp;Runbook Platform</a>
+    <span class="badge">Design proposal &middot; not built</span>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Documents">
+    <div class="search-wrap">
+      <input type="search" id="q" placeholder="Search…" aria-label="Search documents" autocomplete="off">
+      <div id="results" class="results" hidden></div>
+    </div>
+    <div class="navgroup"><div class="navgroup-h">Start here</div><a class="" href="../p/30-decisions-needed.html"><span class="num">30</span>Decisions needed</a><a class="" href="../p/31-confirmed-decisions.html"><span class="num">31</span>Confirmed decisions</a><a class="" href="../p/38-placeholder-register.html"><span class="num">38</span>Placeholder register</a></div><div class="navgroup"><div class="navgroup-h">Research &amp; catalogue</div><a class="" href="../p/00-research-findings.html"><span class="num">00</span>Research findings</a><a class="" href="../p/01-service-catalogue.html"><span class="num">01</span>Service catalogue v1</a><a class="" href="../p/21-engagement-catalogue-v2.html"><span class="num">21</span>Engagement catalogue v2</a></div><div class="navgroup"><div class="navgroup-h">Operating model</div><a class="" href="../p/02-users-and-roles.html"><span class="num">02</span>Users &amp; roles</a><a class="" href="../p/03-engagement-lifecycle.html"><span class="num">03</span>Engagement lifecycle</a><a class="" href="../p/28-checklist-and-gate-architecture.html"><span class="num">28</span>Checklists &amp; gates</a><a class="" href="../p/35-decision-trees.html"><span class="num">35</span>Decision trees</a><a class="" href="../p/32-operating-policies.html"><span class="num">32</span>Operating policies</a></div><div class="navgroup"><div class="navgroup-h">Runbook architecture</div><a class="" href="../p/04-runbook-architecture.html"><span class="num">04</span>Runbook architecture</a><a class="" href="../p/19-engagement-type-specification.html"><span class="num">19</span>Engagement type spec</a><a class="" href="../p/20-shared-module-inheritance.html"><span class="num">20</span>Shared modules</a><a class="" href="../p/22-core-spine-specification.html"><span class="num">22</span>Core spine</a><a class="" href="../p/23-archetype-modules.html"><span class="num">23</span>Archetype modules</a></div><div class="navgroup"><div class="navgroup-h">Engagement types</div><a class="" href="../p/24-ets-assessment.html"><span class="num">24</span>ETS — Assessment</a><a class="" href="../p/25-ets-testing.html"><span class="num">25</span>ETS — Testing</a><a class="" href="../p/26-ets-investigation.html"><span class="num">26</span>ETS — Investigation</a><a class="" href="../p/27-ets-continuous.html"><span class="num">27</span>ETS — Continuous</a></div><div class="navgroup"><div class="navgroup-h">Client information &amp; output</div><a class="" href="../p/05-questionnaire-architecture.html"><span class="num">05</span>Questionnaire architecture</a><a class="" href="../p/33-questionnaire-instruments.html"><span class="num">33</span>Questionnaire instruments</a><a class="" href="../p/08-reporting-architecture.html"><span class="num">08</span>Findings &amp; reporting</a><a class="" href="../p/34-report-templates.html"><span class="num">34</span>Report templates</a><a class="" href="../p/14-excel-exports.html"><span class="num">14</span>Excel exports</a></div><div class="navgroup"><div class="navgroup-h">Evidence &amp; tools</div><a class="" href="../p/06-evidence-model.html"><span class="num">06</span>Evidence model</a><a class="" href="../p/07-tools-and-templates.html"><span class="num">07</span>Tools &amp; templates</a><a class="" href="../p/36-tool-capability-taxonomy.html"><span class="num">36</span>Tool capabilities</a></div><div class="navgroup"><div class="navgroup-h">Product &amp; architecture</div><a class="" href="../p/09-information-architecture.html"><span class="num">09</span>Information architecture</a><a class="on" href="../p/11-ux-structure.html"><span class="num">11</span>UX structure</a><a class="" href="../p/12-visual-design-direction.html"><span class="num">12</span>Visual design direction</a><a class="" href="../p/10-data-model.html"><span class="num">10</span>Data model</a><a class="" href="../p/37-data-schema.html"><span class="num">37</span>Data schema</a><a class="" href="../p/39-api-and-permission-enforcement.html"><span class="num">39</span>API &amp; permissions</a><a class="" href="../p/40-build-and-operations.html"><span class="num">40</span>Build &amp; operations</a><a class="" href="../p/13-security-architecture.html"><span class="num">13</span>Security architecture</a></div><div class="navgroup"><div class="navgroup-h">Programme</div><a class="" href="../p/15-assumptions-and-open-questions.html"><span class="num">15</span>Assumptions &amp; questions</a><a class="" href="../p/16-implementation-plan.html"><span class="num">16</span>Implementation plan</a><a class="" href="../p/17-governing-constraints.html"><span class="num">17</span>Governing constraints</a><a class="" href="../p/18-content-provenance-and-validation.html"><span class="num">18</span>Provenance &amp; validation</a><a class="" href="../p/29-architecture-amendments.html"><span class="num">29</span>Architecture amendments</a></div>
+  </nav>
+  <main id="main" class="content">
+    <h1 id="11-ux-structure">11 — UX Structure<a class="anchor" href="#11-ux-structure" aria-label="Link to this section">#</a></h1>
+<blockquote><p><strong>Status — <code>PROPOSED</code>, awaiting approval.</strong> Structural and design proposals, not confirmed Sleuth practice. See <a href="17-governing-constraints.html" ><code>17-governing-constraints.md</code></a>. Partly superseded on arrival of Sleuth's engagement-type list — <a href="19-engagement-type-specification.html" ><code>19-engagement-type-specification.md</code></a> §5.</p></blockquote>
+<p>Every screen below is worked through the brief's six questions before any layout is proposed: <strong>Message · User · Context · Priority · Risk · UI</strong>.</p>
+<hr>
+<h2 id="1-the-design-problem-stated-once">1. The design problem, stated once<a class="anchor" href="#1-the-design-problem-stated-once" aria-label="Link to this section">#</a></h2>
+<p>A consultant opens the platform in one of four states:</p>
+<div class="tablewrap"><table><thead><tr><th>State</th><th>Frequency</th><th>What they need</th></tr></thead><tbody><tr><td>Resuming known work</td><td>Most common</td><td>The next action, immediately</td></tr><tr><td>Starting unfamiliar work</td><td>Common</td><td>The procedure, with enough detail to do it correctly</td></tr><tr><td>Something unexpected happened</td><td>Occasional, high stakes</td><td>Stop conditions, escalation, who decides</td></tr><tr><td>Checking someone else's work</td><td>Reviewer</td><td>Claim + evidence, side by side</td></tr></tbody></table></div>
+<p>The interface is optimised for the first — because it is most of the time — without making the third dangerous. That tension is the whole design brief: <strong>surface less by default, but never hide the things that prevent serious mistakes.</strong></p>
+<hr>
+<h2 id="2-screen-engagement-now-the-north-star">2. Screen: Engagement → Now  <em>(the North Star)</em><a class="anchor" href="#2-screen-engagement-now-the-north-star" aria-label="Link to this section">#</a></h2>
+<blockquote><p><strong>Message</strong> — "This is the one thing to do next, here is what you need to do it, and here is what to do if it goes wrong." <strong>User</strong> — Analyst. Occasionally the Engagement Manager checking state. <strong>Context</strong> — Mid-engagement. Possibly on a client site, possibly at 3am, possibly having been interrupted twenty minutes ago. Cognitive load already high. <strong>Priority</strong> — Start or complete the current procedure. Everything else is secondary. <strong>Risk</strong> — Doing the <em>wrong</em> next thing. Doing the right thing without capturing evidence. Missing a stop condition that has already been met. Working past an expired authorisation window. <strong>UI</strong> — One action, presented large and unambiguously. Evidence capture inline, not a separate trip. Stop conditions promoted to the primary view, never behind a tab. Blockers stated with an owner and a next step. Everything else collapsed.</p></blockquote>
+<div class="codewrap"><pre><code>┌──────────────────────────────────────────────────────────────────────────────────┐
+│ CLIENT CONFIDENTIAL · ENG-2026-0141 · Meridian Logistics · VAPT — External        │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│ Phase 4 Examine  ·  SF-SEC-VAP-EXT v1.2  ·  Window closes 26 Sep 18:00 (2d 4h)   │
+│ ████████████░░░░░░░░░░░░  Procedure 7 of 14                    ● 1 gate open      │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                  │
+│  NEXT                                                          ~45 min · Analyst │
+│  ┌────────────────────────────────────────────────────────────────────────────┐  │
+│  │  Manual validation of identified vulnerabilities                           │  │
+│  │                                                                            │  │
+│  │  Confirm exploitability of the 23 candidate findings from automated        │  │
+│  │  discovery. Do not exploit beyond proof of access.                         │  │
+│  │                                                                            │  │
+│  │  NEEDS       23 candidate findings · approved toolset · test account TA-02 │  │
+│  │  PRODUCES    Validated findings with proof-of-concept evidence             │  │
+│  │                                                                            │  │
+│  │  ┌──────────────┐  ┌────────────┐  ┌──────────────────┐                    │  │
+│  │  │   START      │  │  I'M       │  │  NOT APPLICABLE  │                    │  │
+│  │  └──────────────┘  │  BLOCKED   │  └──────────────────┘                    │  │
+│  │                    └────────────┘             ▸ Full procedure detail      │  │
+│  └────────────────────────────────────────────────────────────────────────────┘  │
+│                                                                                  │
+│  ⬛ STOP IF                                                                       │
+│     · Evidence of a pre-existing compromise is found     → STOP · escalate now   │
+│     · A production system becomes unstable               → STOP · call client    │
+│     · Testing reaches an asset outside approved scope    → STOP · do not proceed │
+│     Escalation: R. Mehta (EM) +91 ····· · Client: J. Fernandes +91 ·····         │
+│                                                                                  │
+│  ⚠ BLOCKING — 1 item                                                             │
+│     Third-party authorisation outstanding for 2 AWS-hosted assets.               │
+│     Those assets are excluded from testing until resolved.                       │
+│     Owner: R. Mehta · raised 2 days ago                        [ View gate ]     │
+│                                                                                  │
+│  ▸ Also assigned to me in this engagement (3)                                    │
+│  ▸ Completed in this phase (6)                                                   │
+└──────────────────────────────────────────────────────────────────────────────────┘</code></pre></div>
+<p><strong>Design decisions and why</strong></p>
+<ul><li><strong>One next action, not a task list.</strong> A list re-poses the question the screen exists to answer. If several procedures are genuinely available in parallel, one is presented as next by runbook sequence and the others sit under "Also assigned to me".</li><li><strong>STOP IF is above the fold, with phone numbers.</strong> At the moment a stop condition is met, a consultant is surprised, possibly alarmed, and will not navigate to find the escalation path. It must already be on screen. This is the clearest case in the whole product where surfacing information <em>by default</em> outweighs the tidiness of progressive disclosure.</li><li><strong>"I'm blocked" is a first-class button.</strong> If reporting a blocker is harder than working around it, people work around it — and the workaround is invisible until it surfaces in QA, or in a client's question six months later.</li><li><strong>The window countdown is in the header.</strong> Testing outside the authorised window is an authorisation breach, and time pressure is precisely when it happens.</li><li><strong>Evidence capture is inside Start, not a separate destination.</strong> Evidence reconstructed afterwards is weaker evidence, and often simply absent.</li></ul>
+<hr>
+<h2 id="3-screen-procedure-execution">3. Screen: Procedure execution<a class="anchor" href="#3-screen-procedure-execution" aria-label="Link to this section">#</a></h2>
+<blockquote><p><strong>Message</strong> — "Here is exactly how to do this, what to capture, and what to do if reality does not match the procedure." <strong>User</strong> — Analyst, actively working, switching between this screen and their tools. <strong>Context</strong> — This screen sits <em>beside</em> a terminal or a forensic tool. It is a reference, not a destination. <strong>Priority</strong> — Complete the steps. Capture the required evidence. <strong>Risk</strong> — Skipping a step silently. Capturing evidence that is incomplete or unverifiable. Losing work when interrupted. <strong>UI</strong> — Steps with individual completion state. Evidence capture attached to the step that requires it. Persistent notes. Autosave. Nothing that requires the window to be full-width.</p></blockquote>
+<div class="codewrap"><pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
+│ ‹ Back to Now      Manual validation of identified vulnerabilities          │
+│                    Procedure 7 of 14 · Phase 4 · ~45 min                    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ OBJECTIVE  Confirm which candidate findings are genuinely exploitable, so   │
+│            severity reflects real risk rather than scanner output.          │
+│                                                                             │
+│ TOOLS      Capability: web request manipulation                             │
+│            Approved: [ ─ select from catalogue ─ ]        3 approved tools  │
+│            ⓘ Selection is recorded against the evidence you capture.        │
+│                                                                             │
+│ STEPS                                                                       │
+│  ☑ 1  Review the 23 candidate findings and group by asset and type          │
+│  ☑ 2  Confirm each target asset is in the approved scope list               │
+│  ☐ 3  Validate each candidate, stopping at proof of access                  │
+│        ⓘ Do not pivot. Do not access client data. Do not persist.           │
+│  ☐ 4  Capture request/response evidence for every confirmed finding         │
+│  ☐ 5  Record non-exploitable candidates with the reason                     │
+│                                                                             │
+│ EVIDENCE REQUIRED                                        2 of 4 captured    │
+│  ✓ Request/response pair per confirmed finding    ENG-2026-0141-E011        │
+│  ✓ Screenshot of proof of access                  ENG-2026-0141-E012        │
+│  ○ Tool session log                                       [ + Capture ]     │
+│  ○ Validation summary (confirmed vs discounted)           [ + Capture ]     │
+│                                                                             │
+│ ⬛ STOP IF   pre-existing compromise · production instability · out of scope │
+│ ▲ ESCALATE   R. Mehta (EM) · out of hours +91 ·····                         │
+│ ▸ Rationale, standards references and prior examples                        │
+│                                                                             │
+│ NOTES  ┌─────────────────────────────────────────────────────────────────┐  │
+│        │ 4 candidates on SRV-WEB-03 appear to be false positives from    │  │
+│        │ the WAF returning 200 on blocked requests. Verifying.           │  │
+│        └─────────────────────────────────────────────────────────────────┘  │
+│                                                       saved 14:22           │
+│  [ Complete procedure ]   [ Save and pause ]   [ Blocked ]   [ N/A ]        │
+└─────────────────────────────────────────────────────────────────────────────┘</code></pre></div>
+<p><strong>Design decisions</strong></p>
+<ul><li><strong>"Complete procedure" is disabled while required evidence is missing</strong>, with the reason stated. Not a warning on submit — a visible precondition, so the requirement is known before the work rather than after it.</li><li><strong>Tool selection is a catalogue lookup, not free text.</strong> It records what was actually used against the evidence, which is what makes the work reproducible (<code>07-tools-and-templates.md</code>).</li><li><strong>Notes autosave.</strong> People get interrupted constantly in this work; losing a half-written observation is a real cost.</li><li><strong>"Record non-exploitable candidates with the reason" is an explicit step.</strong> Negative results are findings too — the Compromise Assessment report structure has a whole section for them — and they only exist if someone is asked to record them.</li></ul>
+<hr>
+<h2 id="4-screen-gate">4. Screen: Gate<a class="anchor" href="#4-screen-gate" aria-label="Link to this section">#</a></h2>
+<blockquote><p><strong>Message</strong> — "You cannot proceed, here is exactly why, and here is who resolves each item." <strong>User</strong> — Engagement Manager, mostly. Analysts read it to understand a block. <strong>Context</strong> — Usually under schedule pressure, often with a client waiting. <strong>Priority</strong> — Resolve the unmet conditions. Failing that, understand the override path. <strong>Risk</strong> — The override becoming routine. A gate passed on stale conditions. Pressure producing a workaround outside the system. <strong>UI</strong> — Binary, unmissable status. Per-condition detail with owner and age. Override present but visibly weighty.</p></blockquote>
+<div class="codewrap"><pre><code>┌────────────────────────────────────────────────────────────────────────────┐
+│  AUTHORISATION GATE                                            ● BLOCKED   │
+│  Blocks: all technical execution (Phase 4)                                 │
+├────────────────────────────────────────────────────────────────────────────┤
+│  ✓  NDA executed                     2026-09-02 · A. Rao (CFO)             │
+│  ✓  SOW executed                     2026-09-09 · A. Rao (CFO)             │
+│  ✓  Scope approved                   2026-09-11 · 14 assets · 2 excluded   │
+│  ✓  Testing window agreed            22–26 Sep · 09:00–18:00 IST           │
+│  ✓  Emergency contacts recorded      both sides                            │
+│                                                                            │
+│  ✕  Letter of Authorisation          NOT RECEIVED                          │
+│     Issued 2026-09-12 · awaiting signature · 8 days                        │
+│     Owner: R. Mehta            [ Resend ]  [ Record as received ]          │
+│                                                                            │
+│  ✕  Rules of Engagement approved     DRAFT                                 │
+│     Awaiting client approval · 3 days                                      │
+│     Owner: R. Mehta            [ View draft ]  [ Send for approval ]       │
+│                                                                            │
+│  ✕  Third-party authorisation        2 OF 14 ASSETS PENDING                │
+│     api.meridian-log.in, portal.meridian-log.in — AWS-hosted               │
+│     Owner: J. Fernandes (client)        [ View request ]                   │
+├────────────────────────────────────────────────────────────────────────────┤
+│  3 conditions unmet. Technical execution cannot begin.                     │
+│                                                                            │
+│  [ Request override ]   Requires Management approval, a written            │
+│                         justification, an expiry date, and appears in      │
+│                         the client's report under Limitations.             │
+└────────────────────────────────────────────────────────────────────────────┘</code></pre></div>
+<p><strong>Design decisions</strong></p>
+<ul><li><strong>Every unmet condition names an owner and an age.</strong> "Blocked" without an owner is how items sit for three weeks.</li><li><strong>The override button states its full cost before it is pressed</strong> — two approvals, a written justification, an expiry, and visibility to the client. Describing consequences at the point of decision is more effective than a confirmation dialog after it.</li><li>**Conditions that are <em>met</em> stay visible.** Progress is information, and the passing conditions are also the record of what was checked.</li></ul>
+<hr>
+<h2 id="5-screen-evidence-capture">5. Screen: Evidence capture<a class="anchor" href="#5-screen-evidence-capture" aria-label="Link to this section">#</a></h2>
+<blockquote><p><strong>Message</strong> — "Capture this properly now, because it cannot be reconstructed later." <strong>User</strong> — Analyst, sometimes standing in a server room. <strong>Context</strong> — Interruptible, occasionally on a phone, often with the item physically in hand. <strong>Priority</strong> — Complete, verifiable capture with an intact custody record. <strong>Risk</strong> — Missing hash. Missing timezone. Wrong engagement. Handling a source without write protection. A custody gap opening on day one. <strong>UI</strong> — The minimum required fields, defaulted aggressively from context. Hash verification visible and immediate. The engagement name unmissable.</p></blockquote>
+<div class="codewrap"><pre><code>┌─────────────────────────────────────────────────────────────────────────┐
+│  REGISTER EVIDENCE                          ENG-2026-0141 · Meridian    │
+├─────────────────────────────────────────────────────────────────────────┤
+│  LEVEL        ( ) L0 Source   (•) L1 Raw   ( ) L2 Working copy          │
+│  DERIVED FROM  —                                                        │
+│                                                                         │
+│  SOURCE        [ Dell Latitude 5420 · S/N 7K2M9Q3                     ] │
+│  TYPE          [ Host ▾ ]        LOCATION FOUND [ Finance, 3rd floor  ] │
+│  DESCRIPTION   [ Workstation of subject A, seized 2026-09-14 16:10    ] │
+│                                                                         │
+│  ACQUIRED      [ 2026-09-14 ] [ 16:40 ] [ IST (UTC+05:30) ▾ ]          │
+│  EXAMINER      P. Nair (you)                                            │
+│  METHOD        [ Physical image ▾ ]                                     │
+│  TOOL          [ ─ select from catalogue ─ ▾ ]  version auto-recorded   │
+│  WRITE BLOCK   (•) Hardware   ( ) Verified software   ( ) None          │
+│                 ⚠ "None" requires a justification and is reported.      │
+│                                                                         │
+│  HASH          [ SHA-256 ▾ ]                                            │
+│  ACQUISITION   [ 4f2a9c1e…c81d                                        ] │
+│  VERIFICATION  [ 4f2a9c1e…c81d                                        ] │
+│                ● MATCH — integrity verified                             │
+│                                                                         │
+│  STORAGE       [ Evidence safe A-3 ▾ ]   MEDIUM [ WD-EVID-011        ] │
+│  CLASSIFY      [ Client Confidential ▾ ]  ☑ contains personal data      │
+│                                                                         │
+│                        [ Register evidence ]   [ Cancel ]               │
+│                                                                         │
+│  On registration: custody chain opens · ACQUIRED event recorded ·       │
+│  Custody Gate evaluated · ID assigned                                   │
+└─────────────────────────────────────────────────────────────────────────┘</code></pre></div>
+<p><strong>Design decisions</strong></p>
+<ul><li><strong>Timezone is an explicit field, never inferred from the browser.</strong> Cross-source timeline work fails silently when times are ambiguous, and an examiner in Mumbai imaging a laptop that logged in UTC needs both facts recorded, not reconciled from a guess.</li><li><strong>Hash match is shown the instant both values are present</strong>, with an unmissable state. A mismatch here stops the workflow immediately rather than surfacing at the Evidence Integrity Gate days later.</li><li><strong>"No write blocker" is selectable but costly</strong> — justification required, and it appears in the report. Real situations occasionally demand it; the system's job is to record the fact, not to pretend it never happens.</li><li><strong>The engagement name is in the header of the capture form.</strong> Misfiled evidence is among the most damaging errors possible here and is almost always a two-tabs-open mistake.</li></ul>
+<hr>
+<h2 id="6-screen-today">6. Screen: Today<a class="anchor" href="#6-screen-today" aria-label="Link to this section">#</a></h2>
+<blockquote><p><strong>Message</strong> — "Here is your work, in the order that matters." <strong>User</strong> — Analyst and Reviewer, at the start of a day or after an interruption. <strong>Context</strong> — Possibly several engagements; possibly one urgent one. <strong>Priority</strong> — Enter the right engagement and resume. <strong>Risk</strong> — Burying an urgent incident under routine work. Review queues silently growing. <strong>UI</strong> — Ordered by consequence, not by date. Urgent work is visually distinct, not merely sorted first.</p></blockquote>
+<div class="codewrap"><pre><code>┌──────────────────────────────────────────────────────────────────────────┐
+│  TODAY                                            P. Nair · Analyst      │
+├──────────────────────────────────────────────────────────────────────────┤
+│  ▌ACTIVE INCIDENT                                                        │
+│  ▌ENG-2026-0147 · Northgate Health · Ransomware Investigation            │
+│  ▌Phase 4 Examine · Day 2 · Emergency authorisation expires in 6h        │
+│  ▌NEXT  Acquire memory from SRV-DC-01 before any restart                 │
+│  ▌                                                        [ Continue ]   │
+│                                                                          │
+│  IN PROGRESS                                                             │
+│  ENG-2026-0141 · Meridian Logistics · VAPT External                      │
+│  Phase 4 · window closes in 2d 4h                                        │
+│  NEXT  Manual validation of identified vulnerabilities    [ Continue ]   │
+│                                                                          │
+│  ENG-2026-0138 · Calder &amp; Vance · Digital Forensics                      │
+│  Phase 5 Analyse                                                         │
+│  NEXT  Construct timeline from processed artefacts        [ Continue ]   │
+│                                                                          │
+│  WAITING ON OTHERS (2)                                                   │
+│  ENG-2026-0141  Third-party authorisation · R. Mehta · 2d                │
+│  ENG-2026-0138  Reviewer feedback on 3 findings · S. Kulkarni · 1d       │
+│                                                                          │
+│  DUE SOON                                                                │
+│  ENG-2026-0129  Evidence disposition — 4 items · due in 5d               │
+└──────────────────────────────────────────────────────────────────────────┘</code></pre></div>
+<p><strong>Design decisions</strong></p>
+<ul><li><strong>The active incident is visually separated, not just sorted first.</strong> A left rule and a distinct treatment; it should be impossible to scan past.</li><li><strong>"Waiting on others" is a section, not a filter.</strong> It is where work quietly dies, and it belongs on the screen people open every morning.</li><li><strong>Evidence disposition appears here before it is overdue.</strong> Disposition is the most-skipped obligation in the lifecycle (<code>06-evidence-model.md</code> §5), and the fix is visibility while there is still time.</li></ul>
+<hr>
+<h2 id="7-screen-review">7. Screen: Review<a class="anchor" href="#7-screen-review" aria-label="Link to this section">#</a></h2>
+<blockquote><p><strong>Message</strong> — "Is this claim supported by this evidence?" <strong>User</strong> — Reviewer. <strong>Context</strong> — Reviewing someone else's work, under time pressure, possibly across several engagements. <strong>Priority</strong> — Judge each finding accurately and quickly. <strong>Risk</strong> — Approving an unsupported claim. Inconsistent severity across the practice. Review becoming a rubber stamp because the interface makes real checking expensive. <strong>UI</strong> — Claim and evidence side by side, never sequentially. Calibration data present. Rejection produces a worklist, not a comment.</p></blockquote>
+<div class="codewrap"><pre><code>┌────────────────────────────────────────────────────────────────────────────┐
+│  REVIEW · ENG-2026-0141-F012                          Finding 4 of 11      │
+├──────────────────────────────────┬─────────────────────────────────────────┤
+│  THE CLAIM                       │  THE EVIDENCE                           │
+│                                  │                                         │
+│  Authentication bypass via       │  E011  Request/response pair            │
+│  parameter manipulation on the   │        captured 2026-09-24 11:14        │
+│  partner portal                  │        ┌─────────────────────────────┐  │
+│                                  │        │ POST /api/v2/session        │  │
+│  SEVERITY   ● HIGH               │        │ role=partner&amp;elevate=true   │  │
+│                                  │        │ → 200 {"role":"admin"}      │  │
+│  RATIONALE                       │        └─────────────────────────────┘  │
+│  Unauthenticated escalation to   │                                         │
+│  admin on an internet-facing     │  E012  Screenshot — admin panel         │
+│  portal holding partner          │        captured 2026-09-24 11:16        │
+│  commercial data. No             │        [ view ]                         │
+│  compensating controls observed. │                                         │
+│                                  │  ⓘ Both items: integrity verified       │
+│  ASSET  portal.meridian-log.in   │                                         │
+│         in approved scope ✓      │  CALIBRATION                            │
+│                                  │  6 comparable findings in the last 12   │
+│  AUTHOR  P. Nair                 │  months rated: High ×5 · Critical ×1    │
+├──────────────────────────────────┴─────────────────────────────────────────┤
+│  [ Approve ]   [ Change severity ▾ ]   [ Reject with reason ▾ ]            │
+│                                          insufficient evidence ·           │
+│                                          severity disputed ·               │
+│                                          reproduction unclear ·            │
+│                                          out of scope · other              │
+└────────────────────────────────────────────────────────────────────────────┘</code></pre></div>
+<p><strong>Design decisions</strong></p>
+<ul><li><strong>Side by side, always.</strong> If verifying a claim requires navigating away and back, verification gets skipped under load — and a QA gate that is skipped is worse than no gate, because it produces false assurance.</li><li><strong>Calibration data is shown at the moment of judgement.</strong> It is the only intervention that reliably improves severity consistency across a practice, and it is free once findings are structured.</li><li><strong>Rejection reasons are a fixed list.</strong> They become the rework signal (<code>08-reporting-architecture.md</code> §5). Free text cannot be aggregated, and aggregate rework data is how runbook gaps get found.</li></ul>
+<hr>
+<h2 id="8-screen-oversight">8. Screen: Oversight<a class="anchor" href="#8-screen-oversight" aria-label="Link to this section">#</a></h2>
+<blockquote><p><strong>Message</strong> — "Where is the practice exposed right now?" <strong>User</strong> — Management. <strong>Context</strong> — Weekly review, or responding to something. <strong>Priority</strong> — Find the exceptions. <strong>Risk</strong> — A vanity dashboard. Management drifting into engagement content they should not routinely read. <strong>UI</strong> — Obligations and exceptions first, volume metrics second. Metadata only; opening engagement content is a deliberate, logged act.</p></blockquote>
+<p>Content, in priority order: <strong>Obligations</strong> — overdue evidence disposition, expiring authorisations, active gate overrides and their expiry, runbooks past review date, tool validations lapsed. <strong>Exceptions</strong> — engagements blocked more than N days, reviews older than N days, emergency authorisations unratified, integrity failures. <strong>Flow</strong> — engagements by phase, review queue depth, time-in-phase against typical. <strong>Quality</strong> — rework rate by service, rejection reasons, retest pass rate. <strong>Commercial</strong> — pipeline by service and urgency, utilisation <em>(Needs Confirmation: whether Sleuth wants time tracking in this platform at all — it changes the product's character considerably)</em>.</p>
+<p>Deliberately absent from the default view: client names on the obligations list beyond what is needed to act, and any evidence content whatsoever.</p>
+<hr>
+<h2 id="9-cross-cutting-ux-rules">9. Cross-cutting UX rules<a class="anchor" href="#9-cross-cutting-ux-rules" aria-label="Link to this section">#</a></h2>
+<ol><li><strong>One next action.</strong> Every screen makes the primary action obvious.</li><li><strong>Blocked is never silent.</strong> Every block carries a reason, an owner and a next step.</li><li><strong>Evidence is captured where work happens</strong>, never as a separate administrative trip.</li><li><strong>Stop conditions and escalation contacts are never more than zero clicks away</strong> during execution.</li><li><strong>Destructive and irreversible actions state their consequence before confirmation</strong>, and name what cannot be undone.</li><li><strong>Nothing is lost to an interruption.</strong> Autosave everywhere; pausing is a supported state, not an abandonment.</li><li><strong>The client and engagement are always on screen.</strong> Misattribution is the expensive error.</li><li><strong>Dense views are scannable.</strong> Tabular data, aligned columns, monospace identifiers, no decorative chrome between the reader and the data.</li><li><strong>Colour never carries meaning alone.</strong> Every state has a label and a shape as well as a colour — for accessibility, for print, and for the greyscale PDF someone will inevitably read.</li><li><strong>Print and export are designed, not inherited.</strong> Chain-of-custody forms and authorisation letters get carried on paper into rooms where the platform is not available.</li></ol>
+    <footer class="pagefoot">
+      <p>Sleuth Forensics — internal runbook &amp; engagement platform. Design documentation.
+      Nothing here is SME-validated; see <a href="../p/17-governing-constraints.html">governing constraints</a>.</p>
+    </footer>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="l2" href="#1-the-design-problem-stated-once">1. The design problem, stated once</a><a class="l2" href="#2-screen-engagement-now-the-north-star">2. Screen: Engagement → Now  (the North Star)</a><a class="l2" href="#3-screen-procedure-execution">3. Screen: Procedure execution</a><a class="l2" href="#4-screen-gate">4. Screen: Gate</a><a class="l2" href="#5-screen-evidence-capture">5. Screen: Evidence capture</a><a class="l2" href="#6-screen-today">6. Screen: Today</a><a class="l2" href="#7-screen-review">7. Screen: Review</a><a class="l2" href="#8-screen-oversight">8. Screen: Oversight</a><a class="l2" href="#9-cross-cutting-ux-rules">9. Cross-cutting UX rules</a></aside>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

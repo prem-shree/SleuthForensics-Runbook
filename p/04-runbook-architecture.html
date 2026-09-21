@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>04 — Runbook Architecture: Common vs Service-Specific — Sleuth Runbook Platform</title>
+<meta name="description" content="Runbook architecture">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Sleuth&nbsp;&middot;&nbsp;Runbook Platform</a>
+    <span class="badge">Design proposal &middot; not built</span>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Documents">
+    <div class="search-wrap">
+      <input type="search" id="q" placeholder="Search…" aria-label="Search documents" autocomplete="off">
+      <div id="results" class="results" hidden></div>
+    </div>
+    <div class="navgroup"><div class="navgroup-h">Start here</div><a class="" href="../p/30-decisions-needed.html"><span class="num">30</span>Decisions needed</a><a class="" href="../p/31-confirmed-decisions.html"><span class="num">31</span>Confirmed decisions</a><a class="" href="../p/38-placeholder-register.html"><span class="num">38</span>Placeholder register</a></div><div class="navgroup"><div class="navgroup-h">Research &amp; catalogue</div><a class="" href="../p/00-research-findings.html"><span class="num">00</span>Research findings</a><a class="" href="../p/01-service-catalogue.html"><span class="num">01</span>Service catalogue v1</a><a class="" href="../p/21-engagement-catalogue-v2.html"><span class="num">21</span>Engagement catalogue v2</a></div><div class="navgroup"><div class="navgroup-h">Operating model</div><a class="" href="../p/02-users-and-roles.html"><span class="num">02</span>Users &amp; roles</a><a class="" href="../p/03-engagement-lifecycle.html"><span class="num">03</span>Engagement lifecycle</a><a class="" href="../p/28-checklist-and-gate-architecture.html"><span class="num">28</span>Checklists &amp; gates</a><a class="" href="../p/35-decision-trees.html"><span class="num">35</span>Decision trees</a><a class="" href="../p/32-operating-policies.html"><span class="num">32</span>Operating policies</a></div><div class="navgroup"><div class="navgroup-h">Runbook architecture</div><a class="on" href="../p/04-runbook-architecture.html"><span class="num">04</span>Runbook architecture</a><a class="" href="../p/19-engagement-type-specification.html"><span class="num">19</span>Engagement type spec</a><a class="" href="../p/20-shared-module-inheritance.html"><span class="num">20</span>Shared modules</a><a class="" href="../p/22-core-spine-specification.html"><span class="num">22</span>Core spine</a><a class="" href="../p/23-archetype-modules.html"><span class="num">23</span>Archetype modules</a></div><div class="navgroup"><div class="navgroup-h">Engagement types</div><a class="" href="../p/24-ets-assessment.html"><span class="num">24</span>ETS — Assessment</a><a class="" href="../p/25-ets-testing.html"><span class="num">25</span>ETS — Testing</a><a class="" href="../p/26-ets-investigation.html"><span class="num">26</span>ETS — Investigation</a><a class="" href="../p/27-ets-continuous.html"><span class="num">27</span>ETS — Continuous</a></div><div class="navgroup"><div class="navgroup-h">Client information &amp; output</div><a class="" href="../p/05-questionnaire-architecture.html"><span class="num">05</span>Questionnaire architecture</a><a class="" href="../p/33-questionnaire-instruments.html"><span class="num">33</span>Questionnaire instruments</a><a class="" href="../p/08-reporting-architecture.html"><span class="num">08</span>Findings &amp; reporting</a><a class="" href="../p/34-report-templates.html"><span class="num">34</span>Report templates</a><a class="" href="../p/14-excel-exports.html"><span class="num">14</span>Excel exports</a></div><div class="navgroup"><div class="navgroup-h">Evidence &amp; tools</div><a class="" href="../p/06-evidence-model.html"><span class="num">06</span>Evidence model</a><a class="" href="../p/07-tools-and-templates.html"><span class="num">07</span>Tools &amp; templates</a><a class="" href="../p/36-tool-capability-taxonomy.html"><span class="num">36</span>Tool capabilities</a></div><div class="navgroup"><div class="navgroup-h">Product &amp; architecture</div><a class="" href="../p/09-information-architecture.html"><span class="num">09</span>Information architecture</a><a class="" href="../p/11-ux-structure.html"><span class="num">11</span>UX structure</a><a class="" href="../p/12-visual-design-direction.html"><span class="num">12</span>Visual design direction</a><a class="" href="../p/10-data-model.html"><span class="num">10</span>Data model</a><a class="" href="../p/37-data-schema.html"><span class="num">37</span>Data schema</a><a class="" href="../p/39-api-and-permission-enforcement.html"><span class="num">39</span>API &amp; permissions</a><a class="" href="../p/40-build-and-operations.html"><span class="num">40</span>Build &amp; operations</a><a class="" href="../p/13-security-architecture.html"><span class="num">13</span>Security architecture</a></div><div class="navgroup"><div class="navgroup-h">Programme</div><a class="" href="../p/15-assumptions-and-open-questions.html"><span class="num">15</span>Assumptions &amp; questions</a><a class="" href="../p/16-implementation-plan.html"><span class="num">16</span>Implementation plan</a><a class="" href="../p/17-governing-constraints.html"><span class="num">17</span>Governing constraints</a><a class="" href="../p/18-content-provenance-and-validation.html"><span class="num">18</span>Provenance &amp; validation</a><a class="" href="../p/29-architecture-amendments.html"><span class="num">29</span>Architecture amendments</a></div>
+  </nav>
+  <main id="main" class="content">
+    <h1 id="04-runbook-architecture-common-vs-service-specific">04 — Runbook Architecture: Common vs Service-Specific<a class="anchor" href="#04-runbook-architecture-common-vs-service-specific" aria-label="Link to this section">#</a></h1>
+<blockquote><p><strong>Status — DRAFT / NEEDS SME VALIDATION.</strong> Per Rule 1 of <a href="17-governing-constraints.html" ><code>17-governing-constraints.md</code></a>, nothing in this document is confirmed Sleuth practice. Procedures, tools, legal requirements and operational rules here are proposals for SME review, not internal SOP. Content drawn from the public website is <code>SITE-SUGGESTED</code> and carries no authority over internal method (Rule 6). Gaps are named rather than filled (Rule 2). Validation vocabulary: <a href="18-content-provenance-and-validation.html" ><code>18-content-provenance-and-validation.md</code></a>.</p></blockquote>
+<blockquote><p>The brief's constraint: <strong>"Do NOT create 21 giant documents."</strong> The answer: a runbook is not a document. It is a <strong>composition of versioned, reusable units</strong>, rendered one step at a time.</p></blockquote>
+<hr>
+<h2 id="1-runbook-anatomy">1. Runbook anatomy<a class="anchor" href="#1-runbook-anatomy" aria-label="Link to this section">#</a></h2>
+<p>The brief's chain — Runbook → Phase → Procedure → Task → Checklist → Tool → Evidence → Decision → Escalation → Output — is correct, with one clarification: Tool, Evidence, Decision and Escalation are not <em>steps in sequence</em>. They are <strong>facets of a procedure</strong>. A procedure has tools, produces evidence, may contain decisions, and declares escalations.</p>
+<div class="codewrap"><pre><code>RUNBOOK                        SF-SEC-VAP-EXT  v1.2  Approved
+  ├─ metadata                  owner · reviewer · approver · effective · next review
+  ├─ applicability             engagement type · archetype · attachable context modules
+  │
+  └─ PHASE (ordered, from the lifecycle)
+       ├─ entry criteria       what must be true to start
+       ├─ exit criteria        what must be true to finish
+       ├─ gate reference       which gate guards this boundary
+       │
+       └─ PROCEDURE  ← the unit of real work; ~30–90 min of a consultant's time
+            ├─ objective       one sentence: why this exists
+            ├─ preconditions
+            ├─ TASKS (ordered or parallel)
+            │     └─ instruction · expected result · duration · role
+            ├─ CHECKLIST       verification items with state + evidence + owner
+            ├─ TOOLS           references into the tool catalogue (never hard-coded)
+            ├─ INPUTS          what must exist before starting
+            ├─ EVIDENCE REQ.   what must be captured, in what form, at what quality
+            ├─ DECISIONS       branch points with recorded outcomes
+            ├─ STOP CONDITIONS halt immediately
+            ├─ ESCALATIONS     who is told, how fast
+            ├─ APPROVALS       who must authorise before/after
+            └─ OUTPUTS         what this procedure produces for the next one</code></pre></div>
+<p><strong>Why the procedure is the unit.</strong> It is the smallest thing that is meaningful to hand to a person, to review, to mark complete, and to attach evidence to. Tasks are too small to govern; phases are too large to execute. A consultant's session in the platform is: open a procedure, do it, capture evidence, close it, get the next one.</p>
+<hr>
+<h2 id="2-composition-what-is-shared-and-what-is-not">2. Composition: what is shared and what is not<a class="anchor" href="#2-composition-what-is-shared-and-what-is-not" aria-label="Link to this section">#</a></h2>
+<div class="codewrap"><pre><code>                  ┌───────────────────────────────────────────┐
+                  │  CORE SPINE            1 definition       │  ← used by all 41
+                  │  Phases 0–3 and 7–10, the commercial and  │
+                  │  closure machinery, common to everything  │
+                  └────────────────────┬──────────────────────┘
+                                       │
+          ┌──────────────┬─────────────┼─────────────┬──────────────┐
+          │              │             │             │              │
+     ┌────┴────┐   ┌─────┴────┐  ┌─────┴────┐  ┌─────┴────┐         │
+     │   A1    │   │    A2    │  │    A3    │  │    A4    │  ← 4 archetype modules
+     │Assessment│  │ Testing  │  │Investig. │  │Continuous│
+     └────┬────┘   └─────┬────┘  └─────┬────┘  └─────┬────┘         │
+          │              │             │             │              │
+     ┌────┴──────────────┴─────────────┴─────────────┴──────┐       │
+     │  SERVICE MODULES            41 definitions            │  ← the actual methodology
+     │  "External Infra Testing", "Mobile Device Spyware",   │
+     │  "OT Maturity", "Detection Engineering", …            │
+     └───────────────────────┬───────────────────────────────┘
+                             │
+     ┌───────────────────────┴───────────────────────────────┐
+     │  CONTEXT MODULES            9 definitions              │  ← conditionally attached
+     │  Production · Third-Party · OT Safety · Individual     │
+     │  Client · Legal Hold · Regulated · Emergency ·         │
+     │  People-Targeting · Cross-Border                       │
+     └───────────────────────────────────────────────────────┘</code></pre></div>
+<p><strong>Maintenance arithmetic.</strong> Definitions to maintain: 1 + 4 + 41 + 9 = <strong>55 units</strong>, of which only the 41 service modules are genuinely service-specific — and most of those are 6–12 procedures, not a document. Against the naive alternative of 41 standalone runbooks, the shared portion (roughly 40% of every runbook's content by volume) is written and improved <strong>once</strong>. Correcting a chain-of-custody procedure improves all nine A3 runbooks in one edit, with one approval, under one version bump.</p>
+<h3 id="21-the-core-spine-every-engagement-without-exception">2.1 The core spine (every engagement, without exception)<a class="anchor" href="#21-the-core-spine-every-engagement-without-exception" aria-label="Link to this section">#</a></h3>
+<div class="tablewrap"><table><thead><tr><th>Phase</th><th>Procedures in the spine</th></tr></thead><tbody><tr><td>0 Enquiry &amp; Triage</td><td>Record enquiry · Conflict check · Client identity verification · Service selection (decision tree when "Not Sure") · Urgency triage · Qualify in/out</td></tr><tr><td>1 Qualification &amp; Commercials</td><td>NDA issue &amp; execution · MSA (repeat clients) · SOW drafting &amp; execution · Commercial approval · Team assignment</td></tr><tr><td>2 Authorisation &amp; Scope</td><td>Scope definition (in <strong>and</strong> out) · Authorised signatory verification · Letter of Authorisation · Client emergency contacts · <strong>Authorisation Gate</strong></td></tr><tr><td>3 Understand</td><td>Issue questionnaire · Review responses · Confirm prerequisites · Verify access · Pin runbook version · Kickoff · Brief team on stop conditions · <strong>Readiness Gate</strong></td></tr><tr><td>7 Deliver</td><td>Verify recipients · Apply classification · Release · Walkthrough · Record acceptance · <strong>Release Gate</strong></td></tr><tr><td>8 Improve</td><td>Issue remediation guidance · Clarification support · Track remediation status</td></tr><tr><td>9 Validate</td><td>Plan retest · Execute retest · Record per-finding outcome · Issue addendum</td></tr><tr><td>10 Close</td><td>Record acceptance · Execute evidence disposition · Revoke access · Disable test accounts · Remove tester artefacts · Capture lessons learned · Raise runbook improvements · <strong>Closure Gate</strong></td></tr></tbody></table></div>
+<p>That is ~35 procedures written once and reused 41 times.</p>
+<h3 id="22-archetype-modules-phases-46-the-shape-of-the-work">2.2 Archetype modules (Phases 4–6, the shape of the work)<a class="anchor" href="#22-archetype-modules-phases-46-the-shape-of-the-work" aria-label="Link to this section">#</a></h3>
+<p><strong>A1 — Assessment &amp; Advisory</strong> Framework selection &amp; justification · Documentation request &amp; tracking · Stakeholder interview protocol · Control walkthrough · Configuration/artefact review · Maturity rating with mandatory source citation · Gap identification · Roadmap construction &amp; sequencing · Evidence Sufficiency check.</p>
+<p><strong>A2 — Authorised Technical Testing</strong> Rules of Engagement construction · Pre-test asset verification (<em>is this IP actually theirs?</em>) · Test account validation · Testing window open/close ritual · Reconnaissance → enumeration → vulnerability identification → exploitation → post-exploitation (the site's own published VAPT sequence) · Proof-of-concept capture standard · Finding drafting &amp; severity · Client-artefact cleanup · Retest procedure.</p>
+<p><strong>A3 — Investigation &amp; Response</strong> Instruction &amp; authority capture (<em>what exactly are we asked to determine?</em>) · Evidence identification &amp; preservation · <strong>Acquisition with hashing (Custody Gate)</strong> · Verification · Working-copy derivation · Custody record maintenance · Artefact processing · Timeline construction · Hypothesis formulation &amp; testing · Alternative-explanation consideration · Conclusion formulation with confidence statement · Limitations documentation · Disposition.</p>
+<p><strong>A4 — Continuous &amp; Readiness</strong> Baseline establishment · Collection cycle · Delta analysis vs previous cycle · Alert triage &amp; disposition · Escalation to incident where warranted · Cycle reporting · Periodic re-authorisation · Coverage review.</p>
+<h3 id="23-service-modules-what-makes-vapt-cloud-spyware">2.3 Service modules (what makes VAPT ≠ Cloud ≠ Spyware)<a class="anchor" href="#23-service-modules-what-makes-vapt-cloud-spyware" aria-label="Link to this section">#</a></h3>
+<p>Each service module is 6–12 procedures derived from that service's "What We Examine/Test/Analyse" list on the website, expanded into executable method. Example shapes:</p>
+<div class="tablewrap"><table><thead><tr><th>Service module</th><th>Representative procedures (seeded from the site)</th></tr></thead><tbody><tr><td>External Infrastructure Testing</td><td>Scope validation &amp; ownership confirmation · Passive reconnaissance · Active host &amp; service discovery · Service enumeration · Vulnerability identification · Manual validation · Controlled exploitation · Post-exploitation assessment</td></tr><tr><td>Web Application &amp; API Testing</td><td>Application mapping · Authentication testing · Session management · Authorisation &amp; access control · Input validation &amp; injection · Business logic · API-specific testing (REST/GraphQL/SOAP) · File upload &amp; data handling · SSRF · Headers &amp; transport</td></tr><tr><td>Mobile Device Spyware Examination</td><td>Pre-contact safety briefing (<em>do not discuss on the device</em>) · Consent &amp; ownership verification · Device isolation · Forensic acquisition (iOS/Android) · Known-family indicator sweep (Pegasus/Predator/Hermit-class) · Commercial stalkerware sweep · MDM profile &amp; certificate inspection · Network &amp; permission audit · Jailbreak/root &amp; exploit artefact analysis · Message link forensics · Assessment formulation · Hardening guidance</td></tr><tr><td>OT/ICS Maturity</td><td>Safety briefing &amp; engineer pairing · Asset inventory review · Purdue-level segmentation review · IT/OT convergence point mapping · Remote &amp; vendor access governance · Patch &amp; vulnerability practice review · Monitoring capability review · OT incident readiness review · Maturity scoring against IEC 62443 / NIST SP 800-82</td></tr><tr><td>Ransomware Investigation</td><td>Encryption scope determination · Variant identification · Initial access reconstruction · Dwell-time analysis · Exfiltration assessment (<em>was data stolen as well as encrypted?</em>) · Backup integrity &amp; isolation verification · Recovery sequencing advice</td></tr></tbody></table></div>
+<h3 id="24-context-modules">2.4 Context modules<a class="anchor" href="#24-context-modules" aria-label="Link to this section">#</a></h3>
+<p>As defined in <code>01-service-catalogue.md</code> §4. A context module injects procedures, checklist items, gate conditions and questionnaire sections into an already-composed runbook when its attach condition is met.</p>
+<p>The attach condition is evaluated from <strong>questionnaire answers and scope data</strong>, so the runbook a consultant sees is already shaped by what the client told us. Example:</p>
+<div class="codewrap"><pre><code>IF  questionnaire.assets[].environment contains "production"
+THEN attach CONTEXT_PRODUCTION
+     → +4 procedures, +6 checklist items,
+       +1 Authorisation Gate condition (change-window approval),
+       swaps 3 procedures for production-safe variants</code></pre></div>
+<hr>
+<h2 id="3-decision-trees">3. Decision trees<a class="anchor" href="#3-decision-trees" aria-label="Link to this section">#</a></h2>
+<p>A decision tree is a first-class content object, not prose inside a procedure. It has typed nodes so the system can render it as a guided flow and record the path taken.</p>
+<div class="codewrap"><pre><code>DECISION TREE: Evidence Availability            (A3 — used by 9 runbooks)
+
+   ┌─────────────────────────────────┐
+   │ Is the source evidence          │
+   │ available and accessible?       │
+   └────────┬───────────────┬────────┘
+          YES              NO
+            │               │
+            ▼               ▼
+  ┌──────────────────┐  ┌────────────────────────────────┐
+  │ Is it volatile?  │  │ Document the limitation        │
+  └───┬──────────┬───┘  │ Identify alternative sources   │
+    YES         NO      │ (backups, logs, cloud, other   │
+      │          │      │  endpoints, network telemetry) │
+      ▼          ▼      └───────────┬────────────────────┘
+ ┌─────────┐ ┌─────────┐            │
+ │ Capture │ │ Write-  │     ┌──────┴───────┐
+ │ volatile│ │ protect │   found          none
+ │ FIRST   │ │ source  │     │              │
+ └────┬────┘ └────┬────┘     ▼              ▼
+      └─────┬─────┘     ┌─────────┐  ┌──────────────────┐
+            ▼           │ Proceed │  │ ESCALATE:        │
+   ┌──────────────────┐ │ with    │  │ investigation    │
+   │ ACQUIRE → HASH   │ │ reduced │  │ objective may be │
+   │ → VERIFY → LOG   │ │ scope;  │  │ unachievable —   │
+   │ ⟨ CUSTODY GATE ⟩ │ │ state   │  │ Eng. Mgr decision│
+   └────────┬─────────┘ │ in      │  │ before continuing│
+            ▼           │ limits  │  └──────────────────┘
+      ┌──────────┐      └─────────┘
+      │ ANALYSE  │
+      └──────────┘
+
+Every traversal records: node, branch taken, decided_by, timestamp, rationale.</code></pre></div>
+<p>Trees in the initial library:</p>
+<div class="tablewrap"><table><thead><tr><th>Tree</th><th>Archetype</th><th>Purpose</th></tr></thead><tbody><tr><td>Service Selection</td><td>Spine</td><td>Client said "Other / Not Sure" at intake</td></tr><tr><td>Urgency Triage</td><td>Spine</td><td>Route active incidents to the emergency path</td></tr><tr><td>Production Systems</td><td>A1/A2</td><td>Choose production-safe vs standard procedures</td></tr><tr><td>Asset Ownership</td><td>A2</td><td>Third-party hosting → authorisation requirements</td></tr><tr><td>Exploitation Authorisation</td><td>A2</td><td>How far validation may go</td></tr><tr><td>Pre-existing Compromise Discovered</td><td>A2</td><td><strong>Mandatory stop + escalate + propose IR engagement</strong></td></tr><tr><td>Evidence Availability</td><td>A3</td><td>Above</td></tr><tr><td>Device Handling — Powered On/Off</td><td>A3</td><td>Volatile capture vs immediate imaging</td></tr><tr><td>Legal Authority</td><td>A3</td><td>Is there sufficient authority to examine this?</td></tr><tr><td>Incident Severity Classification</td><td>A3</td><td>Team size, escalation, client notification cadence</td></tr><tr><td>Data Exfiltration Suspected</td><td>A3</td><td>Breach-notification assessment path</td></tr><tr><td>Backup Viability</td><td>A3</td><td>Ransomware recovery sequencing</td></tr><tr><td>Finding Severity Moderation</td><td>All</td><td>Consistent severity across engagements and analysts</td></tr><tr><td>Retest Outcome</td><td>All</td><td>Resolved / Partial / Not Resolved / Accepted / Unverifiable</td></tr></tbody></table></div>
+<hr>
+<h2 id="4-version-control-and-pinning">4. Version control and pinning<a class="anchor" href="#4-version-control-and-pinning" aria-label="Link to this section">#</a></h2>
+<p>The brief (§18) requires that an active engagement retains the runbook version it used. This is the mechanism.</p>
+<div class="codewrap"><pre><code>Runbook: SF-INV-DFIR-FULL
+  ├─ v1.0  Deprecated   effective 2026-01-15 → 2026-06-30
+  ├─ v1.1  Deprecated   effective 2026-07-01 → 2026-09-14
+  ├─ v1.2  Approved     effective 2026-09-15   next review 2027-03-15
+  └─ v1.3  Draft        owner: &lt;Needs Confirmation&gt;
+
+ENG-2026-0113  started 2026-08-02  →  pinned to v1.1   ← keeps executing v1.1
+ENG-2026-0141  started 2026-09-18  →  pinned to v1.2</code></pre></div>
+<p><strong>Rules</strong></p>
+<ol><li>On leaving Phase 3, the engagement pins the currently Approved version. The pin is immutable.</li><li>Approved versions are immutable. A change produces a new version, always.</li><li>Deprecating a version never affects engagements already pinned to it.</li><li>A mid-engagement version bump is a <strong>deliberate, logged migration</strong>, requested by the Engagement Manager and approved by Management, with an impact summary of what changed. It never happens silently.</li><li>Every report states the runbook ID and version used — so a report delivered in 2026 remains explicable in 2029.</li><li>Status flow: <code>Draft → In Review → Approved → Deprecated</code>. Only Management approves; only an Author drafts (<code>02-users-and-roles.md</code>).</li><li>Every version carries a change history entry: what changed, why, who, when.</li></ol>
+<h3 id="why-pinning-matters-more-than-it-first-appears">Why pinning matters more than it first appears<a class="anchor" href="#why-pinning-matters-more-than-it-first-appears" aria-label="Link to this section">#</a></h3>
+<p>Without it, a runbook improvement rewrites the methodology of engagements already in flight. A client asking "what process did you follow?" eighteen months later would get an answer describing a process nobody actually ran. Pinning makes the honest answer retrievable, and that is the entire point of a defensible methodology.</p>
+<hr>
+<h2 id="5-answering-the-briefs-seven-questions">5. Answering the brief's seven questions<a class="anchor" href="#5-answering-the-briefs-seven-questions" aria-label="Link to this section">#</a></h2>
+<p>Every procedure view answers these by construction, because each maps to a required field:</p>
+<div class="tablewrap"><table><thead><tr><th>Question</th><th>Field</th></tr></thead><tbody><tr><td>Where am I?</td><td>Phase + procedure position + engagement breadcrumb</td></tr><tr><td>What am I doing?</td><td>Procedure objective + current task</td></tr><tr><td>Why am I doing it?</td><td>Objective rationale + the output it feeds</td></tr><tr><td>What do I need?</td><td>Inputs + preconditions + tools + access</td></tr><tr><td>What evidence do I capture?</td><td>Evidence requirements, with capture action inline</td></tr><tr><td>What should I produce?</td><td>Outputs</td></tr><tr><td>What happens next?</td><td>Next procedure, or the gate that is now in the way</td></tr><tr><td><em>(plus)</em> What if something unexpected happens?</td><td>Stop conditions + escalations, always visible</td></tr><tr><td><em>(plus)</em> Who needs to review this?</td><td>Approvals</td></tr></tbody></table></div>
+<p>A procedure that cannot fill all nine fields is not ready to be approved. That is the authoring quality bar, enforced by the runbook editor.</p>
+    <footer class="pagefoot">
+      <p>Sleuth Forensics — internal runbook &amp; engagement platform. Design documentation.
+      Nothing here is SME-validated; see <a href="../p/17-governing-constraints.html">governing constraints</a>.</p>
+    </footer>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="l2" href="#1-runbook-anatomy">1. Runbook anatomy</a><a class="l2" href="#2-composition-what-is-shared-and-what-is-not">2. Composition: what is shared and what is not</a><a class="l3" href="#21-the-core-spine-every-engagement-without-exception">2.1 The core spine (every engagement, without exception)</a><a class="l3" href="#22-archetype-modules-phases-46-the-shape-of-the-work">2.2 Archetype modules (Phases 4–6, the shape of the work)</a><a class="l3" href="#23-service-modules-what-makes-vapt-cloud-spyware">2.3 Service modules (what makes VAPT ≠ Cloud ≠ Spyware)</a><a class="l3" href="#24-context-modules">2.4 Context modules</a><a class="l2" href="#3-decision-trees">3. Decision trees</a><a class="l2" href="#4-version-control-and-pinning">4. Version control and pinning</a><a class="l3" href="#why-pinning-matters-more-than-it-first-appears">Why pinning matters more than it first appears</a><a class="l2" href="#5-answering-the-briefs-seven-questions">5. Answering the brief's seven questions</a></aside>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
